@@ -8,6 +8,7 @@ TagManager:
   - Warmer
   - Homeless
   - Chest
+  - Open_Chest
   layers:
   - Default
   - TransparentFX

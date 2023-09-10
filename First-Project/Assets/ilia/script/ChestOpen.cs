@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ChestOpen : MonoBehaviour
 {
-    // Start is called before the first frame update
+   private Animator ChestOpenAnimation;
     void Start()
     {
-        
+        ChestOpenAnimation = GetComponent<Animator>();
     }
 
     // Update is called once per frame
