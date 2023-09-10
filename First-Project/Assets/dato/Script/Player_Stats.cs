@@ -1,16 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using TMPro;
 using UnityEngine;
 
+
 public class Player_Stats : MonoBehaviour
 {
-    //public TextMeshPro _textMeshPro;
+    [SerializeField] private TextMeshProUGUI _text;
+    [SerializeField] private int Count = 1;
     public int Score = 0;
+
     
     void Start()
     {
-    //    _textMeshPro = GameObject.Find("Count").GetComponent<TextMeshPro>();
+      
     }
 
    
@@ -22,7 +26,15 @@ public class Player_Stats : MonoBehaviour
 
     public void ScoreCount()
     {
-        Score++;
-    //  _textMeshPro.text =  Score++.ToString();
+        Score += Count;
+        _text.text = Score.ToString();
     }
+
+    public void ScoreCountX2()
+    {
+        Count = 2;
+
+      
+    }
+
 }
