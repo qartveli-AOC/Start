@@ -9,8 +9,13 @@ TagManager:
   - Homeless
   - Chest
   - Open_Chest
+
+  - Shop
+  - Score
+
   - bird
   - birdText
+
   layers:
   - Default
   - TransparentFX
