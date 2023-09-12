@@ -8,8 +8,10 @@ public class ForCountFly : MonoBehaviour
     private Rigidbody _rb;
     [SerializeField] private float _speed;
     [SerializeField] private float Destroy_Time;
+    public ClickPrice clickPrice;
     void Start()
     {
+
         _rb = GetComponent<Rigidbody>();
     }
 
