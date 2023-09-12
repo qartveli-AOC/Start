@@ -1,48 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditor.VersionControl;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCounter : MonoBehaviour
 {
-    
-    public TextMeshProUGUI Number_Count;
-    public Player_Stats play_stats;
+    public ClickPrice clickPrice;
     public GameObject Number_Count_gameobject;
     public Camera _camera;
     public Transform Transform_Canvas;
+    
+    public TextMeshProUGUI Prefab_Text;
 
+    public Button Garbige_Button;
 
-
-
+   
 
     void Start()
-    {
-        play_stats = FindObjectOfType<Player_Stats>();
+    {       
+        Garbige_Button.onClick.AddListener(NumberInstantiante);
+        Debug.Log("Inside");
+        clickPrice = FindObjectOfType<ClickPrice>();
         
     }
-
-
-    void Update()
+    
+    void NumberInstantiante()
     {
-       
-    }
-    public void NumberInstantiante()
-    {
-       
-
+        Prefab_Text.text = clickPrice.Count.ToString();
         GameObject number = Instantiate(Number_Count_gameobject, transform.position, Quaternion.identity);
         number.transform.SetParent(Transform_Canvas);
+
     }
-
-
-
-    public void NumberCounter()
-    {
-        Number_Count.text = "+".ToString() + play_stats.Count.ToString();
-    }
-
-
 
 }
