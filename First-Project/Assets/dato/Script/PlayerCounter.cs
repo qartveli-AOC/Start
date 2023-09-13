@@ -16,8 +16,7 @@ public class PlayerCounter : MonoBehaviour
     public TextMeshProUGUI Prefab_Text;
 
     public Button Garbige_Button;
-    public Image image;
-    public Sprite[] sprite;
+   
 
    
      
@@ -36,15 +35,13 @@ public class PlayerCounter : MonoBehaviour
 
     void SpawnPosition()
     {
-        RaycastHit hit;
-        Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
-        if(Physics.Raycast(ray,out hit))
-        {
+       
+        
             Prefab_Text.text = clickPrice.Count.ToString();
-            GameObject number = Instantiate(Number_Count_gameobject,hit.point, Quaternion.identity);
+            GameObject number = Instantiate(Number_Count_gameobject, transform.position, Quaternion.identity);
             number.transform.SetParent(Transform_Canvas);
-        }
-        image.sprite = sprite[Random.Range(0,sprite.Length)];
+        
+       
 
     }
 
