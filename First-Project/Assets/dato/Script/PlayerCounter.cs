@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
-using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,6 +17,8 @@ public class PlayerCounter : MonoBehaviour
     public TextMeshProUGUI Prefab_Text;
 
     public Button Garbige_Button;
+
+    
    
 
    
@@ -39,7 +40,7 @@ public class PlayerCounter : MonoBehaviour
     {
        
         
-            Prefab_Text.text = clickPrice.Count.ToString();
+            Prefab_Text.text = clickPrice.Count.ToString();            
             GameObject number = Instantiate(Number_Count_gameobject, Spwner_Coin_Tr.position, Quaternion.identity);
             number.transform.SetParent(Transform_Canvas);
         

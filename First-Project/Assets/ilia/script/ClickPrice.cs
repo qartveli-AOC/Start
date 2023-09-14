@@ -30,6 +30,8 @@ public class ClickPrice : MonoBehaviour
 
     public Sprite Angry_Garbige_Sprite;
 
+    public AudioSource Coin_Sound;
+
     void Start()
     {
        Score = 0;
@@ -45,6 +47,7 @@ public class ClickPrice : MonoBehaviour
     {      
         Score += Count;
         Show_Score.text = Score.ToString();
+        Coin_Sound.Play();
        
     }
 
