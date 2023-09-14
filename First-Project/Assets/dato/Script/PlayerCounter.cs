@@ -11,7 +11,9 @@ public class PlayerCounter : MonoBehaviour
     public ClickPrice clickPrice;
     public GameObject Number_Count_gameobject;
     public Camera _camera;
+
     public Transform Transform_Canvas;
+    public Transform Spwner_Coin_Tr;
     
     public TextMeshProUGUI Prefab_Text;
 
@@ -38,7 +40,7 @@ public class PlayerCounter : MonoBehaviour
        
         
             Prefab_Text.text = clickPrice.Count.ToString();
-            GameObject number = Instantiate(Number_Count_gameobject, transform.position, Quaternion.identity);
+            GameObject number = Instantiate(Number_Count_gameobject, Spwner_Coin_Tr.position, Quaternion.identity);
             number.transform.SetParent(Transform_Canvas);
         
        
