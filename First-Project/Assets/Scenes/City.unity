@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1644,11 +1644,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Image_Coin: {fileID: 1650789247}
   sprite_Coin:
-  - {fileID: -1526956743, guid: a3ffcde5e5ba69445ab1b4893b25f814, type: 3}
-  - {fileID: 1824217323, guid: a3ffcde5e5ba69445ab1b4893b25f814, type: 3}
-  - {fileID: -1432134435, guid: a3ffcde5e5ba69445ab1b4893b25f814, type: 3}
-  - {fileID: -1640515345, guid: a3ffcde5e5ba69445ab1b4893b25f814, type: 3}
-  - {fileID: 95513047, guid: a3ffcde5e5ba69445ab1b4893b25f814, type: 3}
+  - {fileID: -1526956743, guid: 9ddda1f26022b7947960d3e92fc88269, type: 3}
+  - {fileID: 1824217323, guid: 9ddda1f26022b7947960d3e92fc88269, type: 3}
+  - {fileID: -1432134435, guid: 9ddda1f26022b7947960d3e92fc88269, type: 3}
+  - {fileID: -1640515345, guid: 9ddda1f26022b7947960d3e92fc88269, type: 3}
+  - {fileID: 95513047, guid: 9ddda1f26022b7947960d3e92fc88269, type: 3}
   Interval_Time_Coin_Num: 0.1
 --- !u!114 &1650789247
 MonoBehaviour:
