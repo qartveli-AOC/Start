@@ -6,6 +6,7 @@ using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 using Unity.VisualScripting;
 
+
 public class ClickPrice : MonoBehaviour
 {
     public Animator Chest_Open;
@@ -17,6 +18,8 @@ public class ClickPrice : MonoBehaviour
     public int Count;
     public int Click_Cost = 10;
     public int One_Auto_Cost = 50;
+    public float Level_Upgrade_Click_Num;
+    public float Level_Full_Num;
 
     public Button Auto_Button;
     public Button Click_Button;
@@ -28,9 +31,13 @@ public class ClickPrice : MonoBehaviour
    
     public TextMeshProUGUI Show_Score;
 
-    public Sprite Angry_Garbige_Sprite;
+    public AudioSource Coin_Sound;    
 
-    public AudioSource Coin_Sound;
+    public Slider Level_Slider;
+
+    private Color _originalColor;
+    private Color _targetColor;
+
     private void Awake()
     {
         
@@ -39,11 +46,10 @@ public class ClickPrice : MonoBehaviour
     }
     void Start()
     {
-       
-        
-       
-       
-       Count = 1;     
+        _originalColor = Level_Slider.colors.normalColor;
+        _targetColor = _originalColor;
+
+        Count = 1;     
        
         Auto_Button.onClick.AddListener(One_Auto_Shop);
         Click_Button.onClick.AddListener(One_Click_Shop);
@@ -58,8 +64,16 @@ public class ClickPrice : MonoBehaviour
         Score += Count;
         Show_Score.text = Score.ToString();
         Coin_Sound.Play();
-       
-    }
+        
+        if (Level_Upgrade_Click_Num<Level_Full_Num)
+        {
+            Level_Upgrade_Click_Num++;
+            Level_Slider.value = Level_Upgrade_Click_Num/Level_Full_Num;
+        }
+        Color newColor = Color.Lerp(Color.red, Color.green, Level_Slider.value);
+        Level_Slider.fillRect.GetComponent<Image>().color = newColor;
+
+    }   
 
 
     private void OnApplicationQuit()
@@ -103,6 +117,7 @@ public class ClickPrice : MonoBehaviour
             Show_Score.text = Score.ToString();
             Click_Price.text = Click_Cost.ToString() + "   One click";
             Count += 1;
+
         }
            
             
