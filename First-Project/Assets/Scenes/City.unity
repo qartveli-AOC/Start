@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 106442624}
   - component: {fileID: 106442625}
   - component: {fileID: 106442626}
+  - component: {fileID: 106442628}
   - component: {fileID: 106442627}
   m_Layer: 0
   m_Name: starter
@@ -172,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Chest_Open: {fileID: 0}
-  Score: 0
+  Score: 1000
   Count: 1
   Click_Cost: 10
   One_Auto_Cost: 50
@@ -364,6 +365,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &106442628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106442620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13ecfdc8970563d4d86c7f2e6cb016cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button_Garbije_Click: {fileID: 1236861446}
+  Garbije_Transform_Pos: {fileID: 1236861445}
+  Vector_Position_Num: 1.1
+  Wait_Time: 0.1
 --- !u!1 &113348117
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,7 +1197,7 @@ Transform:
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 1269.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

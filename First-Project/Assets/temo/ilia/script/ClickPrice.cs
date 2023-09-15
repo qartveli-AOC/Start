@@ -31,10 +31,18 @@ public class ClickPrice : MonoBehaviour
     public Sprite Angry_Garbige_Sprite;
 
     public AudioSource Coin_Sound;
-
+    private void Awake()
+    {
+        
+        Score = PlayerPrefs.GetInt("surim", 0);
+        Show_Score.text = Score.ToString();
+    }
     void Start()
     {
-       Score = 0;
+       
+        
+       
+       
        Count = 1;     
        
         Auto_Button.onClick.AddListener(One_Auto_Shop);
@@ -42,8 +50,10 @@ public class ClickPrice : MonoBehaviour
        
         Count_Button.onClick.AddListener(Click);     
     }
-  
-  public  void Click()
+   
+   
+
+    public  void Click()
     {      
         Score += Count;
         Show_Score.text = Score.ToString();
@@ -51,7 +61,14 @@ public class ClickPrice : MonoBehaviour
        
     }
 
-   public void One_Auto_Shop()
+
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.SetInt("surim",Score);
+        PlayerPrefs.Save();
+    }
+
+    public void One_Auto_Shop()
     {        
         if (Score >= One_Auto_Cost)
         {

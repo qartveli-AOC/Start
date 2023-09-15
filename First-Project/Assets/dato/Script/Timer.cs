@@ -4,10 +4,14 @@ using System.Threading;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
-{
+{   
+
+
+
     public float Full_Time_Num;
     public float Curent_Time_Num;
     public float Timer_Num;
@@ -16,10 +20,7 @@ public class Timer : MonoBehaviour
     public Slider Time_Slider;
     public TextMeshProUGUI Timer_Num_Text;
 
-    private void Start()
-    {
-        
-    }
+    
 
     private void Update()
     {
@@ -35,6 +36,8 @@ public class Timer : MonoBehaviour
             Timer_Num = 0;
             SceneManager.LoadScene(0);
         }
+
+      
        
 
         Time_Slider.value = Curent_Time_Num / Full_Time_Num;

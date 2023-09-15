@@ -29,7 +29,7 @@ public class PlayerCounter : MonoBehaviour
     void Start()
     {       
         Garbige_Button.onClick.AddListener(SpawnPosition);
-        Debug.Log("Inside");
+        
         clickPrice = FindObjectOfType<ClickPrice>();
         
     }
