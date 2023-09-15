@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 106442625}
   - component: {fileID: 106442626}
   - component: {fileID: 106442628}
+  - component: {fileID: 106442629}
   - component: {fileID: 106442627}
   m_Layer: 0
   m_Name: starter
@@ -381,6 +382,23 @@ MonoBehaviour:
   Garbije_Transform_Pos: {fileID: 1236861445}
   Vector_Position_Num: 1.1
   Wait_Time: 0.1
+--- !u!114 &106442629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106442620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0bffb8ded9d4e94a9225b6eea403e82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spawn_Birds:
+  - {fileID: 834300247384811919, guid: 58814c13ed72dea4186a4ce0afdb9fa1, type: 3}
+  - {fileID: 1205279310516210667, guid: 72e2901881ea735498d3d6cd70fdb218, type: 3}
+  Birds_Spawn_Position: {fileID: 215009727}
+  Canvas_posI: {fileID: 2072412014}
 --- !u!1 &113348117
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,6 +720,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &215009726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 215009727}
+  m_Layer: 0
+  m_Name: Birds_Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &215009727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215009726}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -467, y: -1.1754799, z: 1.9533571}
+  m_LocalScale: {x: 0.96038413, y: 0.96038413, z: 0.96038413}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2072412014}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &330476563
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,7 +1515,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -13.299988}
+  m_AnchoredPosition: {x: 0, y: -13.300049}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &997476435
@@ -2258,6 +2307,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 215009727}
   - {fileID: 1771362731}
   - {fileID: 459065665}
   - {fileID: 552373079}
