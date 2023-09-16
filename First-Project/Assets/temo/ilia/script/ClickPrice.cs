@@ -18,8 +18,9 @@ public class ClickPrice : MonoBehaviour
     public int Count;
     public int Click_Cost = 10;
     public int One_Auto_Cost = 50;
-    public float Level_Upgrade_Click_Num;
+    public float Current_Level_Num;
     public float Level_Full_Num;
+    public int Daimond_Num;
 
     public Button Auto_Button;
     public Button Click_Button;
@@ -28,6 +29,7 @@ public class ClickPrice : MonoBehaviour
     
     public TextMeshProUGUI Click_Price;
     public TextMeshProUGUI One_Auto_Price;
+    public TextMeshProUGUI Daimond_Text;
    
     public TextMeshProUGUI Show_Score;
 
@@ -35,25 +37,27 @@ public class ClickPrice : MonoBehaviour
 
     public Slider Level_Slider;
 
-    private Color _originalColor;
-    private Color _targetColor;
+    public GameObject Spawn_Birds;
+
+    public Transform Birds_Spawn_Position;
+    public Transform Canvas_posI;
+
 
     private void Awake()
     {
         
-        Score = PlayerPrefs.GetInt("surim", 0);
+        Score = PlayerPrefs.GetInt("coin", 0);
+        Daimond_Num = PlayerPrefs.GetInt("diamond", 0);
         Show_Score.text = Score.ToString();
+        Daimond_Text.text = Daimond_Num.ToString();
     }
     void Start()
-    {
-        _originalColor = Level_Slider.colors.normalColor;
-        _targetColor = _originalColor;
-
+    {      
         Count = 1;     
        
         Auto_Button.onClick.AddListener(One_Auto_Shop);
         Click_Button.onClick.AddListener(One_Click_Shop);
-       
+        Level_Slider.value = 0;
         Count_Button.onClick.AddListener(Click);     
     }
    
@@ -64,21 +68,31 @@ public class ClickPrice : MonoBehaviour
         Score += Count;
         Show_Score.text = Score.ToString();
         Coin_Sound.Play();
-        
-        if (Level_Upgrade_Click_Num<Level_Full_Num)
+       
+        if (Current_Level_Num<=Level_Full_Num)
         {
-            Level_Upgrade_Click_Num++;
-            Level_Slider.value = Level_Upgrade_Click_Num/Level_Full_Num;
+            Current_Level_Num++;
+            Level_Slider.value = Current_Level_Num/Level_Full_Num;
+        } if (Current_Level_Num>=Level_Full_Num)
+        {
+            SpawnBirds();
+            Current_Level_Num =0;
+            Daimond_Num += 1;
+            Daimond_Text.text = Daimond_Num.ToString();
         }
-        Color newColor = Color.Lerp(Color.red, Color.green, Level_Slider.value);
-        Level_Slider.fillRect.GetComponent<Image>().color = newColor;
+       
 
-    }   
-
+    }
+    private void SpawnBirds()
+    {
+        GameObject gm = Instantiate(Spawn_Birds, Birds_Spawn_Position.position, Quaternion.identity);
+        gm.transform.SetParent(Canvas_posI);
+    }
 
     private void OnApplicationQuit()
     {
-        PlayerPrefs.SetInt("surim",Score);
+        PlayerPrefs.SetInt("coin",Score); 
+        PlayerPrefs.SetInt("diamond",Daimond_Num);
         PlayerPrefs.Save();
     }
 
@@ -121,11 +135,6 @@ public class ClickPrice : MonoBehaviour
         }
            
             
-    }
-
-    public void Chest()
-    {
-        Chest_Open.Play("chest_Open");
     }
 
  private IEnumerator I_Auto_Click()
