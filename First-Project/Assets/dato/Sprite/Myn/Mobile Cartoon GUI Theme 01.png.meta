@@ -1,0 +1,3708 @@
+fileFormatVersion: 2
+guid: f7c1d4fea7e360f418567b0243825011
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_0
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 1000
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5369460100ec80d45b9b665b73f8172d
+      internalID: 1728125087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_1
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 954
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16d4909eb98220c4eb0b09ded7874fb3
+      internalID: 10082749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_2
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 975
+        width: 74
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e403a7653eca0348b1431aba2b11a10
+      internalID: 918961851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_3
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 975
+        width: 72
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb4158892576624d83748144956da5d
+      internalID: 1891744205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_4
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 964
+        width: 60
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b5d47f95896e9c4783d7e178222dc33
+      internalID: -648306640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_5
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 980
+        width: 30
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4237828b9d5209746aa2149b04b3ea76
+      internalID: 883657091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_6
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 981
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ac43e16f47d90478652221853b6dcb
+      internalID: -1245855229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_7
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 970
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 886e18f0dde221a42a0a7886c7380bf5
+      internalID: -1390917493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_8
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 968
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd13bea89b230a4e8807fde503ec358
+      internalID: 718931226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_9
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 1007
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f7f0e6b01349af4d90ee3f35b4105c1
+      internalID: 592512521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_10
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 995
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5681e1165b1cdf046a6792e488496881
+      internalID: -224813646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_11
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 982
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63f5f24ed9e5aea418fdd2e46aa2a2c6
+      internalID: 415414952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 100
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f942b14ab5ebb42b0d79e3e1bba6a3
+      internalID: -381618838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_13
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 896
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eecc1962ac084664285689906f8f9d70
+      internalID: -1304734688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_14
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 954
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65efd20f171203c4fa26f1b7887f9a19
+      internalID: 2070628948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_15
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 973
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f26a0b48f54b5474d853aac9b6acad3f
+      internalID: 1635558374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_16
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 957
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5bb26a83d70cd8418b1ae19fdd72da0
+      internalID: -1720822513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_17
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 951
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c719018e1cbb342bb25938987aaff6
+      internalID: -1061897533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_18
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 949
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a4e6d97175817c4caf52ff9c2fcca37
+      internalID: 411350047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_19
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 952
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aa085aa60f1056489cfb8719869eea2
+      internalID: -496452477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_20
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 952
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b80313ed7dc204d498c9dab3590985ae
+      internalID: 2003596328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_21
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 921
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc999f4c140a574ab4685db4faa2d13
+      internalID: 37682384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_22
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 931
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c31d627f0c59f640833a9e574120f69
+      internalID: -1569367206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_23
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 918
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf8e3d31f2420f43ac7c2b037206392
+      internalID: -2042424164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_24
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 931
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155d80d82078b78429b13d6a616f4d4d
+      internalID: 108693403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_25
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 918
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f91574fa47930041828106d50642e87
+      internalID: 44121955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_26
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 918
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc31b2983d6e72429ad4b0e85692b5d
+      internalID: -1273659541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_27
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 909
+        width: 39
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165c04630dda0c848baba1224f86199f
+      internalID: -455955879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_28
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 905
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c846f8f1c0f3d9c418a3dbf6f94b7c0e
+      internalID: 1981391106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_29
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 896
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d66c9942d2fa73458a8b231ac16239a
+      internalID: -873105424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_30
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 916
+        width: 76
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6b4d1dc268e654f845cc9c6ef50896
+      internalID: -484270124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_31
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 872
+        width: 54
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 184022e0dce17094bb0f5767f7b73b77
+      internalID: -1745416512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_32
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 918
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798ee81c788cf3343abb9533c90d542c
+      internalID: -669099121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_33
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 918
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7eeefd88e903df4db9405abbb3706d5
+      internalID: -1672131788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_34
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 918
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde3f1b0be6fa5e4eae27546dff359ae
+      internalID: 1838863679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_35
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 918
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c27ec360b94714640a89a17cf5c00e53
+      internalID: -133427648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_36
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 918
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8724a27310e4a80478b607464237049d
+      internalID: -236851586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_37
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 894
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad2bd13c168c6b4a9ca6890a03fdacf
+      internalID: 15366961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_38
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 894
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c4db30c8d36dd84ab07a6092a55a1ef
+      internalID: 224015757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_39
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 783
+        width: 128
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b428c6aff7c40564a98140b206dba395
+      internalID: -241284222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_40
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 849
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c3de90fb7959a4fb666eec15ae1b2c
+      internalID: -1775144783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_41
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 845
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c507179cdbc5f224f97aaa41aac353a8
+      internalID: 875691888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_42
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 795
+        width: 71
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d40b20a767e3f9d4aa88b29cb679bd10
+      internalID: -474177394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_43
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 834
+        width: 59
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c433ba774e76748a4c3159b39f5f46
+      internalID: -1402922828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_44
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 775
+        width: 52
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5e7125a4242c7a4c9eb2b4ca480360e
+      internalID: -1145312021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_45
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 840
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14af2bf166a676348aaa9fcf658529ea
+      internalID: -71492595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_46
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 825
+        width: 79
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14c8383e55ee154ba48c02fac869240
+      internalID: 393280932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_47
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 811
+        width: 40
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b275913faf3005549b9a2585338380b6
+      internalID: 1284729211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_48
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 847
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 407fe5cdf9424db40ba57d34f4f2ab8c
+      internalID: 2087385564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_49
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 849
+        width: 37
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fcab3b85edeece4780be5358ce9886f
+      internalID: 1819887343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_50
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 791
+        width: 60
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d72b07a2094c4e43a4ac5d305bd9419
+      internalID: 900290760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_51
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 818
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b3302e59fc4c194d93059d469bb818e
+      internalID: -1356093379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_52
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 818
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 995e26bfd10eb394ea39cc17d0ffe09e
+      internalID: 861244371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_53
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 783
+        width: 58
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 205091a0a0dfe5a4984996f589bdac06
+      internalID: -783154019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_54
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 783
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07adcec66beb5eb49827db4770c18657
+      internalID: 1617155228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_55
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 783
+        width: 56
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d0234a455f2b94c8ae1d0e8befeb53
+      internalID: -2082457301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_56
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 753
+        width: 52
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7432c2a6e7b92f94d92e2b8b979ba01e
+      internalID: 864064629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_57
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 758
+        width: 56
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31ba1c12c085084db2e508095a00e78
+      internalID: 554498915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_58
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 744
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ca95c9501435940a0223a015506106
+      internalID: 686696772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_59
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 736
+        width: 76
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33a251aeacabbf4409081fae4152ad07
+      internalID: 1987708289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_60
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 705
+        width: 54
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90e32e2a2d65a1c468be994541bc1cbe
+      internalID: 1209503053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_61
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 682
+        width: 56
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e3dd41e770a844ca89522ab8f7649c
+      internalID: -2059671279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_62
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 686
+        width: 49
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edfdd943131484142b30466761e148f1
+      internalID: 379323251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_63
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 676
+        width: 68
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 562707eaf5e146a4c921b83220936636
+      internalID: -632853200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_64
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 734
+        width: 18
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e5f5f3dc632a1241b0219912b9d1a6f
+      internalID: 816830582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_65
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 722
+        width: 54
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3402ea7fa7cac734db8b426c42951e1d
+      internalID: 1809012944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_66
+      rect:
+        serializedVersion: 2
+        x: 1885
+        y: 718
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49d8aa5a3d31024885badd43451ba81
+      internalID: 1078487175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_67
+      rect:
+        serializedVersion: 2
+        x: 1916
+        y: 739
+        width: 11
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b442fa96e589fd6439deeb55081db3c0
+      internalID: -974353418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_68
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 691
+        width: 60
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d013fc847e4c6ae47aed555db91ed1b5
+      internalID: 930536326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_69
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 679
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eda49e9dad992de4e8c6de06e64346d5
+      internalID: -769241196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_70
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 700
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d99c4cc9cd26cc843b73755b85bc96e3
+      internalID: -926304654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_71
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 727
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3e84402f2d13534cb81938c2d2f645a
+      internalID: -857048978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_72
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 730
+        width: 47
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a2331564b44dec42b89749043c548e1
+      internalID: -1126970073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_73
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 660
+        width: 70
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98aa46c43b70de8458655a41b5fd713a
+      internalID: 594811604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_74
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 707
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 501453f356222d04a8f59561dd418d31
+      internalID: 1143966619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_75
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 710
+        width: 47
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6a73cb7a0476d7438bd3bc49d23e149
+      internalID: 1088017658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_76
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 690
+        width: 14
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 679494f91173c0441a0512126fff57d8
+      internalID: -1414428948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_77
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 661
+        width: 63
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0573a0ca3845514d84ad94691b452fc
+      internalID: 1982858436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_78
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 626
+        width: 48
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03109c7303d6e0f45b2ec042826ae083
+      internalID: -1019977511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_79
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 644
+        width: 62
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18b6756f519ec246838665536797206
+      internalID: 1050348845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_80
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 686
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ae543917995314c90b4022e6d51b07
+      internalID: -61486026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_81
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 689
+        width: 47
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47ff1926a75d0041a29a286eaf2f2c1
+      internalID: -605318189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_82
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 614
+        width: 60
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436e5e9a10bc27e4a8eb9644dc0635a2
+      internalID: -1502299358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_83
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 609
+        width: 50
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 652d3e1420e0e6646b2673b4901d600d
+      internalID: 2042592347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_84
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 601
+        width: 75
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 115456c6ffae8d647a76fa30ce8adbda
+      internalID: 1138126485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_85
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 619
+        width: 74
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9d3b7e31ef1a2649a90fb44051563b2
+      internalID: 750510039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_86
+      rect:
+        serializedVersion: 2
+        x: 1462
+        y: 623
+        width: 69
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b46bec9f86ecd564cad8ef72142cda61
+      internalID: -698758102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_87
+      rect:
+        serializedVersion: 2
+        x: 1598
+        y: 633
+        width: 18
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3545e3f243bdbf4aadea5c8e7435c09
+      internalID: 1549107049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_88
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 617
+        width: 31
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d033614b4f2def946a2aabda1e0d3ad1
+      internalID: 1907582450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_89
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 638
+        width: 11
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444f7256c97876a48ae84a18bfebe90d
+      internalID: 699085083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_90
+      rect:
+        serializedVersion: 2
+        x: 1729
+        y: 626
+        width: 68
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba477ec3aa3f1a4aaf3755e403848ac
+      internalID: 49895659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_91
+      rect:
+        serializedVersion: 2
+        x: 1861
+        y: 585
+        width: 57
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e83fb5728121844ebc7038d447fbfc9
+      internalID: 125636629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_92
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 622
+        width: 62
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05471c56e17d526468a0f34d88b19467
+      internalID: -860735496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_93
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 471
+        width: 157
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ae2485b2b316a2489057f1bb72cc174
+      internalID: -35641092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_94
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 489
+        width: 122
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 574c1afc58ff5394aae3c766cd259714
+      internalID: 1905704874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_95
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 579
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd923dbd3d2e08f45b5af349785482ae
+      internalID: -741832366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_96
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 435
+        width: 164
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ccd4152bcd9de541a6d0db29ad7829d
+      internalID: 405756466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_97
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 547
+        width: 73
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2994cbd5da88ab046a9701d6540530db
+      internalID: 65361116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_98
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 551
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 362dff24ed8345343a274d8a70523480
+      internalID: 520856937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_99
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 551
+        width: 22
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f35098a6426ccde478e47c8c6fbf299c
+      internalID: 484540746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_100
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 548
+        width: 66
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 370ac72f293be2240a8e56925e0b7375
+      internalID: 1972666824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_101
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 586
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd851eeecf5c35429c879d8a8b6d7ae
+      internalID: 1946856120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_102
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 552
+        width: 62
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 235f42c0ab8698c408f005a9f81cc8a2
+      internalID: 35303103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_103
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 543
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f51c6a97afae18340ab7097f7ddae851
+      internalID: 1409237606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_104
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 546
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181417880a3793c4bbe37fc3def34819
+      internalID: -1704913753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_105
+      rect:
+        serializedVersion: 2
+        x: 1205
+        y: 488
+        width: 62
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8601cde555eb6194bba873c1a66331cd
+      internalID: -787451600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_106
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 501
+        width: 57
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a66e4b83e0166484fb2b5fc72330c476
+      internalID: 1128450389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_107
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 499
+        width: 48
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b05334133103af468522fdd0046b0f7
+      internalID: 1615666096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_108
+      rect:
+        serializedVersion: 2
+        x: 1729
+        y: 481
+        width: 69
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 955cf2966f8d8b648af321baf8aec76c
+      internalID: 2004614780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_109
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 507
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe9d9d607612d148854f41edc6d6e6d
+      internalID: -1159771245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_110
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 466
+        width: 68
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf9697a6930547c47aa543d9b68f2105
+      internalID: -735871426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_111
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 488
+        width: 67
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cdf4f4d18deec34197a30c62b83a4c1
+      internalID: -1620402556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_112
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 522
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4318ba94279c79943a3b59539b24c6d6
+      internalID: 2132037472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_113
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 522
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be4cfa03787571a41bb535f0da84923d
+      internalID: -1310107640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_114
+      rect:
+        serializedVersion: 2
+        x: 1882
+        y: 522
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5635cfe89339e4347b2c6dbcc3b48880
+      internalID: -1544181889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_115
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 471
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a580e94afdd93ef448ddfdec58f13ddc
+      internalID: 1390272524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_116
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 480
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 952389c01afddba48a37f333121b5eaa
+      internalID: -737370643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_117
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 485
+        width: 62
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a295f2e2497d444b806281f0cfab9b2
+      internalID: -1689386410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_118
+      rect:
+        serializedVersion: 2
+        x: 1833
+        y: 450
+        width: 64
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce834eb364d00c48bb383893dd6c52d
+      internalID: 515319530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_119
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 459
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c832f78da0a2442ab0150a55da0c67
+      internalID: 800061149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 243
+        width: 340
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6048de1057c543e4f8ce13178b6c9682
+      internalID: -245952888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_121
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 414
+        width: 72
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61abcc0b977437f4e9c409442d046980
+      internalID: -1881715789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_122
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 410
+        width: 67
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3a369ac0e211454fa57d6fb99b4e038
+      internalID: -76602731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_123
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 458
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e86a5c500fed7af48af03a6b0637ebd5
+      internalID: -1403180530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_124
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 458
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d85dcfaf6d1e16341a105ce3cbe903b9
+      internalID: -1806383978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_125
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 458
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dba73c89a6c945458762dad85899565
+      internalID: -2103093448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_126
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 417
+        width: 35
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a225c9e297c69064bbb62c37850e6076
+      internalID: -1431943924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_127
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 417
+        width: 34
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d6c72642b38604c8e5e262170a4bd2
+      internalID: 893561279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_128
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 436
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2038ec6e26c91894a9587e1e84486ada
+      internalID: -16963886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_129
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 436
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8b29c6069906d74d9a5b6e6d586b566
+      internalID: -187976754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_130
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 436
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab425bc546c5fe4c8a051efc1eaf799
+      internalID: 13350665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_131
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 378
+        width: 62
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d74860dcded20124fabb4bd5a9677ce0
+      internalID: 1665015445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_132
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 375
+        width: 46
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97bbaf8fef90ad74d9004ddcecfe8db2
+      internalID: -1767345580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_133
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 146
+        width: 298
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15e8fae797d7dbf43a1cf302d46d038c
+      internalID: 1853072646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_134
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 243
+        width: 188
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f64cd196f727ff40a279305fe6c7f69
+      internalID: -825197999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_135
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 378
+        width: 64
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49df3741d306bbb4da75e8922618b83c
+      internalID: -784169014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_136
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 378
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab53a7b94c776b244aeeee824d936624
+      internalID: -48716538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_137
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 414
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92e80691f4dc7bf499f3ad1b5e5e0d5c
+      internalID: -1407054486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_138
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 414
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a66e3b08a162f5548b7b35feea3b56d4
+      internalID: -1876083058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_139
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 414
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 025e1133fd0f99b44b7338d76f82c02b
+      internalID: -2024600595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_140
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 175
+        width: 241
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d82fe4b67073254686e9a326dfbd5a3
+      internalID: 976220966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_141
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 321
+        width: 67
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b03e63e2d6acb49be9986443a62a0a
+      internalID: 185477065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_142
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 352
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c2bbd777c28b24cab9c2f2e41ef909
+      internalID: 1825470679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_143
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 316
+        width: 64
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e1f84004f849a468ab35a58d398ee3
+      internalID: -841278941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_144
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 286
+        width: 70
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dbc151648c45b943a6e61efece87d2f
+      internalID: 1675845252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_145
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 277
+        width: 70
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0154734ef0e94d643bddcc07c66699ae
+      internalID: 1698303884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_146
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 273
+        width: 79
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1714ceac3ff85df40a591e80a3893a30
+      internalID: -283317532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_147
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 291
+        width: 75
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d5a26632f151a44bb08ddd766df6282
+      internalID: -867190979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_148
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 321
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 448fb71ddc492fe48b62bbb38a2ca8a5
+      internalID: -1144436847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_149
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 303
+        width: 75
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a83acadf82e0d24cbb750088e50effb
+      internalID: 655209086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_150
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 243
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f0ef33094b1994f80bea4c1b634b7f
+      internalID: -1489336226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_151
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 279
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d655818a76b066545b32fe29dc09ecac
+      internalID: -95896950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_152
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 275
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 820312cb27bc948479f1d416ddb7219b
+      internalID: -410405060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_153
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 275
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c8106a84fa665459f9597fbf202a0a
+      internalID: -1009345473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_154
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 243
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c72e17e6af108934c896f7ceafb63a73
+      internalID: 347811824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_155
+      rect:
+        serializedVersion: 2
+        x: 1933
+        y: 205
+        width: 60
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4762d7973561aea44be846bed600fa08
+      internalID: 1367280798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_156
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 644
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b92a772ceb7dbf4439e3df17ce1cfd1d
+      internalID: -1505782902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_157
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 0
+        width: 644
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63d086ee8d6a59a4d96b816d5f7d0d7d
+      internalID: 1942860898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_158
+      rect:
+        serializedVersion: 2
+        x: 1940
+        y: 179
+        width: 59
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a803b9bdd6ca38b409f75d17dc07c20f
+      internalID: 1340842586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_159
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 0
+        width: 644
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1aea3122d3c92346a09a819fee0c943
+      internalID: -1099825771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile Cartoon GUI Theme 01_160
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 0
+        width: 90
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c3eed6701ab6d41981d262947e87f3
+      internalID: 1638625856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Mobile Cartoon GUI Theme 01_0: 1728125087
+      Mobile Cartoon GUI Theme 01_1: 10082749
+      Mobile Cartoon GUI Theme 01_10: -224813646
+      Mobile Cartoon GUI Theme 01_100: 1972666824
+      Mobile Cartoon GUI Theme 01_101: 1946856120
+      Mobile Cartoon GUI Theme 01_102: 35303103
+      Mobile Cartoon GUI Theme 01_103: 1409237606
+      Mobile Cartoon GUI Theme 01_104: -1704913753
+      Mobile Cartoon GUI Theme 01_105: -787451600
+      Mobile Cartoon GUI Theme 01_106: 1128450389
+      Mobile Cartoon GUI Theme 01_107: 1615666096
+      Mobile Cartoon GUI Theme 01_108: 2004614780
+      Mobile Cartoon GUI Theme 01_109: -1159771245
+      Mobile Cartoon GUI Theme 01_11: 415414952
+      Mobile Cartoon GUI Theme 01_110: -735871426
+      Mobile Cartoon GUI Theme 01_111: -1620402556
+      Mobile Cartoon GUI Theme 01_112: 2132037472
+      Mobile Cartoon GUI Theme 01_113: -1310107640
+      Mobile Cartoon GUI Theme 01_114: -1544181889
+      Mobile Cartoon GUI Theme 01_115: 1390272524
+      Mobile Cartoon GUI Theme 01_116: -737370643
+      Mobile Cartoon GUI Theme 01_117: -1689386410
+      Mobile Cartoon GUI Theme 01_118: 515319530
+      Mobile Cartoon GUI Theme 01_119: 800061149
+      Mobile Cartoon GUI Theme 01_12: -381618838
+      Mobile Cartoon GUI Theme 01_120: -245952888
+      Mobile Cartoon GUI Theme 01_121: -1881715789
+      Mobile Cartoon GUI Theme 01_122: -76602731
+      Mobile Cartoon GUI Theme 01_123: -1403180530
+      Mobile Cartoon GUI Theme 01_124: -1806383978
+      Mobile Cartoon GUI Theme 01_125: -2103093448
+      Mobile Cartoon GUI Theme 01_126: -1431943924
+      Mobile Cartoon GUI Theme 01_127: 893561279
+      Mobile Cartoon GUI Theme 01_128: -16963886
+      Mobile Cartoon GUI Theme 01_129: -187976754
+      Mobile Cartoon GUI Theme 01_13: -1304734688
+      Mobile Cartoon GUI Theme 01_130: 13350665
+      Mobile Cartoon GUI Theme 01_131: 1665015445
+      Mobile Cartoon GUI Theme 01_132: -1767345580
+      Mobile Cartoon GUI Theme 01_133: 1853072646
+      Mobile Cartoon GUI Theme 01_134: -825197999
+      Mobile Cartoon GUI Theme 01_135: -784169014
+      Mobile Cartoon GUI Theme 01_136: -48716538
+      Mobile Cartoon GUI Theme 01_137: -1407054486
+      Mobile Cartoon GUI Theme 01_138: -1876083058
+      Mobile Cartoon GUI Theme 01_139: -2024600595
+      Mobile Cartoon GUI Theme 01_14: 2070628948
+      Mobile Cartoon GUI Theme 01_140: 976220966
+      Mobile Cartoon GUI Theme 01_141: 185477065
+      Mobile Cartoon GUI Theme 01_142: 1825470679
+      Mobile Cartoon GUI Theme 01_143: -841278941
+      Mobile Cartoon GUI Theme 01_144: 1675845252
+      Mobile Cartoon GUI Theme 01_145: 1698303884
+      Mobile Cartoon GUI Theme 01_146: -283317532
+      Mobile Cartoon GUI Theme 01_147: -867190979
+      Mobile Cartoon GUI Theme 01_148: -1144436847
+      Mobile Cartoon GUI Theme 01_149: 655209086
+      Mobile Cartoon GUI Theme 01_15: 1635558374
+      Mobile Cartoon GUI Theme 01_150: -1489336226
+      Mobile Cartoon GUI Theme 01_151: -95896950
+      Mobile Cartoon GUI Theme 01_152: -410405060
+      Mobile Cartoon GUI Theme 01_153: -1009345473
+      Mobile Cartoon GUI Theme 01_154: 347811824
+      Mobile Cartoon GUI Theme 01_155: 1367280798
+      Mobile Cartoon GUI Theme 01_156: -1505782902
+      Mobile Cartoon GUI Theme 01_157: 1942860898
+      Mobile Cartoon GUI Theme 01_158: 1340842586
+      Mobile Cartoon GUI Theme 01_159: -1099825771
+      Mobile Cartoon GUI Theme 01_16: -1720822513
+      Mobile Cartoon GUI Theme 01_160: 1638625856
+      Mobile Cartoon GUI Theme 01_17: -1061897533
+      Mobile Cartoon GUI Theme 01_18: 411350047
+      Mobile Cartoon GUI Theme 01_19: -496452477
+      Mobile Cartoon GUI Theme 01_2: 918961851
+      Mobile Cartoon GUI Theme 01_20: 2003596328
+      Mobile Cartoon GUI Theme 01_21: 37682384
+      Mobile Cartoon GUI Theme 01_22: -1569367206
+      Mobile Cartoon GUI Theme 01_23: -2042424164
+      Mobile Cartoon GUI Theme 01_24: 108693403
+      Mobile Cartoon GUI Theme 01_25: 44121955
+      Mobile Cartoon GUI Theme 01_26: -1273659541
+      Mobile Cartoon GUI Theme 01_27: -455955879
+      Mobile Cartoon GUI Theme 01_28: 1981391106
+      Mobile Cartoon GUI Theme 01_29: -873105424
+      Mobile Cartoon GUI Theme 01_3: 1891744205
+      Mobile Cartoon GUI Theme 01_30: -484270124
+      Mobile Cartoon GUI Theme 01_31: -1745416512
+      Mobile Cartoon GUI Theme 01_32: -669099121
+      Mobile Cartoon GUI Theme 01_33: -1672131788
+      Mobile Cartoon GUI Theme 01_34: 1838863679
+      Mobile Cartoon GUI Theme 01_35: -133427648
+      Mobile Cartoon GUI Theme 01_36: -236851586
+      Mobile Cartoon GUI Theme 01_37: 15366961
+      Mobile Cartoon GUI Theme 01_38: 224015757
+      Mobile Cartoon GUI Theme 01_39: -241284222
+      Mobile Cartoon GUI Theme 01_4: -648306640
+      Mobile Cartoon GUI Theme 01_40: -1775144783
+      Mobile Cartoon GUI Theme 01_41: 875691888
+      Mobile Cartoon GUI Theme 01_42: -474177394
+      Mobile Cartoon GUI Theme 01_43: -1402922828
+      Mobile Cartoon GUI Theme 01_44: -1145312021
+      Mobile Cartoon GUI Theme 01_45: -71492595
+      Mobile Cartoon GUI Theme 01_46: 393280932
+      Mobile Cartoon GUI Theme 01_47: 1284729211
+      Mobile Cartoon GUI Theme 01_48: 2087385564
+      Mobile Cartoon GUI Theme 01_49: 1819887343
+      Mobile Cartoon GUI Theme 01_5: 883657091
+      Mobile Cartoon GUI Theme 01_50: 900290760
+      Mobile Cartoon GUI Theme 01_51: -1356093379
+      Mobile Cartoon GUI Theme 01_52: 861244371
+      Mobile Cartoon GUI Theme 01_53: -783154019
+      Mobile Cartoon GUI Theme 01_54: 1617155228
+      Mobile Cartoon GUI Theme 01_55: -2082457301
+      Mobile Cartoon GUI Theme 01_56: 864064629
+      Mobile Cartoon GUI Theme 01_57: 554498915
+      Mobile Cartoon GUI Theme 01_58: 686696772
+      Mobile Cartoon GUI Theme 01_59: 1987708289
+      Mobile Cartoon GUI Theme 01_6: -1245855229
+      Mobile Cartoon GUI Theme 01_60: 1209503053
+      Mobile Cartoon GUI Theme 01_61: -2059671279
+      Mobile Cartoon GUI Theme 01_62: 379323251
+      Mobile Cartoon GUI Theme 01_63: -632853200
+      Mobile Cartoon GUI Theme 01_64: 816830582
+      Mobile Cartoon GUI Theme 01_65: 1809012944
+      Mobile Cartoon GUI Theme 01_66: 1078487175
+      Mobile Cartoon GUI Theme 01_67: -974353418
+      Mobile Cartoon GUI Theme 01_68: 930536326
+      Mobile Cartoon GUI Theme 01_69: -769241196
+      Mobile Cartoon GUI Theme 01_7: -1390917493
+      Mobile Cartoon GUI Theme 01_70: -926304654
+      Mobile Cartoon GUI Theme 01_71: -857048978
+      Mobile Cartoon GUI Theme 01_72: -1126970073
+      Mobile Cartoon GUI Theme 01_73: 594811604
+      Mobile Cartoon GUI Theme 01_74: 1143966619
+      Mobile Cartoon GUI Theme 01_75: 1088017658
+      Mobile Cartoon GUI Theme 01_76: -1414428948
+      Mobile Cartoon GUI Theme 01_77: 1982858436
+      Mobile Cartoon GUI Theme 01_78: -1019977511
+      Mobile Cartoon GUI Theme 01_79: 1050348845
+      Mobile Cartoon GUI Theme 01_8: 718931226
+      Mobile Cartoon GUI Theme 01_80: -61486026
+      Mobile Cartoon GUI Theme 01_81: -605318189
+      Mobile Cartoon GUI Theme 01_82: -1502299358
+      Mobile Cartoon GUI Theme 01_83: 2042592347
+      Mobile Cartoon GUI Theme 01_84: 1138126485
+      Mobile Cartoon GUI Theme 01_85: 750510039
+      Mobile Cartoon GUI Theme 01_86: -698758102
+      Mobile Cartoon GUI Theme 01_87: 1549107049
+      Mobile Cartoon GUI Theme 01_88: 1907582450
+      Mobile Cartoon GUI Theme 01_89: 699085083
+      Mobile Cartoon GUI Theme 01_9: 592512521
+      Mobile Cartoon GUI Theme 01_90: 49895659
+      Mobile Cartoon GUI Theme 01_91: 125636629
+      Mobile Cartoon GUI Theme 01_92: -860735496
+      Mobile Cartoon GUI Theme 01_93: -35641092
+      Mobile Cartoon GUI Theme 01_94: 1905704874
+      Mobile Cartoon GUI Theme 01_95: -741832366
+      Mobile Cartoon GUI Theme 01_96: 405756466
+      Mobile Cartoon GUI Theme 01_97: 65361116
+      Mobile Cartoon GUI Theme 01_98: 520856937
+      Mobile Cartoon GUI Theme 01_99: 484540746
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
