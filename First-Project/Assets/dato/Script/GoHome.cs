@@ -22,7 +22,8 @@ public class GoHome : MonoBehaviour
 
     public float Currect_Slid;
     public float Full_Slid;
-    
+
+    MusicManager musicManager;
    private void Start()
     {
         
