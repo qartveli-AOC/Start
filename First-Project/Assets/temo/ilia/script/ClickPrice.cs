@@ -50,6 +50,9 @@ public class ClickPrice : MonoBehaviour
         Daimond_Num = PlayerPrefs.GetInt("diamond", 0);
         Show_Score.text = Score.ToString();
         Daimond_Text.text = Daimond_Num.ToString();
+        One_Auto_Price.text = One_Auto_Cost.ToString() + "  Auto click 1/s";
+        Click_Price.text = Click_Cost.ToString() + "   One click";
+
     }
     void Start()
     {      
@@ -99,11 +102,9 @@ public class ClickPrice : MonoBehaviour
     public void One_Auto_Shop()
     {        
         if (Score >= One_Auto_Cost)
-        {
-            One_Auto_Price.text = One_Auto_Cost.ToString() + "  Auto click 1/s"; 
+        {           
             Score -= One_Auto_Cost;
-            One_Auto_Cost *= 2;
-            Show_Score.text = Score.ToString();
+            One_Auto_Cost *= 2;           
             One_Auto_Price.text = One_Auto_Cost.ToString() + "  Auto click 1/s";
             _auto_Click_Num++;
             if(!_check_Turn_B)
@@ -125,7 +126,6 @@ public class ClickPrice : MonoBehaviour
     {
         if (Score >= Click_Cost)
         {
-            Click_Price.text = Click_Cost.ToString() + "   One click";
             Score -= Click_Cost;
             Click_Cost *= 2;
             Show_Score.text = Score.ToString();
