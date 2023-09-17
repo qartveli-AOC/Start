@@ -5,12 +5,10 @@ using TMPro;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 using Unity.VisualScripting;
-
+using UnityEngine.SceneManagement;
 
 public class ClickPrice : MonoBehaviour
 {
-    public Animator Chest_Open;
-
     private bool _check_Turn_B=false;
 
     private int _auto_Click_Num = 0;
@@ -22,8 +20,13 @@ public class ClickPrice : MonoBehaviour
     public float Level_Full_Num;
     public int Daimond_Num;
 
+    public Button Home_Button;
     public Button Auto_Button;
     public Button Click_Button;
+    public Button Ten_Click_Button;
+    public Button Dable_Click_Button;
+    public Button Diamond_10sec_Button;
+    public Button Diamond_1sec_Button;
     
     public Button Count_Button;
     
@@ -42,6 +45,8 @@ public class ClickPrice : MonoBehaviour
     public Transform Birds_Spawn_Position;
     public Transform Canvas_posI;
 
+    public  Trash_Generator Trash_Generator_Cs;
+    public MusicManager musicManager;
 
     private void Awake()
     {
@@ -56,20 +61,29 @@ public class ClickPrice : MonoBehaviour
     }
     void Start()
     {      
-        Count = 1;     
-       
+        Count = 1;
+        Home_Button.onClick.AddListener(Go_Home);
         Auto_Button.onClick.AddListener(One_Auto_Shop);
         Click_Button.onClick.AddListener(One_Click_Shop);
         Level_Slider.value = 0;
-        Count_Button.onClick.AddListener(Click);     
+        Count_Button.onClick.AddListener(Click);
+        PlayerPrefs.GetInt("rep", 0);
     }
-   
+   void Go_Home()
+    {
+        musicManager.repeatCount++;
+        PlayerPrefs.SetInt("rep", musicManager.repeatCount);
+        musicManager.Check();
+        SceneManager.LoadScene(0);
+
+    }
    
 
     public  void Click()
     {      
+        Trash_Generator_Cs.CreateTrash();
         Score += Count;
-        Show_Score.text = Score.ToString();
+        Show_Score.text = Score.ToString();       
         Coin_Sound.Play();
        
         if (Current_Level_Num<=Level_Full_Num)
