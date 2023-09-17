@@ -23,7 +23,11 @@ public class MusicManager : MonoBehaviour
         audioSource.clip = songs[1];
         audioSource.Play();
     }
-  
+  public void Check()
+    {
+        Debug.Log(repeatCount + "check");
+    }
+
     void Update()
     {
 

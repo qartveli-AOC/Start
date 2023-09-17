@@ -8,7 +8,7 @@ public class GoHome : MonoBehaviour
 {
     public Button Button_Go_Home;
     public Button[] Button_Upgrade_Click;
-    public Button Chect_Button;
+    public Button Chest_Button;
 
     public Slider Slider_Upgrade_Answer;
     public Slider[] Slider_Upgrade_Click;
@@ -39,16 +39,17 @@ public class GoHome : MonoBehaviour
     public float Currect_Slid;
     public float Full_Slid;
 
-    MusicManager musicManager;
+    public MusicManager musicManager;
+
    private void Start()
     {
-        
+        PlayerPrefs.GetInt("rep", 0);
         Currect_Slid = 0;
         Button_Go_Home.onClick.AddListener(GoHomeClick);
         Button_Upgrade_Click[0].onClick.AddListener(SliderAnswer1);
         Button_Upgrade_Click[1].onClick.AddListener(SliderAnswer2);
         Button_Upgrade_Click[2].onClick.AddListener(SliderAnswer3);
-        Chect_Button.onClick.AddListener(ChectClick);
+        Chest_Button.onClick.AddListener(ChectClick);
     }
 
     private void FixedUpdate()
@@ -63,7 +64,12 @@ public class GoHome : MonoBehaviour
 
     private void GoHomeClick()
     {
+        musicManager.repeatCount++;
+        musicManager.Check();
+        PlayerPrefs.SetInt("rep",musicManager.repeatCount++);
         SceneManager.LoadScene(1);
+        
+        musicManager.Check();
         Transform_Buttons[3].localScale = new Vector3 (1.1f, 1.1f, 1.1f);
         StartCoroutine(ForButtonClicable());
     }
