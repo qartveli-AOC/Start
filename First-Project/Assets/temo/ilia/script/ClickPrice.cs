@@ -18,7 +18,7 @@ public class ClickPrice : MonoBehaviour
     public int One_Auto_Cost = 50;
     public float Current_Level_Num;
     public float Level_Full_Num;
-    public int Daimond_Num;
+    public static int Daimond_Num;
 
     public Button Home_Button;
     public Button Auto_Button;
