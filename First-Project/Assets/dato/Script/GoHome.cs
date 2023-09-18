@@ -1,11 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GoHome : MonoBehaviour
 {
+    public TextMeshProUGUI Text_Daimond_Home;
+    public TextMeshProUGUI Price_Update_Text1;
+    public TextMeshProUGUI Price_Update_Text2;
+    public TextMeshProUGUI Price_Update_Text3;
+
+    public int Price_Update_Num_1;
+    public int Price_Update_Num_2;
+    public int Price_Update_Num_3;
+
+
     public Button Button_Go_Home;
     public Button[] Button_Upgrade_Click;
     public Button Chest_Button;
@@ -39,12 +50,35 @@ public class GoHome : MonoBehaviour
     public float Currect_Slid;
     public float Full_Slid;
 
-    public MusicManager musicManager;
-
-   private void Start()
+    private void Awake()
     {
-        PlayerPrefs.GetInt("rep", 0);
-        Currect_Slid = 0;
+        Currect_Slid = PlayerPrefs.GetFloat("SaveSliderLid", 0);
+        Currect_Slider_Click_1 = PlayerPrefs.GetFloat("sav10", 0);
+        Currect_Slider_Click_2 = PlayerPrefs.GetFloat("sav11", 0);
+        Currect_Slider_Click_3 = PlayerPrefs.GetFloat("sav12", 0);
+
+      
+    }
+
+
+    private void Start()
+    {   
+        Text_Daimond_Home.text = ClickPrice.Daimond_Num.ToString();
+        
+        Price_Update_Text1.text = Price_Update_Num_1.ToString();
+        Price_Update_Text2.text = Price_Update_Num_2.ToString();
+        Price_Update_Text3.text = Price_Update_Num_3.ToString();
+
+
+        Slider_Upgrade_Answer.value = Currect_Slid / Full_Slid;
+        Slider_Upgrade_Click[0].value = Currect_Slider_Click_1 / Fuul_Slider_Click_1;
+        Slider_Upgrade_Click[1].value = Currect_Slider_Click_2 / Fuul_Slider_Click_2;
+        Slider_Upgrade_Click[2].value = Currect_Slider_Click_3 / Fuul_Slider_Click_3;
+
+
+
+
+
         Button_Go_Home.onClick.AddListener(GoHomeClick);
         Button_Upgrade_Click[0].onClick.AddListener(SliderAnswer1);
         Button_Upgrade_Click[1].onClick.AddListener(SliderAnswer2);
@@ -64,12 +98,18 @@ public class GoHome : MonoBehaviour
 
     private void GoHomeClick()
     {
-        musicManager.repeatCount++;
-        musicManager.Check();
-        PlayerPrefs.SetInt("rep",musicManager.repeatCount++);
+        PlayerPrefs.SetFloat("SaveSliderLid", Currect_Slid);
+        PlayerPrefs.SetFloat("sav10", Currect_Slider_Click_1);
+        PlayerPrefs.SetFloat("sav11", Currect_Slider_Click_2);
+        PlayerPrefs.SetFloat("sav12", Currect_Slider_Click_3);
+
+     
+
+        
+        PlayerPrefs.Save();
         SceneManager.LoadScene(1);
         
-        musicManager.Check();
+      
         Transform_Buttons[3].localScale = new Vector3 (1.1f, 1.1f, 1.1f);
         StartCoroutine(ForButtonClicable());
     }
@@ -78,18 +118,24 @@ public class GoHome : MonoBehaviour
     { 
         Transform_Buttons[0].localScale = new Vector3(1.2f,1.2f,1.2f);
         StartCoroutine(ForButtonClicable());
-        if (Currect_Slid<Full_Slid)
-        {   if(Currect_Slider_Click_1<Fuul_Slider_Click_1)
+        if(ClickPrice.Daimond_Num>= Price_Update_Num_1)
+        {
+            if (Currect_Slid < Full_Slid)
             {
-                Currect_Slid++;
-                
-                NextSprite1();
-              
-                
+                if (Currect_Slider_Click_1 < Fuul_Slider_Click_1)
+                {
+                    Currect_Slid++;
+
+                    NextSprite1();
+
+
+                }
+
             }
-            
+            SliderMassivClick();
         }
-        SliderMassivClick();
+       
+       
         if (Currect_Slid == Full_Slid)
         {
             Currect_Slid = 0;
@@ -109,17 +155,22 @@ public class GoHome : MonoBehaviour
     {
         Transform_Buttons[1].localScale = new Vector3(1.2f, 1.2f, 1.2f);
         StartCoroutine(ForButtonClicable());
-        if (Currect_Slid < Full_Slid)
-        {   if(Currect_Slider_Click_2<Fuul_Slider_Click_2)
+        if (ClickPrice.Daimond_Num >= Price_Update_Num_2)
+        {
+            if (Currect_Slid < Full_Slid)
             {
-                Currect_Slid++;
-                
-                NextSprite2();
-               
+                if (Currect_Slider_Click_2 < Fuul_Slider_Click_2)
+                {
+                    Currect_Slid++;
+
+                    NextSprite2();
+
+                }
+
             }
-            
+            SliderMassivClick2();
         }
-        SliderMassivClick2();
+       
         if (Currect_Slid == Full_Slid)
         {
             Currect_Slid = 0;
@@ -139,18 +190,25 @@ public class GoHome : MonoBehaviour
     {
         Transform_Buttons[2].localScale = new Vector3(1.2f, 1.2f, 1.2f);
         StartCoroutine(ForButtonClicable());
-        if (Currect_Slid < Full_Slid)
-        {   if(Currect_Slider_Click_3<Fuul_Slider_Click_3)
+        if (ClickPrice.Daimond_Num >= Price_Update_Num_1)
+        {
+
+
+            if (Currect_Slid < Full_Slid)
             {
-                Currect_Slid++;
-            
-                NextSprite3();
-               
+                if (Currect_Slider_Click_3 < Fuul_Slider_Click_3)
+                {
+                    Currect_Slid++;
+
+                    NextSprite3();
+
+
+                }
 
             }
-            
+            SliderMassivClick3();
         }
-        SliderMassivClick3();
+     
         if (Currect_Slid == Full_Slid)
         {
             Currect_Slid = 0;
@@ -168,6 +226,8 @@ public class GoHome : MonoBehaviour
     {   if(Currect_Slider_Click_1<Fuul_Slider_Click_1)
         {
             Currect_Slider_Click_1++;
+            ClickPrice.Daimond_Num -= Price_Update_Num_1;
+            Text_Daimond_Home.text = ClickPrice.Daimond_Num.ToString();
         }
         
         Slider_Upgrade_Click[0].value = Currect_Slider_Click_1 / Fuul_Slider_Click_1;
@@ -178,6 +238,8 @@ public class GoHome : MonoBehaviour
     {   if(Currect_Slider_Click_2<Fuul_Slider_Click_2)
         {
             Currect_Slider_Click_2++;
+            ClickPrice.Daimond_Num -= Price_Update_Num_2;
+            Text_Daimond_Home.text = ClickPrice.Daimond_Num.ToString();
         }
         
         Slider_Upgrade_Click[1].value = Currect_Slider_Click_2 / Fuul_Slider_Click_2;
@@ -188,6 +250,8 @@ public class GoHome : MonoBehaviour
     {   if(Currect_Slider_Click_3<Fuul_Slider_Click_3)
         {
             Currect_Slider_Click_3++;
+            ClickPrice.Daimond_Num -= Price_Update_Num_3;
+            Text_Daimond_Home.text = ClickPrice.Daimond_Num.ToString();
         }
         
         Slider_Upgrade_Click[2].value = Currect_Slider_Click_3 / Fuul_Slider_Click_3;

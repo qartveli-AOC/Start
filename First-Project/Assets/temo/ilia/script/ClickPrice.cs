@@ -50,9 +50,9 @@ public class ClickPrice : MonoBehaviour
 
     private void Awake()
     {
-        
+       
         Score = PlayerPrefs.GetInt("coin", 0);
-        Daimond_Num = PlayerPrefs.GetInt("diamond", 0);
+       
         Show_Score.text = Score.ToString();
         Daimond_Text.text = Daimond_Num.ToString();
         One_Auto_Price.text = One_Auto_Cost.ToString() + "  Auto click 1/s";
@@ -75,7 +75,7 @@ public class ClickPrice : MonoBehaviour
         PlayerPrefs.SetInt("rep", musicManager.repeatCount);
         musicManager.Check();
         SceneManager.LoadScene(0);
-
+        PlayerPrefs.SetInt("coin", Score);
     }
    
 
@@ -109,7 +109,7 @@ public class ClickPrice : MonoBehaviour
     private void OnApplicationQuit()
     {
         PlayerPrefs.SetInt("coin",Score); 
-        PlayerPrefs.SetInt("diamond",Daimond_Num);
+        
         PlayerPrefs.Save();
     }
 

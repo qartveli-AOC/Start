@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3411,7 +3411,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1835942768}
   - component: {fileID: 1835942769}
-  - component: {fileID: 1835942770}
   m_Layer: 0
   m_Name: Starter_Home
   m_TagString: Untagged
@@ -3446,12 +3445,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfac45806a706834ab85e4208019b23e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Text_Daimond_Home: {fileID: 458797769}
+  Price_Update_Text1: {fileID: 301026702}
+  Price_Update_Text2: {fileID: 360128598}
+  Price_Update_Text3: {fileID: 976381416}
+  Price_Update_Num_1: 10
+  Price_Update_Num_2: 10
+  Price_Update_Num_3: 10
   Button_Go_Home: {fileID: 1358022639}
   Button_Upgrade_Click:
   - {fileID: 1435764972}
   - {fileID: 426308242}
   - {fileID: 564275514}
-  Chest_Button: {fileID: 1435764972}
+  Chest_Button: {fileID: 492490876}
   Slider_Upgrade_Answer: {fileID: 1954833416}
   Slider_Upgrade_Click:
   - {fileID: 1795767729}
@@ -3488,22 +3494,6 @@ MonoBehaviour:
   Fuul_Slider_Click_3: 3
   Currect_Slid: 0
   Full_Slid: 9
-  musicManager: {fileID: 1835942770}
---- !u!114 &1835942770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1835942767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b70267f4057ab14cb09dcb74b9e7f30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  songs: []
-  repeatCount: 0
-  bt: {fileID: 426308242}
 --- !u!1 &1846265248
 GameObject:
   m_ObjectHideFlags: 0
@@ -3590,7 +3580,7 @@ GameObject:
   - component: {fileID: 1954833415}
   - component: {fileID: 1954833416}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: Slider_Answer_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3831,7 +3821,7 @@ GameObject:
   - component: {fileID: 2036764548}
   - component: {fileID: 2036764547}
   m_Layer: 5
-  m_Name: Bochka_Image
+  m_Name: Home_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
