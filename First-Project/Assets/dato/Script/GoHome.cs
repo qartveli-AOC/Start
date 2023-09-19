@@ -34,9 +34,9 @@ public class GoHome : MonoBehaviour
     public Sprite[] Sprite_img_1;
     public Sprite[] Sprite_img_2;
     public Sprite[] Sprite_img_3;
-    private int _currentSpriteIndex_Num_1 = 0;
-    private int _currentSpriteIndex_Num_2 = 0;
-    private int _currentSpriteIndex_Num_3 = 0;
+    public int _currentSpriteIndex_Num_1 = 0;
+    public int _currentSpriteIndex_Num_2 = 0;
+    public int _currentSpriteIndex_Num_3 = 0;
 
     public float Currect_Slider_Click_1;
     public float Fuul_Slider_Click_1;
@@ -57,8 +57,13 @@ public class GoHome : MonoBehaviour
         Currect_Slider_Click_2 = PlayerPrefs.GetFloat("sav11", 0);
         Currect_Slider_Click_3 = PlayerPrefs.GetFloat("sav12", 0);
 
-      
+
+        _currentSpriteIndex_Num_1 = PlayerPrefs.GetInt("SaveSprite100", 0);
+        _currentSpriteIndex_Num_2 = PlayerPrefs.GetInt("SaveSprite200", 0);
+        _currentSpriteIndex_Num_3 = PlayerPrefs.GetInt("SaveSprite300", 0);
+
     }
+
 
 
     private void Start()
@@ -74,6 +79,8 @@ public class GoHome : MonoBehaviour
         Slider_Upgrade_Click[0].value = Currect_Slider_Click_1 / Fuul_Slider_Click_1;
         Slider_Upgrade_Click[1].value = Currect_Slider_Click_2 / Fuul_Slider_Click_2;
         Slider_Upgrade_Click[2].value = Currect_Slider_Click_3 / Fuul_Slider_Click_3;
+
+       
 
 
 
@@ -93,8 +100,29 @@ public class GoHome : MonoBehaviour
         Slider_Upgrade_Click[1].value = Currect_Slider_Click_2 / Fuul_Slider_Click_2;
         Slider_Upgrade_Click[2].value = Currect_Slider_Click_3 / Fuul_Slider_Click_3;
 
-    }
 
+        
+        Upgrade_Img_1.sprite = Sprite_img_1[_currentSpriteIndex_Num_1];
+        Upgrade_Img_2.sprite = Sprite_img_2[_currentSpriteIndex_Num_2];
+        Upgrade_Img_3.sprite = Sprite_img_3[_currentSpriteIndex_Num_3];
+
+
+
+
+    }
+    private void OnApplicationQuit()
+    {
+
+        PlayerPrefs.SetFloat("SaveSliderLid", Currect_Slid);
+        PlayerPrefs.SetFloat("sav10", Currect_Slider_Click_1);
+        PlayerPrefs.SetFloat("sav11", Currect_Slider_Click_2);
+        PlayerPrefs.SetFloat("sav12", Currect_Slider_Click_3);
+
+        PlayerPrefs.SetInt("SaveSprite100", _currentSpriteIndex_Num_1);
+        PlayerPrefs.SetInt("SaveSprite200", _currentSpriteIndex_Num_2);
+        PlayerPrefs.SetInt("SaveSprite300", _currentSpriteIndex_Num_3);
+        PlayerPrefs.Save();
+    }
 
     private void GoHomeClick()
     {
@@ -103,9 +131,9 @@ public class GoHome : MonoBehaviour
         PlayerPrefs.SetFloat("sav11", Currect_Slider_Click_2);
         PlayerPrefs.SetFloat("sav12", Currect_Slider_Click_3);
 
-     
-
-        
+        PlayerPrefs.SetInt("SaveSprite100", _currentSpriteIndex_Num_1);
+        PlayerPrefs.SetInt("SaveSprite200", _currentSpriteIndex_Num_2);
+        PlayerPrefs.SetInt("SaveSprite300", _currentSpriteIndex_Num_3);
         PlayerPrefs.Save();
         SceneManager.LoadScene(1);
         
@@ -113,29 +141,24 @@ public class GoHome : MonoBehaviour
         Transform_Buttons[3].localScale = new Vector3 (1.1f, 1.1f, 1.1f);
         StartCoroutine(ForButtonClicable());
     }
-   
+
     private void SliderAnswer1()
-    { 
-        Transform_Buttons[0].localScale = new Vector3(1.2f,1.2f,1.2f);
+    {
+        Transform_Buttons[0].localScale = new Vector3(1.2f, 1.2f, 1.2f);
         StartCoroutine(ForButtonClicable());
-        if(ClickPrice.Daimond_Num>= Price_Update_Num_1)
+        if (ClickPrice.Daimond_Num >= Price_Update_Num_1)
         {
             if (Currect_Slid < Full_Slid)
             {
                 if (Currect_Slider_Click_1 < Fuul_Slider_Click_1)
                 {
-                    Currect_Slid++;
-
-                    NextSprite1();
-
-
+                    NextSprite1(); 
+                    Currect_Slid++; 
                 }
-
             }
             SliderMassivClick();
         }
-       
-       
+
         if (Currect_Slid == Full_Slid)
         {
             Currect_Slid = 0;
@@ -144,10 +167,8 @@ public class GoHome : MonoBehaviour
             Currect_Slider_Click_3 = 0;
             Slider_Upgrade_Click[0].value = 0;
         }
-        
-        Slider_Upgrade_Answer.value = Currect_Slid/Full_Slid;
-        
 
+        Slider_Upgrade_Answer.value = Currect_Slid / Full_Slid;
     }
 
 
@@ -161,9 +182,10 @@ public class GoHome : MonoBehaviour
             {
                 if (Currect_Slider_Click_2 < Fuul_Slider_Click_2)
                 {
+                    NextSprite2();
                     Currect_Slid++;
 
-                    NextSprite2();
+                   
 
                 }
 
@@ -198,9 +220,10 @@ public class GoHome : MonoBehaviour
             {
                 if (Currect_Slider_Click_3 < Fuul_Slider_Click_3)
                 {
+                    NextSprite3();
                     Currect_Slid++;
 
-                    NextSprite3();
+                   
 
 
                 }
@@ -273,18 +296,24 @@ public class GoHome : MonoBehaviour
     private void NextSprite1()
     {
         Upgrade_Img_1.sprite = Sprite_img_1[_currentSpriteIndex_Num_1];
+       
         _currentSpriteIndex_Num_1 = (_currentSpriteIndex_Num_1 + 1) % Sprite_img_1.Length;
     }
+
     private void NextSprite2()
     {
         Upgrade_Img_2.sprite = Sprite_img_2[_currentSpriteIndex_Num_2];
+       
         _currentSpriteIndex_Num_2 = (_currentSpriteIndex_Num_2 + 1) % Sprite_img_2.Length;
     }
+
     private void NextSprite3()
     {
         Upgrade_Img_3.sprite = Sprite_img_3[_currentSpriteIndex_Num_3];
+        
         _currentSpriteIndex_Num_3 = (_currentSpriteIndex_Num_3 + 1) % Sprite_img_3.Length;
     }
+
 
     private void ChectClick()
     {
