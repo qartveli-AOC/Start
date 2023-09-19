@@ -46,7 +46,6 @@ public class ClickPrice : MonoBehaviour
     public Transform Canvas_posI;
 
     public  Trash_Generator Trash_Generator_Cs;
-    public MusicManager musicManager;
 
     private void Awake()
     {
@@ -67,13 +66,9 @@ public class ClickPrice : MonoBehaviour
         Click_Button.onClick.AddListener(One_Click_Shop);
         Level_Slider.value = 0;
         Count_Button.onClick.AddListener(Click);
-        PlayerPrefs.GetInt("rep", 0);
     }
    void Go_Home()
     {
-        musicManager.repeatCount++;
-        PlayerPrefs.SetInt("rep", musicManager.repeatCount);
-        musicManager.Check();
         SceneManager.LoadScene(0);
         PlayerPrefs.SetInt("coin", Score);
     }
