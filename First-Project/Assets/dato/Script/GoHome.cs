@@ -50,8 +50,19 @@ public class GoHome : MonoBehaviour
     public float Currect_Slid;
     public float Full_Slid;
 
+
+    public GameObject[] Particle_Objects;
+    public   static int CountIndex_Num;
+
+
+
+
+
+
+
+
     private void Awake()
-    {
+    {   
         Currect_Slid = PlayerPrefs.GetFloat("SaveSliderLid", 0);
         Currect_Slider_Click_1 = PlayerPrefs.GetFloat("sav10", 0);
         Currect_Slider_Click_2 = PlayerPrefs.GetFloat("sav11", 0);
@@ -62,12 +73,21 @@ public class GoHome : MonoBehaviour
         _currentSpriteIndex_Num_2 = PlayerPrefs.GetInt("SaveSprite200", 0);
         _currentSpriteIndex_Num_3 = PlayerPrefs.GetInt("SaveSprite300", 0);
 
+
+
+        Particle_Objects[CountIndex_Num].SetActive(true);
+
     }
 
 
 
     private void Start()
-    {   
+
+    {
+       
+   
+
+
         Text_Daimond_Home.text = ClickPrice.Daimond_Num.ToString();
         
         Price_Update_Text1.text = Price_Update_Num_1.ToString();
@@ -93,6 +113,14 @@ public class GoHome : MonoBehaviour
         Chest_Button.onClick.AddListener(ChectClick);
     }
 
+
+
+  
+
+
+
+
+
     private void FixedUpdate()
     {
         Slider_Upgrade_Answer.value = Currect_Slid / Full_Slid;
@@ -106,6 +134,12 @@ public class GoHome : MonoBehaviour
         Upgrade_Img_2.sprite = Sprite_img_2[_currentSpriteIndex_Num_2];
         Upgrade_Img_3.sprite = Sprite_img_3[_currentSpriteIndex_Num_3];
 
+
+
+
+        
+            
+        
 
 
 
@@ -166,6 +200,12 @@ public class GoHome : MonoBehaviour
             Currect_Slider_Click_2 = 0;
             Currect_Slider_Click_3 = 0;
             Slider_Upgrade_Click[0].value = 0;
+
+            Debug.Log("MENAI");
+            Particle_Objects[CountIndex_Num].SetActive(false);
+            CountIndex_Num = (CountIndex_Num + 1) % Particle_Objects.Length;
+            Particle_Objects[CountIndex_Num].SetActive(true);
+
         }
 
         Slider_Upgrade_Answer.value = Currect_Slid / Full_Slid;
@@ -200,6 +240,15 @@ public class GoHome : MonoBehaviour
             Currect_Slider_Click_2 = 0;
             Currect_Slider_Click_3 = 0;
             Slider_Upgrade_Click[1].value = 0;
+
+            Debug.Log("MENAI");
+            Particle_Objects[CountIndex_Num].SetActive(false);
+
+
+            CountIndex_Num = (CountIndex_Num + 1) % Particle_Objects.Length;
+
+
+            Particle_Objects[CountIndex_Num].SetActive(true);
         }
 
         Slider_Upgrade_Answer.value = Currect_Slid / Full_Slid;
@@ -239,6 +288,14 @@ public class GoHome : MonoBehaviour
             Currect_Slider_Click_2 = 0;
             Currect_Slider_Click_3 = 0;
             Slider_Upgrade_Click[2].value = 0;
+            Debug.Log("MENAI");
+            Particle_Objects[CountIndex_Num].SetActive(false);
+
+
+            CountIndex_Num = (CountIndex_Num + 1) % Particle_Objects.Length;
+
+
+            Particle_Objects[CountIndex_Num].SetActive(true);
         }
 
         Slider_Upgrade_Answer.value = Currect_Slid / Full_Slid;
