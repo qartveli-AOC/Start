@@ -40,7 +40,7 @@ public class PlayerCounter : MonoBehaviour
     {
        
         
-            Prefab_Text.text = clickPrice.Count.ToString();            
+            Prefab_Text.text = clickPrice.Click_Count.ToString();            
             GameObject number = Instantiate(Number_Count_gameobject, Spwner_Coin_Tr.position, Quaternion.identity);
             number.transform.SetParent(Transform_Canvas);
         
