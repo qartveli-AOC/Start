@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 798cde649e411f54184a84d068cc1156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 200000
+  _speed: 5000
   Destroy_Time: 1
   click: {fileID: 0}
   Count_Power_Text: {fileID: 4817263768595043567}
