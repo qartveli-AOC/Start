@@ -70,6 +70,8 @@ public class ClickPrice : MonoBehaviour
 
     public GameObject[] Sam_Postav;
 
+    public Animator Animator_Hand;
+
 
     private void Update()
     {
@@ -221,7 +223,8 @@ public class ClickPrice : MonoBehaviour
             Score -= Hausent_Click_Num;
             Click_Count += 1000;
             Hausent_Click_Num += ((Hausent_Click_Num +5000) / 2);
-            Hausent_Click_Text.text = Hausent_Click_Num.ToString() ;
+            Hausent_Click_Text.text = Hausent_Click_Num.ToString();
+
         }
     }
     void Diamond1sec()
