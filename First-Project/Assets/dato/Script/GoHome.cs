@@ -55,7 +55,7 @@ public class GoHome : MonoBehaviour
     public   static int CountIndex_Num;
 
 
-
+    
 
 
 
@@ -76,6 +76,9 @@ public class GoHome : MonoBehaviour
 
 
         Particle_Objects[CountIndex_Num].SetActive(true);
+
+
+      
 
     }
 
@@ -170,8 +173,7 @@ public class GoHome : MonoBehaviour
         PlayerPrefs.SetInt("SaveSprite300", _currentSpriteIndex_Num_3);
         PlayerPrefs.Save();
         SceneManager.LoadScene(1);
-        
-      
+       
         Transform_Buttons[3].localScale = new Vector3 (1.1f, 1.1f, 1.1f);
         StartCoroutine(ForButtonClicable());
     }

@@ -68,10 +68,12 @@ public class ClickPrice : MonoBehaviour
 
     public  Trash_Generator Trash_Generator_Cs;
 
+
     public GameObject[] Sam_Postav;
 
     public Animator Animator_Hand;
-
+    public AudioSource Audio_Sound_Halliluia;
+    public GameObject Alliluia_Object;
 
     private void Update()
     {
@@ -137,12 +139,16 @@ public class ClickPrice : MonoBehaviour
 
         if (Current_Level_Num <= Level_Full_Num)
         {
+            
             Current_Level_Num++;
             Level_Slider.value = Current_Level_Num / Level_Full_Num;
         }
         if (Current_Level_Num >= Level_Full_Num)
         {
-            
+            Animator_Hand.SetTrigger("HandUp");
+            Audio_Sound_Halliluia.Play();
+            Alliluia_Object.SetActive(true);
+            StartCoroutine(ForHandel());
             Current_Level_Num = 0;
             Daimond_Num += _diamond_x2_NUM;           
             _diamond_x2_NUM = (_diamond_x2_NUM+2)*2 ;            
@@ -289,6 +295,12 @@ private IEnumerator Auto_Diamond()
             }
         }
            
+    }
+
+    private IEnumerator ForHandel()
+    {
+        yield return new WaitForSeconds(3);
+        Alliluia_Object.SetActive(false);
     }
     
    
