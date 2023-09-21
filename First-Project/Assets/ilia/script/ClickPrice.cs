@@ -68,6 +68,8 @@ public class ClickPrice : MonoBehaviour
 
     public  Trash_Generator Trash_Generator_Cs;
 
+    public GameObject[] Sam_Postav;
+
 
     private void Update()
     {
@@ -92,6 +94,7 @@ public class ClickPrice : MonoBehaviour
         Diamond_1sec_Text.text= Diamond_1sec_Num.ToString();
         Diamond_10sec_Text.text = Diamond_10sec_Num.ToString();
         Diamond_100_Text.text = Diamond_100_Num.ToString();
+        Sam_Postav[GoHome.CountIndex_Num].SetActive(true);
     }
     void Start()
     {
