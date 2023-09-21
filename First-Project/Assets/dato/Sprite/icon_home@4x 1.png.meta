@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 44088f21d15dcbb44a828fc50c5430f5
+guid: a1774909477d46649b958d4e45bd5e7d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -107,6 +107,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -132,39 +145,26 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 83cce790-8b2d-467b-b850-af471288454c_0
+      name: icon_home@4x 1_0
       rect:
         serializedVersion: 2
-        x: 204
-        y: 100
-        width: 196
-        height: 349
+        x: 3
+        y: 9
+        width: 103
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 19, y: 0, z: 0, w: 0}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 608d5d3cedf537e448d9348acda97cb2
-      internalID: -23217640
+      spriteID: 5069482d4e416f843acc1ae0aa1e5a34
+      internalID: -357908624
       vertices: []
       indices: 
       edges: []
@@ -180,14 +180,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      83cce790-8b2d-467b-b850-af471288454c_0: -23217640
-      83cce790-8b2d-467b-b850-af471288454c_1: 299969214
-      83cce790-8b2d-467b-b850-af471288454c_2: -462368208
-      83cce790-8b2d-467b-b850-af471288454c_3: -1235063609
-      83cce790-8b2d-467b-b850-af471288454c_4: -615819806
-      83cce790-8b2d-467b-b850-af471288454c_5: 731021299
-      83cce790-8b2d-467b-b850-af471288454c_6: -601941759
-      83cce790-8b2d-467b-b850-af471288454c_7: -1335894333
+      icon_home@4x 1_0: -357908624
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
