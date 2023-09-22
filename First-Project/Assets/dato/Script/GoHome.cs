@@ -74,6 +74,11 @@ public class GoHome : MonoBehaviour
         _currentSpriteIndex_Num_3 = PlayerPrefs.GetInt("SaveSprite300", 0);
 
 
+        Price_Update_Num_1 = PlayerPrefs.GetInt("SaveDaimondPrice1", Price_Update_Num_1);
+        Price_Update_Num_2 = PlayerPrefs.GetInt("SaveDaimondPrice2", Price_Update_Num_2);
+        Price_Update_Num_3 = PlayerPrefs.GetInt("SaveDaimondPrice3", Price_Update_Num_3);
+
+
 
         Particle_Objects[CountIndex_Num].SetActive(true);
 
@@ -90,9 +95,7 @@ public class GoHome : MonoBehaviour
 
         Text_Daimond_Home.text = ClickPrice.Daimond_Num.ToString();
         
-        Price_Update_Text1.text = Price_Update_Num_1.ToString();
-        Price_Update_Text2.text = Price_Update_Num_2.ToString();
-        Price_Update_Text3.text = Price_Update_Num_3.ToString();
+        
 
 
         Slider_Upgrade_Answer.value = Currect_Slid / Full_Slid;
@@ -136,10 +139,16 @@ public class GoHome : MonoBehaviour
 
 
 
+        Price_Update_Text1.text = Price_Update_Num_1.ToString();
+        Price_Update_Text2.text = Price_Update_Num_2.ToString();
+        Price_Update_Text3.text = Price_Update_Num_3.ToString();
 
-        
-            
-        
+
+
+
+
+
+
 
 
 
@@ -168,6 +177,13 @@ public class GoHome : MonoBehaviour
         PlayerPrefs.SetInt("SaveSprite100", _currentSpriteIndex_Num_1);
         PlayerPrefs.SetInt("SaveSprite200", _currentSpriteIndex_Num_2);
         PlayerPrefs.SetInt("SaveSprite300", _currentSpriteIndex_Num_3);
+
+
+        PlayerPrefs.SetInt("SaveDaimondPrice1", Price_Update_Num_1);
+        PlayerPrefs.SetInt("SaveDaimondPrice2", Price_Update_Num_2);
+        PlayerPrefs.SetInt("SaveDaimondPrice3", Price_Update_Num_3);
+
+
         PlayerPrefs.Save();
         SceneManager.LoadScene(1);
         
@@ -181,16 +197,20 @@ public class GoHome : MonoBehaviour
         Transform_Buttons[0].localScale = new Vector3(1.2f, 1.2f, 1.2f);
         StartCoroutine(ForButtonClicable());
         if (ClickPrice.Daimond_Num >= Price_Update_Num_1)
-        {
+        { 
             if (Currect_Slid < Full_Slid)
             {
                 if (Currect_Slider_Click_1 < Fuul_Slider_Click_1)
                 {
+                   
                     NextSprite1(); 
-                    Currect_Slid++; 
+                    Currect_Slid++;
+                    SliderMassivClick();
+                    Price_Update_Num_1 = (Price_Update_Num_1 + 2) * 2;
+                    
                 }
             }
-            SliderMassivClick();
+           
         }
 
         if (Currect_Slid == Full_Slid)
@@ -224,13 +244,15 @@ public class GoHome : MonoBehaviour
                 {
                     NextSprite2();
                     Currect_Slid++;
+                    SliderMassivClick2();
+                    Price_Update_Num_2 = (Price_Update_Num_2 + 2) * 2;
 
-                   
+                 
 
                 }
 
             }
-            SliderMassivClick2();
+           
         }
        
         if (Currect_Slid == Full_Slid)
@@ -261,7 +283,7 @@ public class GoHome : MonoBehaviour
     {
         Transform_Buttons[2].localScale = new Vector3(1.2f, 1.2f, 1.2f);
         StartCoroutine(ForButtonClicable());
-        if (ClickPrice.Daimond_Num >= Price_Update_Num_1)
+        if (ClickPrice.Daimond_Num >= Price_Update_Num_3)
         {
 
 
@@ -271,14 +293,16 @@ public class GoHome : MonoBehaviour
                 {
                     NextSprite3();
                     Currect_Slid++;
+                    SliderMassivClick3();
+                    Price_Update_Num_3 = (Price_Update_Num_3 + 2) * 2;
 
-                   
 
 
+                    
                 }
 
             }
-            SliderMassivClick3();
+           
         }
      
         if (Currect_Slid == Full_Slid)
