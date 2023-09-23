@@ -58,6 +58,7 @@ public class GoHome : MonoBehaviour
     public AudioSource Song_Audio;
     public AudioClip[] Song_Clip_Audio;
 
+    public static int Season_Counter;
 
 
 
@@ -226,6 +227,7 @@ public class GoHome : MonoBehaviour
                     Song_Audio.Play();
                     NextSprite1(); 
                     Currect_Slid++;
+                    Season_Counter++;
                     SliderMassivClick();
                     Price_Update_Num_1 = (Price_Update_Num_1 + 1) * 2;
 
@@ -284,7 +286,7 @@ public class GoHome : MonoBehaviour
                     Currect_Slid++;
                     SliderMassivClick2();
                     Price_Update_Num_2 = (Price_Update_Num_2 + 1) * 2;
-
+                    Season_Counter++;
 
 
                 }
@@ -348,6 +350,7 @@ public class GoHome : MonoBehaviour
                     Song_Audio.Play();
                     NextSprite3();
                     Currect_Slid++;
+                    Season_Counter++;
                     SliderMassivClick3();
                     Price_Update_Num_3 = (Price_Update_Num_3 + 1) * 2;
 
