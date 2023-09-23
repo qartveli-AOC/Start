@@ -5,8 +5,10 @@ using UnityEngine;
 public class SingleGoHome : MonoBehaviour
 {
     public static SingleGoHome Instance;
+   
     void Start()
     {
+        
         if(Instance == null)
         {
             Instance = this;
