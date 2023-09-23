@@ -71,6 +71,7 @@ public class ClickPrice : MonoBehaviour
     public GameObject[] Sam_Postav;
 
     public Animator Animator_Hand;
+    public AudioSource Hand_Audio_Source;
 
 
     private void Update()
@@ -142,7 +143,8 @@ public class ClickPrice : MonoBehaviour
         }
         if (Current_Level_Num >= Level_Full_Num)
         {
-            
+            Animator_Hand.SetTrigger("HandUp");
+            Hand_Audio_Source.Play();
             Current_Level_Num = 0;
             Daimond_Num += _diamond_x2_NUM;           
             _diamond_x2_NUM = (_diamond_x2_NUM+2)*2 ;            
