@@ -17,7 +17,7 @@ public class ClickPrice : MonoBehaviour
     private int _diamond_x2_NUM=1;
     private int _diamond_Count;
     public int Score;
-    public static int Daimond_Num;
+    public static uint Daimond_Num;
 
     public int Click_One_Num = 10;
     public int One_Auto_Num = 50;
@@ -72,6 +72,13 @@ public class ClickPrice : MonoBehaviour
 
     public Animator Animator_Hand;
     public AudioSource Hand_Audio_Source;
+    public GameObject Hand_Particle;
+
+    public AudioSource Click_Source;
+    public AudioSource Halliluia_Song;
+    public AudioClip[] Audio_Click;
+
+
 
 
     private void Update()
@@ -79,12 +86,13 @@ public class ClickPrice : MonoBehaviour
         Show_Score.text = Score.ToString();
         Daimond_Text.text = Daimond_Num.ToString();
         Power_Click_Text.text = Click_Count.ToString();
+
 }
     public void Awake()
     {
        
         Score = PlayerPrefs.GetInt("coin", 0);
-       
+        Daimond_Num = (uint)PlayerPrefs.GetInt("SaveDiamond",0);
         Daimond_Text.text = Daimond_Num.ToString();
 
         One_Auto_Text.text = One_Auto_Num.ToString();
@@ -120,13 +128,17 @@ public class ClickPrice : MonoBehaviour
     }
    void Go_Home()
     {
+        Click_Source.clip = Audio_Click[3];
+        Click_Source.Play();
+        SwapMusicSingle.Instance.gameObject.SetActive(true);
+        PlayerPrefs.SetInt("SaveDiamond",(int)Daimond_Num);
         SceneManager.LoadScene(0);
         PlayerPrefs.SetInt("coin", Score);
     }
     private void OnApplicationQuit()
     {
-        PlayerPrefs.SetInt("coin",Score); 
-        
+        PlayerPrefs.SetInt("coin",Score);
+        PlayerPrefs.SetInt("SaveDiamond", (int)Daimond_Num);
         PlayerPrefs.Save();
     }
 
@@ -134,7 +146,8 @@ public class ClickPrice : MonoBehaviour
     {
         Trash_Generator_Cs.CreateTrash();
         Score += Click_Count;
-        Coin_Sound.Play();
+        Click_Source.clip = Audio_Click[5];
+        Click_Source.Play();
 
         if (Current_Level_Num <= Level_Full_Num)
         {
@@ -144,9 +157,11 @@ public class ClickPrice : MonoBehaviour
         if (Current_Level_Num >= Level_Full_Num)
         {
             Animator_Hand.SetTrigger("HandUp");
-            Hand_Audio_Source.Play();
+            Hand_Particle.SetActive(true);
+            Halliluia_Song.Play();
+            StartCoroutine(HendEffector());
             Current_Level_Num = 0;
-            Daimond_Num += _diamond_x2_NUM;           
+            Daimond_Num +=(uint) _diamond_x2_NUM;           
             _diamond_x2_NUM = (_diamond_x2_NUM+2)*2 ;            
         }
     }
@@ -155,22 +170,36 @@ public class ClickPrice : MonoBehaviour
     {
         if (Score >= Click_One_Num)
         {
+            Click_Source.clip = Audio_Click[0];
+            Click_Source.Play();
             Score -= Click_One_Num;
             Click_One_Num *= 2;
             Click_One_Text.text = Click_One_Num.ToString();
             Click_Count += 1;
+        }
+        else
+        {
+            Click_Source.clip = Audio_Click[1];
+            Click_Source.Play();
         }
     }
 
     public void OneAuto()
     {        
         if (Score >= One_Auto_Num)
-        {           
+        {
+            Click_Source.clip = Audio_Click[0];
+            Click_Source.Play();
             Score -= One_Auto_Num;
             One_Auto_Num *= 2;           
             One_Auto_Text.text = One_Auto_Num.ToString();
             _auto_Count_Num++;
                 StartCoroutine(Auto_Click());                                 
+        }
+        else
+        {
+            Click_Source.clip = Audio_Click[1];
+            Click_Source.Play();
         }
             
     }
@@ -178,16 +207,25 @@ public class ClickPrice : MonoBehaviour
     {
         if(Score >=Ten_Click_Num)
         {
+            Click_Source.clip = Audio_Click[0];
+            Click_Source.Play();
             Score -= Ten_Click_Num;
             Click_Count += 10;
             Ten_Click_Num *= 2;
             Ten_Click_Text.text = Ten_Click_Num.ToString();
+        }
+        else
+        {
+            Click_Source.clip = Audio_Click[1];
+            Click_Source.Play();
         }
     }
     void Auto10()
     {
         if(Score >=Auto_10_Num)
         {
+            Click_Source.clip = Audio_Click[0];
+            Click_Source.Play();
             Score -= Auto_10_Num;
             _auto_Count_Num += 10;
             Auto_10_Num *= 2;
@@ -196,71 +234,124 @@ public class ClickPrice : MonoBehaviour
             StartCoroutine(Auto_Click());
             Debug.Log("2");
         }
+        else
+        {
+            Click_Source.clip = Audio_Click[1];
+            Click_Source.Play();
+        }
     }
     void OneHundredClick()
     {
         if(Score>=OneHundred_Click_Num)
         {
+            Click_Source.clip = Audio_Click[0];
+            Click_Source.Play();
             Score -= OneHundred_Click_Num;
             Click_Count += 100;
             OneHundred_Click_Num += ((OneHundred_Click_Num+500) / 2) ;
             OneHundred_Click_Text.text = OneHundred_Click_Num.ToString();
+        }
+        else
+        {
+            Click_Source.clip = Audio_Click[1];
+            Click_Source.Play();
         }
     }
     void Auto100()
     {
         if(Score>=Auto_100_Num)
         {
+            Click_Source.clip = Audio_Click[0];
+            Click_Source.Play();
             Score -= Auto_100_Num;
             _auto_Count_Num += 100;
             Auto_100_Num += ((Auto_100_Num + 2500) / 2);
             Auto_100_Text.text = Auto_100_Num.ToString();           
                 StartCoroutine(Auto_Click());
         }
+        else
+        {
+            Click_Source.clip = Audio_Click[1];
+            Click_Source.Play();
+        }
     }
     void HausentClick()
     {
         if(Score >= Hausent_Click_Num)
         {
+            Click_Source.clip = Audio_Click[0];
+            Click_Source.Play();
             Score -= Hausent_Click_Num;
             Click_Count += 1000;
             Hausent_Click_Num += ((Hausent_Click_Num +5000) / 2);
             Hausent_Click_Text.text = Hausent_Click_Num.ToString();
 
         }
+        else
+        {
+            Click_Source.clip = Audio_Click[1];
+            Click_Source.Play();
+        }
+       
     }
     void Diamond1sec()
     {
         if(Score >= Diamond_1sec_Num)
         {
+            Click_Source.clip = Audio_Click[0];
+            Click_Source.Play();
             Score -= Diamond_1sec_Num;
             _diamond_Count += 1;
             Diamond_1sec_Num *= 2;
             Diamond_1sec_Text.text = Diamond_1sec_Num.ToString();
             StartCoroutine(Auto_Diamond());
         }
+        else
+        {
+            Click_Source.clip = Audio_Click[1];
+            Click_Source.Play();
+        }
+            
     }
     void Diamond10sec()
     {
         if(Score >=Diamond_10sec_Num)
         {
+            Click_Source.clip = Audio_Click[0];
+            Click_Source.Play();
             Score -= Diamond_10sec_Num;
             _diamond_Count += 10;
             Diamond_10sec_Num += ((Diamond_10sec_Num+5000)/2);
             Diamond_10sec_Text.text = Diamond_10sec_Num.ToString();
             StartCoroutine(Auto_Diamond());
         }
+        else
+        {
+            Click_Source.clip = Audio_Click[1];
+            Click_Source.Play();
+        }
+        
+           
+        
     }
     void Diamond100()
     {
         if(Score >= Diamond_100_Num)
         {
-            Daimond_Num -= Diamond_100_Num;
+            Click_Source.clip = Audio_Click[0];
+            Click_Source.Play();
+            Daimond_Num -= (uint)Diamond_100_Num;
             _diamond_Count += 100;
             Diamond_100_Num += Diamond_100_Num/2;
             Diamond_100_Text.text = Diamond_100_Num.ToString();
             StartCoroutine(Auto_Diamond());
         }
+        else
+        {
+            Click_Source.clip = Audio_Click[1];
+            Click_Source.Play();
+        }
+            
     }
 
    
@@ -286,11 +377,17 @@ private IEnumerator Auto_Diamond()
             {
  
                 yield return new WaitForSeconds(1);
-                Daimond_Num += _diamond_Count;
+                Daimond_Num += (uint)_diamond_Count;
 
             }
         }
            
+    }
+
+    private IEnumerator HendEffector()
+    {
+        yield return new WaitForSeconds(4);
+        Hand_Particle.SetActive(false);
     }
     
    
