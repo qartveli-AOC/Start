@@ -62,6 +62,11 @@ public class GoHome : MonoBehaviour
 
 
 
+    public AudioSource Song_Audio;
+    public AudioClip[] Song_Clip_Audio;
+
+
+
 
 
 
@@ -86,7 +91,7 @@ private void Awake()
         Price_Update_Num_2 = PlayerPrefs.GetInt("SaveDaimondPrice2", Price_Update_Num_2);
         Price_Update_Num_3 = PlayerPrefs.GetInt("SaveDaimondPrice3", Price_Update_Num_3);
 
-
+        ClickPrice.Daimond_Num = (uint)PlayerPrefs.GetInt("SaveDiamond", 0);
 
         Particle_Objects[CountIndex_Num].SetActive(true);
 
@@ -172,12 +177,24 @@ private void Awake()
         PlayerPrefs.SetInt("SaveSprite100", _currentSpriteIndex_Num_1);
         PlayerPrefs.SetInt("SaveSprite200", _currentSpriteIndex_Num_2);
         PlayerPrefs.SetInt("SaveSprite300", _currentSpriteIndex_Num_3);
+
         PlayerPrefs.SetInt("SeasonCounter", Season_Counter);
+
+
+        PlayerPrefs.Save();
+
+
+        PlayerPrefs.SetInt("SaveDaimondPrice1", Price_Update_Num_1);
+        PlayerPrefs.SetInt("SaveDaimondPrice2", Price_Update_Num_2);
+        PlayerPrefs.SetInt("SaveDaimondPrice3", Price_Update_Num_3);
+
+
+         PlayerPrefs.SetInt("SaveDiamond", (int)ClickPrice.Daimond_Num);
 
     }
 
     private void GoHomeClick()
-    {
+    {   
         PlayerPrefs.SetFloat("SaveSliderLid", Currect_Slid);
         PlayerPrefs.SetFloat("sav10", Currect_Slider_Click_1);
         PlayerPrefs.SetFloat("sav11", Currect_Slider_Click_2);
@@ -194,7 +211,19 @@ private void Awake()
         PlayerPrefs.SetInt("SeasonCounter",Season_Counter);
         
 
+
         
+
+        PlayerPrefs.SetInt("SaveDiamond", (int)ClickPrice.Daimond_Num);
+
+
+        PlayerPrefs.Save();
+        SwapMusicSingle.Instance.gameObject.SetActive(true);
+        SwapMusicSingle.Instance.Audio_Source.enabled = true;
+
+        Song_Audio.clip = Song_Clip_Audio[2];
+        Song_Audio.Play();
+
         SceneManager.LoadScene(1);
 
         
@@ -214,15 +243,35 @@ private void Awake()
             {
                 if (Currect_Slider_Click_1 < Fuul_Slider_Click_1)
                 {
+
                     Season_Counter++;
+
+                    Song_Audio.clip = Song_Clip_Audio[0];
+                    Song_Audio.Play();
+
                     NextSprite1(); 
                     Currect_Slid++;
                     SliderMassivClick();
-                    Price_Update_Num_1 = (Price_Update_Num_1 + 2) * 2;
-                    
+                    Price_Update_Num_1 = (Price_Update_Num_1 + 1) * 2;
+
+                }
+                else
+                {
+                    Song_Audio.clip = Song_Clip_Audio[1];
+                    Song_Audio.Play();
                 }
             }
-           
+            else
+            {
+                Song_Audio.clip = Song_Clip_Audio[1];
+                Song_Audio.Play();
+            }
+
+        }
+        else
+        {
+            Song_Audio.clip = Song_Clip_Audio[1];
+            Song_Audio.Play();
         }
 
         if (Currect_Slid == Full_Slid)
@@ -254,17 +303,40 @@ private void Awake()
             {
                 if (Currect_Slider_Click_2 < Fuul_Slider_Click_2)
                 {
+                    Song_Audio.clip = Song_Clip_Audio[0];
+                    Song_Audio.Play();
                     NextSprite2();
                     Currect_Slid++;
                     SliderMassivClick2();
+
                     Price_Update_Num_2 = (Price_Update_Num_2 + 2) * 2;
                     Season_Counter++;
                     Debug.Log(Season_Counter+" Sl2");
 
+                    Price_Update_Num_2 = (Price_Update_Num_2 + 1) * 2;
+
+
+
+
+                }
+                else
+                {
+                    Song_Audio.clip = Song_Clip_Audio[1];
+                    Song_Audio.Play();
                 }
 
             }
-           
+            else
+            {
+                Song_Audio.clip = Song_Clip_Audio[1];
+                Song_Audio.Play();
+            }
+
+        }
+        else
+        {
+            Song_Audio.clip = Song_Clip_Audio[1];
+            Song_Audio.Play();
         }
 
        
@@ -309,16 +381,49 @@ private void Awake()
                 if (Currect_Slider_Click_3 < Fuul_Slider_Click_3)
                 {
 
+
                     Season_Counter++;
                     NextSprite3();
                     Currect_Slid++;
                     SliderMassivClick3();
                     Price_Update_Num_3 = (Price_Update_Num_3 + 2) * 2;
+
+                    Song_Audio.clip = Song_Clip_Audio[0];
+                    Song_Audio.Play();
+                    NextSprite3();
+                    Currect_Slid++;
+                    SliderMassivClick3();
+                    Price_Update_Num_3 = (Price_Update_Num_3 + 1) * 2;
+
+
+
+
                     
+                }
+                else
+                {
+                    Song_Audio.clip = Song_Clip_Audio[1];
+                    Song_Audio.Play();
                 }
 
             }  
 
+        }
+
+
+            }
+
+            else
+            {
+                Song_Audio.clip = Song_Clip_Audio[1];
+                Song_Audio.Play();
+            }
+           
+        }
+        else
+        {
+            Song_Audio.clip = Song_Clip_Audio[1];
+            Song_Audio.Play();
         }
 
      
@@ -347,7 +452,7 @@ private void Awake()
     {   if(Currect_Slider_Click_1<Fuul_Slider_Click_1)
         {
             Currect_Slider_Click_1++;
-            ClickPrice.Daimond_Num -= Price_Update_Num_1;
+            ClickPrice.Daimond_Num -= (uint)Price_Update_Num_1;
             Text_Daimond_Home.text = ClickPrice.Daimond_Num.ToString();
         }
         
@@ -359,7 +464,7 @@ private void Awake()
     {   if(Currect_Slider_Click_2<Fuul_Slider_Click_2)
         {
             Currect_Slider_Click_2++;
-            ClickPrice.Daimond_Num -= Price_Update_Num_2;
+            ClickPrice.Daimond_Num -= (uint)Price_Update_Num_2;
             Text_Daimond_Home.text = ClickPrice.Daimond_Num.ToString();
         }
         
@@ -371,7 +476,7 @@ private void Awake()
     {   if(Currect_Slider_Click_3<Fuul_Slider_Click_3)
         {
             Currect_Slider_Click_3++;
-            ClickPrice.Daimond_Num -= Price_Update_Num_3;
+            ClickPrice.Daimond_Num -= (uint)Price_Update_Num_3;
             Text_Daimond_Home.text = ClickPrice.Daimond_Num.ToString();
         }
         
@@ -417,6 +522,8 @@ private void Awake()
     {
         Chest_Button_Transform.localScale = new Vector3(1.1f,1.1f,1.1f);
         StartCoroutine(ForButtonClicable());
+        Song_Audio.clip = Song_Clip_Audio[3];
+        Song_Audio.Play();
     }
 
 
