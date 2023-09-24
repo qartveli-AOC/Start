@@ -920,8 +920,6 @@ MonoBehaviour:
   Sound_Currect_Num: 0
   Audi: {fileID: 0}
   Audio: {fileID: 1887506652}
-  IsOn_B_Soung: 0
-  IsOn_B_Song: 0
   CLica_Pricee: {fileID: 106442623}
 --- !u!1 &113348117
 GameObject:
