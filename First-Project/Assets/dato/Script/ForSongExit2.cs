@@ -25,8 +25,8 @@ public class ForSongExit2 : MonoBehaviour
     public GameObject Audi;
     public GameObject Audio;
 
-    public bool IsOn_B_Soung;
-    public bool IsOn_B_Song;
+    public static bool IsOn_B_Soung = true;
+    public static bool IsOn_B_Song = true;
 
 
     public ClickPrice CLica_Pricee;
@@ -96,7 +96,7 @@ public class ForSongExit2 : MonoBehaviour
 
         if (IsOn_B_Soung)
         {
-            Audi.SetActive(true);
+            Audi.GetComponent<AudioSource>().Play();
             CLica_Pricee.Click_Source.clip = CLica_Pricee.Audio_Click[4];
             CLica_Pricee.Click_Source.Play();
         }
@@ -104,7 +104,7 @@ public class ForSongExit2 : MonoBehaviour
         {
             CLica_Pricee.Click_Source.clip = CLica_Pricee.Audio_Click[4];
             CLica_Pricee.Click_Source.Play();
-            Audi.SetActive(false);
+            Audi.GetComponent<AudioSource>().Pause(); 
         }
     }
 

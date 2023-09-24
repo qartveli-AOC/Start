@@ -60,6 +60,8 @@ public class GoHome : MonoBehaviour
 
     public static int Season_Counter;
 
+    public ForSongExit For_Song_Exit;
+
 
 
 
@@ -203,6 +205,8 @@ public class GoHome : MonoBehaviour
         PlayerPrefs.Save();
         SwapMusicSingle.Instance.gameObject.SetActive(true);
         SwapMusicSingle.Instance.Audio_Source.enabled = true;
+        ForSongExit.IsOn_B_Song  = true;
+        ForSongExit.IsOn_B_Soung = true;
 
         Song_Audio.clip = Song_Clip_Audio[2];
         Song_Audio.Play();
@@ -222,33 +226,49 @@ public class GoHome : MonoBehaviour
             if (Currect_Slid < Full_Slid)
             {
                 if (Currect_Slider_Click_1 < Fuul_Slider_Click_1)
-                {
-                    Song_Audio.clip = Song_Clip_Audio[0];
-                    Song_Audio.Play();
-                    NextSprite1(); 
-                    Currect_Slid++;
-                    Season_Counter++;
-                    SliderMassivClick();
-                    Price_Update_Num_1 = (Price_Update_Num_1 + 1) * 2;
+                {   if (ForSongExit.IsOn_B_Song)
+                    {
+                        Song_Audio.clip = Song_Clip_Audio[0];
+                        Song_Audio.Play();
+                    }
+                        NextSprite1();
+                        Currect_Slid++;
+                        Season_Counter++;
+                        SliderMassivClick();
+                        Price_Update_Num_1 = (Price_Update_Num_1 + 1) * 2;
+                    
+                   
 
                 }
                 else
                 {
-                    Song_Audio.clip = Song_Clip_Audio[1];
-                    Song_Audio.Play();
+                    if (ForSongExit.IsOn_B_Song)
+                    {
+
+                        Song_Audio.clip = Song_Clip_Audio[1];
+                        Song_Audio.Play();
+                    }
                 }
             }
             else
             {
-                Song_Audio.clip = Song_Clip_Audio[1];
-                Song_Audio.Play();
+                if (ForSongExit.IsOn_B_Song)
+                {
+                    Song_Audio.clip = Song_Clip_Audio[1];
+                    Song_Audio.Play();
+                }
+                    
             }
 
         }
         else
         {
-            Song_Audio.clip = Song_Clip_Audio[1];
-            Song_Audio.Play();
+            if (ForSongExit.IsOn_B_Song)
+            {
+                Song_Audio.clip = Song_Clip_Audio[1];
+                Song_Audio.Play();
+            }
+               
         }
 
         if (Currect_Slid == Full_Slid)
@@ -280,8 +300,12 @@ public class GoHome : MonoBehaviour
             {
                 if (Currect_Slider_Click_2 < Fuul_Slider_Click_2)
                 {
-                    Song_Audio.clip = Song_Clip_Audio[0];
-                    Song_Audio.Play();
+                    if (ForSongExit.IsOn_B_Song)
+                    {
+                        Song_Audio.clip = Song_Clip_Audio[0];
+                        Song_Audio.Play();
+                    }
+                        
                     NextSprite2();
                     Currect_Slid++;
                     SliderMassivClick2();
@@ -292,22 +316,34 @@ public class GoHome : MonoBehaviour
                 }
                 else
                 {
-                    Song_Audio.clip = Song_Clip_Audio[1];
-                    Song_Audio.Play();
+                    if (ForSongExit.IsOn_B_Song)
+                    {
+                        Song_Audio.clip = Song_Clip_Audio[1];
+                        Song_Audio.Play();
+                    }
+                        
                 }
 
             }
             else
             {
-                Song_Audio.clip = Song_Clip_Audio[1];
-                Song_Audio.Play();
+                if (ForSongExit.IsOn_B_Song)
+                {
+                    Song_Audio.clip = Song_Clip_Audio[1];
+                    Song_Audio.Play();
+                }
+                   
             }
 
         }
         else
         {
-            Song_Audio.clip = Song_Clip_Audio[1];
-            Song_Audio.Play();
+            if (ForSongExit.IsOn_B_Song)
+            {
+                Song_Audio.clip = Song_Clip_Audio[1];
+                Song_Audio.Play();
+            }
+                
         }
        
         if (Currect_Slid == Full_Slid)
@@ -346,8 +382,12 @@ public class GoHome : MonoBehaviour
             {
                 if (Currect_Slider_Click_3 < Fuul_Slider_Click_3)
                 {
-                    Song_Audio.clip = Song_Clip_Audio[0];
-                    Song_Audio.Play();
+                    if (ForSongExit.IsOn_B_Song)
+                    {
+                        Song_Audio.clip = Song_Clip_Audio[0];
+                        Song_Audio.Play();
+                    }
+                       
                     NextSprite3();
                     Currect_Slid++;
                     Season_Counter++;
@@ -360,23 +400,35 @@ public class GoHome : MonoBehaviour
                 }
                 else
                 {
-                    Song_Audio.clip = Song_Clip_Audio[1];
-                    Song_Audio.Play();
+                    if (ForSongExit.IsOn_B_Song)
+                    {
+                        Song_Audio.clip = Song_Clip_Audio[1];
+                        Song_Audio.Play();
+                    }
+                       
                 }
 
             }
 
             else
             {
-                Song_Audio.clip = Song_Clip_Audio[1];
-                Song_Audio.Play();
+                if (ForSongExit.IsOn_B_Song)
+                {
+                    Song_Audio.clip = Song_Clip_Audio[1];
+                    Song_Audio.Play();
+                }
+                   
             }
            
         }
         else
         {
-            Song_Audio.clip = Song_Clip_Audio[1];
-            Song_Audio.Play();
+            if (ForSongExit.IsOn_B_Song)
+            {
+                Song_Audio.clip = Song_Clip_Audio[1];
+                Song_Audio.Play();
+            }
+                
         }
      
         if (Currect_Slid == Full_Slid)
@@ -474,8 +526,12 @@ public class GoHome : MonoBehaviour
     {
         Chest_Button_Transform.localScale = new Vector3(1.1f,1.1f,1.1f);
         StartCoroutine(ForButtonClicable());
-        Song_Audio.clip = Song_Clip_Audio[3];
-        Song_Audio.Play();
+        if(ForSongExit.IsOn_B_Song)
+        {
+            Song_Audio.clip = Song_Clip_Audio[3];
+            Song_Audio.Play();
+        }
+        
     }
 
 
