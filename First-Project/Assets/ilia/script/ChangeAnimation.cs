@@ -10,7 +10,7 @@ public class ChangeAnimation : MonoBehaviour
     private void Start()
     {
         
-        animator = GetComponent<Animator>();
+        
          
     }
     private void Update()
@@ -34,11 +34,25 @@ public class ChangeAnimation : MonoBehaviour
             Debug.Log(GoHome.Season_Counter);
             animator.Play("trembling");
             
-        }else if(GoHome.Season_Counter >=27)
+        }else if(GoHome.Season_Counter >=27 && GoHome.Season_Counter <36)
 
         {
-            GoHome.Season_Counter = 0;
+            animator.Play("bird");
         }
+        else if(GoHome.Season_Counter >=36 && GoHome.Season_Counter <45)
+        {
+            animator.Play("warmingup");
+        }
+        else if(GoHome.Season_Counter >= 45 && GoHome.Season_Counter < 54)
+        {
+            animator.Play("smell");
+        }
+        else if(GoHome.Season_Counter >=54 && GoHome.Season_Counter <63 )
+        {
+            GoHome.Season_Counter = 9;
+
+        }
+        
         
         
 

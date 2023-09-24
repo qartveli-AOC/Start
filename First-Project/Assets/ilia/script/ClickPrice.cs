@@ -93,6 +93,7 @@ public class ClickPrice : MonoBehaviour
        
         Score = PlayerPrefs.GetInt("coin", 0);
         Daimond_Num = (uint)PlayerPrefs.GetInt("SaveDiamond",0);
+        GoHome.Season_Counter = PlayerPrefs.GetInt("SaveCountAnimation", 0);
         Daimond_Text.text = Daimond_Num.ToString();
 
         One_Auto_Text.text = One_Auto_Num.ToString();
@@ -108,7 +109,7 @@ public class ClickPrice : MonoBehaviour
         Sam_Postav[GoHome.CountIndex_Num].SetActive(true);
     }
     void Start()
-    {
+    {   
         Level_Slider.value = 0;
         Click_Count = 1;
 
@@ -132,6 +133,7 @@ public class ClickPrice : MonoBehaviour
         Click_Source.Play();
         SwapMusicSingle.Instance.gameObject.SetActive(true);
         PlayerPrefs.SetInt("SaveDiamond",(int)Daimond_Num);
+        PlayerPrefs.SetInt("SaveCountAnimation", GoHome.Season_Counter);
         SceneManager.LoadScene(0);
         PlayerPrefs.SetInt("coin", Score);
         ForSongExit2.IsOn_B_Soung = true;
@@ -141,6 +143,7 @@ public class ClickPrice : MonoBehaviour
     {
         PlayerPrefs.SetInt("coin",Score);
         PlayerPrefs.SetInt("SaveDiamond", (int)Daimond_Num);
+        PlayerPrefs.SetInt("SaveCountAnimation", GoHome.Season_Counter);
         PlayerPrefs.Save();
     }
 

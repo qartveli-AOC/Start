@@ -88,6 +88,8 @@ public class GoHome : MonoBehaviour
 
         ClickPrice.Daimond_Num = (uint)PlayerPrefs.GetInt("SaveDiamond", 0);
 
+        Season_Counter = PlayerPrefs.GetInt("SaveCountAnimation",0);
+
         Particle_Objects[CountIndex_Num].SetActive(true);
 
     }
@@ -178,9 +180,9 @@ public class GoHome : MonoBehaviour
         PlayerPrefs.SetInt("SaveDaimondPrice1", Price_Update_Num_1);
         PlayerPrefs.SetInt("SaveDaimondPrice2", Price_Update_Num_2);
         PlayerPrefs.SetInt("SaveDaimondPrice3", Price_Update_Num_3);
+        PlayerPrefs.SetInt("SaveDiamond", (int)ClickPrice.Daimond_Num);
 
-
-         PlayerPrefs.SetInt("SaveDiamond", (int)ClickPrice.Daimond_Num);
+        PlayerPrefs.SetInt("SaveCountAnimation", Season_Counter);
     }
 
     private void GoHomeClick()
@@ -200,7 +202,7 @@ public class GoHome : MonoBehaviour
         PlayerPrefs.SetInt("SaveDaimondPrice3", Price_Update_Num_3);
 
         PlayerPrefs.SetInt("SaveDiamond", (int)ClickPrice.Daimond_Num);
-
+        PlayerPrefs.SetInt("SaveCountAnimation", Season_Counter);
 
         PlayerPrefs.Save();
         SwapMusicSingle.Instance.gameObject.SetActive(true);
