@@ -45,12 +45,21 @@ public class SwapMusicSingle : MonoBehaviour
 
         if (!Audio_Source.isPlaying)
         {
-            
-            clipIndex = (clipIndex + 1) % audio_Clips.Length;
+            if(ForSongExit.IsOn_B_Soung )
+            {   
+                
+                if (ForSongExit2.IsOn_B_Soung)
+                {
+                    clipIndex = (clipIndex + 1) % audio_Clips.Length;
 
-      
-            Audio_Source.clip = audio_Clips[clipIndex];
-            Audio_Source.Play();
+
+                    Audio_Source.clip = audio_Clips[clipIndex];
+                    Audio_Source.Play();
+                }
+               
+
+            }
+           
         }
     }
 }

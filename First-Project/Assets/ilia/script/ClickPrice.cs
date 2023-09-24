@@ -134,6 +134,8 @@ public class ClickPrice : MonoBehaviour
         PlayerPrefs.SetInt("SaveDiamond",(int)Daimond_Num);
         SceneManager.LoadScene(0);
         PlayerPrefs.SetInt("coin", Score);
+        ForSongExit2.IsOn_B_Soung = true;
+        ForSongExit2.IsOn_B_Song = true;
     }
     private void OnApplicationQuit()
     {

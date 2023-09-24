@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ForSongExit : MonoBehaviour
-{
+{   
     public Button Song_Button;
     public Button Soung_Button;
     public Button Exit_Button;
@@ -24,8 +24,8 @@ public class ForSongExit : MonoBehaviour
     public AudioSource Audi;
     public AudioSource Audio;
 
-    public bool IsOn_B_Soung;
-    public bool IsOn_B_Song;
+    public static bool  IsOn_B_Soung = true;
+    public static bool  IsOn_B_Song = true;
 
 
     public GoHome GOO_Home;
@@ -66,7 +66,7 @@ public class ForSongExit : MonoBehaviour
         {  
             
                 Audio.Play();
-                Audio.enabled = true;
+               
             
 
            
@@ -74,7 +74,7 @@ public class ForSongExit : MonoBehaviour
         else
         {
             Audio.Pause();
-            Audio.enabled = false;
+           
         }
     }
 
@@ -93,19 +93,23 @@ public class ForSongExit : MonoBehaviour
 
         if(IsOn_B_Soung)
         {
-            Audi.enabled = true;
+            Audi.Play();
         }
         else
         {
-            Audi.enabled = false;
+            Audi.Pause(); 
         }
     }
 
     public void SettingClick()
     {
         Panel_gm.SetActive(true);
-        GOO_Home.Song_Audio.clip = GOO_Home.Song_Clip_Audio[2];
-        GOO_Home.Song_Audio.Play();
+        if(IsOn_B_Song)
+        {
+            GOO_Home.Song_Audio.clip = GOO_Home.Song_Clip_Audio[2];
+            GOO_Home.Song_Audio.Play();
+        }
+       
 
 
     }
@@ -113,7 +117,10 @@ public class ForSongExit : MonoBehaviour
     public void ExitClick()
     {
         Panel_gm.SetActive(false);
-        GOO_Home.Song_Audio.clip = GOO_Home.Song_Clip_Audio[2];
-        GOO_Home.Song_Audio.Play();
+        if (IsOn_B_Song)
+        {
+            GOO_Home.Song_Audio.clip = GOO_Home.Song_Clip_Audio[2];
+            GOO_Home.Song_Audio.Play();
+        }
     }
 }
