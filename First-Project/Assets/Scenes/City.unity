@@ -3731,7 +3731,7 @@ Transform:
   m_GameObject: {fileID: 725999266}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.57, y: -7.5, z: 203}
+  m_LocalPosition: {x: 2.57, y: -5, z: 203}
   m_LocalScale: {x: 141.29903, y: 152.32115, z: 44.98823}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5776,13 +5776,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4844fb52a8e2b394ba5c541a0554ca10, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.335
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 86
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -8817,10 +8817,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audio_Clips:
-  - {fileID: 8300000, guid: 37a19a0a2cb59fd45844e78d972287bf, type: 3}
-  - {fileID: 8300000, guid: d55ad3c446b652a45a7aa23c9d0bb36c, type: 3}
-  - {fileID: 8300000, guid: 02141d18410517947b0c25083d53eee2, type: 3}
-  - {fileID: 8300000, guid: e94f5c0ff94b1d74b854834096e6b33b, type: 3}
+  - {fileID: 8300000, guid: 7dfe4abc08bb813438aa2d5433b2bbfe, type: 3}
+  - {fileID: 8300000, guid: 7dfe4abc08bb813438aa2d5433b2bbfe, type: 3}
+  - {fileID: 8300000, guid: 7dfe4abc08bb813438aa2d5433b2bbfe, type: 3}
+  - {fileID: 8300000, guid: 7dfe4abc08bb813438aa2d5433b2bbfe, type: 3}
   Audio_Source: {fileID: 0}
 --- !u!4 &2000270350
 Transform:
@@ -9656,6 +9656,34 @@ PrefabInstance:
     - target: {fileID: 2002824304241802472, guid: f8c61b0384dd2be4b975e7d80ec0be32, type: 3}
       propertyPath: m_Name
       value: Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002824304241802472, guid: f8c61b0384dd2be4b975e7d80ec0be32, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696958505483796875, guid: f8c61b0384dd2be4b975e7d80ec0be32, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3212e0eeab22c4d47bdf5e0a23879874, type: 3}
+    - target: {fileID: 6484880804101794829, guid: f8c61b0384dd2be4b975e7d80ec0be32, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484880804101794829, guid: f8c61b0384dd2be4b975e7d80ec0be32, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 67ae4e4d3b7a74044a75ae37969f7d2e, type: 3}
+    - target: {fileID: 6484880804101794829, guid: f8c61b0384dd2be4b975e7d80ec0be32, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484880804101794829, guid: f8c61b0384dd2be4b975e7d80ec0be32, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484880804101794829, guid: f8c61b0384dd2be4b975e7d80ec0be32, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7727843167582120242, guid: f8c61b0384dd2be4b975e7d80ec0be32, type: 3}
       propertyPath: m_Pivot.x
