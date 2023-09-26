@@ -29,7 +29,7 @@ RectTransform:
   m_GameObject: {fileID: 6225282960564914017}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -116,7 +116,7 @@ MonoBehaviour:
   - {fileID: 418375001, guid: 7fc18ffb7f3578348b2868b71b25758c, type: 3}
   - {fileID: -745717417, guid: 7fc18ffb7f3578348b2868b71b25758c, type: 3}
   - {fileID: 237681982, guid: 7fc18ffb7f3578348b2868b71b25758c, type: 3}
-  Max_Speed: 400
+  Max_Speed: 500
   Min_Speed: 200
 --- !u!54 &7564344566559629407
 Rigidbody:
