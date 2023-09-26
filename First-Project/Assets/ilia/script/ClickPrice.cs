@@ -81,6 +81,10 @@ public class ClickPrice : MonoBehaviour
     public GameObject leaves_gm;
 
 
+    public Timer Timer_time;
+    public GameObject Panel_noEnergy;
+
+
 
     private void Update()
     {
@@ -169,249 +173,353 @@ public class ClickPrice : MonoBehaviour
     }
 
     public void Click()
-    {
-        Trash_Generator_Cs.CreateTrash();
-        Score += Click_Count;
-        Click_Source.clip = Audio_Click[5];
-        Click_Source.Play();
+    {   if(Timer_time.Curent_Time_Num > 0)
+        {
+            Trash_Generator_Cs.CreateTrash();
+            Score += Click_Count;
+            Click_Source.clip = Audio_Click[5];
+            Click_Source.Play();
 
-        if (Current_Level_Num <= Level_Full_Num)
-        {
-            Current_Level_Num++;
-            Level_Slider.value = Current_Level_Num / Level_Full_Num;
+            if (Current_Level_Num <= Level_Full_Num)
+            {
+                Current_Level_Num++;
+                Level_Slider.value = Current_Level_Num / Level_Full_Num;
+            }
+            if (Current_Level_Num >= Level_Full_Num)
+            {
+                Animator_Hand.SetTrigger("HandUp");
+                Hand_Particle.SetActive(true);
+                Halliluia_Song.Play();
+                StartCoroutine(HendEffector());
+                Current_Level_Num = 0;
+                Daimond_Num += (uint)_diamond_x2_NUM;
+                _diamond_x2_NUM = (_diamond_x2_NUM + 2) * 2;
+            }
         }
-        if (Current_Level_Num >= Level_Full_Num)
+         else
         {
-            Animator_Hand.SetTrigger("HandUp");
-            Hand_Particle.SetActive(true);
-            Halliluia_Song.Play();
-            StartCoroutine(HendEffector());
-            Current_Level_Num = 0;
-            Daimond_Num +=(uint) _diamond_x2_NUM;           
-            _diamond_x2_NUM = (_diamond_x2_NUM+2)*2 ;            
+            Panel_noEnergy.SetActive(true);
         }
+       
     }
 
     public void One_Click_Shop()
     {
-        if (Score >= Click_One_Num)
+        if (Timer_time.Curent_Time_Num > 0)
         {
-            Click_Source.clip = Audio_Click[0];
-            Click_Source.Play();
-            Score -= Click_One_Num;
-            Click_One_Num *= 2;
-            Click_One_Text.text = Click_One_Num.ToString();
-            Click_Count += 1;
+            if (Score >= Click_One_Num)
+            {
+                Click_Source.clip = Audio_Click[0];
+                Click_Source.Play();
+                Score -= Click_One_Num;
+                Click_One_Num *= 2;
+                Click_One_Text.text = Click_One_Num.ToString();
+                Click_Count += 1;
+            }
+            else
+            {
+                Click_Source.clip = Audio_Click[1];
+                Click_Source.Play();
+            }
         }
         else
         {
-            Click_Source.clip = Audio_Click[1];
-            Click_Source.Play();
+            Panel_noEnergy.SetActive(true);
         }
+           
     }
 
     public void OneAuto()
-    {        
-        if (Score >= One_Auto_Num)
+    {
+        if (Timer_time.Curent_Time_Num > 0)
         {
-            Click_Source.clip = Audio_Click[0];
-            Click_Source.Play();
-            Score -= One_Auto_Num;
-            One_Auto_Num *= 2;           
-            One_Auto_Text.text = One_Auto_Num.ToString();
-            _auto_Count_Num++;
-                StartCoroutine(Auto_Click());                                 
+            if (Score >= One_Auto_Num)
+            {
+                Click_Source.clip = Audio_Click[0];
+                Click_Source.Play();
+                Score -= One_Auto_Num;
+                One_Auto_Num *= 2;
+                One_Auto_Text.text = One_Auto_Num.ToString();
+                _auto_Count_Num++;
+                StartCoroutine(Auto_Click());
+            }
+            else
+            {
+                Click_Source.clip = Audio_Click[1];
+                Click_Source.Play();
+            }
         }
         else
         {
-            Click_Source.clip = Audio_Click[1];
-            Click_Source.Play();
+            Panel_noEnergy.SetActive(true);
         }
+            
             
     }
     void TenClick()
     {
-        if(Score >=Ten_Click_Num)
+        if (Timer_time.Curent_Time_Num > 0)
         {
-            Click_Source.clip = Audio_Click[0];
-            Click_Source.Play();
-            Score -= Ten_Click_Num;
-            Click_Count += 10;
-            Ten_Click_Num *= 2;
-            Ten_Click_Text.text = Ten_Click_Num.ToString();
+            if (Score >= Ten_Click_Num)
+            {
+                Click_Source.clip = Audio_Click[0];
+                Click_Source.Play();
+                Score -= Ten_Click_Num;
+                Click_Count += 10;
+                Ten_Click_Num *= 2;
+                Ten_Click_Text.text = Ten_Click_Num.ToString();
+            }
+            else
+            {
+                Click_Source.clip = Audio_Click[1];
+                Click_Source.Play();
+            }
         }
         else
         {
-            Click_Source.clip = Audio_Click[1];
-            Click_Source.Play();
+            Panel_noEnergy.SetActive(true);
         }
+           
     }
     void Auto10()
     {
-        if(Score >=Auto_10_Num)
+        if (Timer_time.Curent_Time_Num > 0)
         {
-            Click_Source.clip = Audio_Click[0];
-            Click_Source.Play();
-            Score -= Auto_10_Num;
-            _auto_Count_Num += 10;
-            Auto_10_Num *= 2;
-            Auto_10_Text.text = Auto_10_Num.ToString();
-            Debug.Log("1");
-            StartCoroutine(Auto_Click());
-            Debug.Log("2");
+            if (Score >= Auto_10_Num)
+            {
+                Click_Source.clip = Audio_Click[0];
+                Click_Source.Play();
+                Score -= Auto_10_Num;
+                _auto_Count_Num += 10;
+                Auto_10_Num *= 2;
+                Auto_10_Text.text = Auto_10_Num.ToString();
+                Debug.Log("1");
+                StartCoroutine(Auto_Click());
+                Debug.Log("2");
+            }
+            else
+            {
+                Click_Source.clip = Audio_Click[1];
+                Click_Source.Play();
+            }
         }
+
         else
         {
-            Click_Source.clip = Audio_Click[1];
-            Click_Source.Play();
+            Panel_noEnergy.SetActive(true);
         }
+            
     }
     void OneHundredClick()
     {
-        if(Score>=OneHundred_Click_Num)
+        if (Timer_time.Curent_Time_Num > 0)
         {
-            Click_Source.clip = Audio_Click[0];
-            Click_Source.Play();
-            Score -= OneHundred_Click_Num;
-            Click_Count += 100;
-            OneHundred_Click_Num += ((OneHundred_Click_Num+500) / 2) ;
-            OneHundred_Click_Text.text = OneHundred_Click_Num.ToString();
+            if (Score >= OneHundred_Click_Num)
+            {
+                Click_Source.clip = Audio_Click[0];
+                Click_Source.Play();
+                Score -= OneHundred_Click_Num;
+                Click_Count += 100;
+                OneHundred_Click_Num += ((OneHundred_Click_Num + 500) / 2);
+                OneHundred_Click_Text.text = OneHundred_Click_Num.ToString();
+            }
+            else
+            {
+                Click_Source.clip = Audio_Click[1];
+                Click_Source.Play();
+            }
         }
         else
         {
-            Click_Source.clip = Audio_Click[1];
-            Click_Source.Play();
+            Panel_noEnergy.SetActive(true);
         }
+            
     }
     void Auto100()
     {
-        if(Score>=Auto_100_Num)
+        if (Timer_time.Curent_Time_Num > 0)
         {
-            Click_Source.clip = Audio_Click[0];
-            Click_Source.Play();
-            Score -= Auto_100_Num;
-            _auto_Count_Num += 100;
-            Auto_100_Num += ((Auto_100_Num + 2500) / 2);
-            Auto_100_Text.text = Auto_100_Num.ToString();           
+            if (Score >= Auto_100_Num)
+            {
+                Click_Source.clip = Audio_Click[0];
+                Click_Source.Play();
+                Score -= Auto_100_Num;
+                _auto_Count_Num += 100;
+                Auto_100_Num += ((Auto_100_Num + 2500) / 2);
+                Auto_100_Text.text = Auto_100_Num.ToString();
                 StartCoroutine(Auto_Click());
+            }
+            else
+            {
+                Click_Source.clip = Audio_Click[1];
+                Click_Source.Play();
+            }
         }
         else
         {
-            Click_Source.clip = Audio_Click[1];
-            Click_Source.Play();
+            Panel_noEnergy.SetActive(true);
         }
+            
     }
     void HausentClick()
     {
-        if(Score >= Hausent_Click_Num)
+        if (Timer_time.Curent_Time_Num > 0)
         {
-            Click_Source.clip = Audio_Click[0];
-            Click_Source.Play();
-            Score -= Hausent_Click_Num;
-            Click_Count += 1000;
-            Hausent_Click_Num += ((Hausent_Click_Num +5000) / 2);
-            Hausent_Click_Text.text = Hausent_Click_Num.ToString();
+            if (Score >= Hausent_Click_Num)
+            {
+                Click_Source.clip = Audio_Click[0];
+                Click_Source.Play();
+                Score -= Hausent_Click_Num;
+                Click_Count += 1000;
+                Hausent_Click_Num += ((Hausent_Click_Num + 5000) / 2);
+                Hausent_Click_Text.text = Hausent_Click_Num.ToString();
 
+            }
+            else
+            {
+                Click_Source.clip = Audio_Click[1];
+                Click_Source.Play();
+            }
         }
         else
         {
-            Click_Source.clip = Audio_Click[1];
-            Click_Source.Play();
+            Panel_noEnergy.SetActive(true);
         }
+            
        
     }
     void Diamond1sec()
     {
-        if(Score >= Diamond_1sec_Num)
+        if (Timer_time.Curent_Time_Num > 0)
         {
-            Click_Source.clip = Audio_Click[0];
-            Click_Source.Play();
-            Score -= Diamond_1sec_Num;
-            _diamond_Count += 1;
-            Diamond_1sec_Num *= 2;
-            Diamond_1sec_Text.text = Diamond_1sec_Num.ToString();
-            StartCoroutine(Auto_Diamond());
+            if (Score >= Diamond_1sec_Num)
+            {
+                Click_Source.clip = Audio_Click[0];
+                Click_Source.Play();
+                Score -= Diamond_1sec_Num;
+                _diamond_Count += 1;
+                Diamond_1sec_Num *= 2;
+                Diamond_1sec_Text.text = Diamond_1sec_Num.ToString();
+                StartCoroutine(Auto_Diamond());
+            }
+            else
+            {
+                Click_Source.clip = Audio_Click[1];
+                Click_Source.Play();
+            }
         }
         else
         {
-            Click_Source.clip = Audio_Click[1];
-            Click_Source.Play();
+            Panel_noEnergy.SetActive(true);
         }
+            
             
     }
     void Diamond10sec()
     {
-        if(Score >=Diamond_10sec_Num)
+        if (Timer_time.Curent_Time_Num > 0)
         {
-            Click_Source.clip = Audio_Click[0];
-            Click_Source.Play();
-            Score -= Diamond_10sec_Num;
-            _diamond_Count += 10;
-            Diamond_10sec_Num += ((Diamond_10sec_Num+5000)/2);
-            Diamond_10sec_Text.text = Diamond_10sec_Num.ToString();
-            StartCoroutine(Auto_Diamond());
+            if (Score >= Diamond_10sec_Num)
+            {
+                Click_Source.clip = Audio_Click[0];
+                Click_Source.Play();
+                Score -= Diamond_10sec_Num;
+                _diamond_Count += 10;
+                Diamond_10sec_Num += ((Diamond_10sec_Num + 5000) / 2);
+                Diamond_10sec_Text.text = Diamond_10sec_Num.ToString();
+                StartCoroutine(Auto_Diamond());
+            }
+            else
+            {
+                Click_Source.clip = Audio_Click[1];
+                Click_Source.Play();
+            }
         }
         else
         {
-            Click_Source.clip = Audio_Click[1];
-            Click_Source.Play();
+            Panel_noEnergy.SetActive(true);
         }
+            
         
            
         
     }
     void Diamond100()
     {
-        if(Score >= Diamond_100_Num)
+        if (Timer_time.Curent_Time_Num > 0)
         {
-            Click_Source.clip = Audio_Click[0];
-            Click_Source.Play();
-            Daimond_Num -= (uint)Diamond_100_Num;
-            _diamond_Count += 100;
-            Diamond_100_Num += Diamond_100_Num/2;
-            Diamond_100_Text.text = Diamond_100_Num.ToString();
-            StartCoroutine(Auto_Diamond());
+            if (Score >= Diamond_100_Num)
+            {
+                Click_Source.clip = Audio_Click[0];
+                Click_Source.Play();
+                Daimond_Num -= (uint)Diamond_100_Num;
+                _diamond_Count += 100;
+                Diamond_100_Num += Diamond_100_Num / 2;
+                Diamond_100_Text.text = Diamond_100_Num.ToString();
+                StartCoroutine(Auto_Diamond());
+            }
+            else
+            {
+                Click_Source.clip = Audio_Click[1];
+                Click_Source.Play();
+            }
         }
         else
         {
-            Click_Source.clip = Audio_Click[1];
-            Click_Source.Play();
+            Panel_noEnergy.SetActive(true);
         }
+          
             
     }
 
    
  private IEnumerator Auto_Click()
     {
-        if (!_coin_IfAuto_Work_B)
-        {
-            _coin_IfAuto_Work_B = true;
-            while (true)
-            {               
-                yield return new WaitForSeconds(1);
-                Score += _auto_Count_Num;              
+        
+            if (!_coin_IfAuto_Work_B)
+            {
+                _coin_IfAuto_Work_B = true;
+                while (true)
+                {
+                    yield return new WaitForSeconds(1);
+                if (Timer_time.Curent_Time_Num > 0)
+                {
+                    Score += _auto_Count_Num;
+                }
+                   
 
+                }
             }
-        }
+        
+      
+            
     }
 private IEnumerator Auto_Diamond()
     {
-        if (!_diamond_IfAuto_Work_B)
-        {
-            _diamond_IfAuto_Work_B = true;
-            while (true)
+       
+        
+            if (!_diamond_IfAuto_Work_B)
             {
- 
-                yield return new WaitForSeconds(1);
-                Daimond_Num += (uint)_diamond_Count;
+                _diamond_IfAuto_Work_B = true;
+                while (true)
+                {
 
+                    yield return new WaitForSeconds(1);
+                if (Timer_time.Curent_Time_Num > 0)
+                {
+                    Daimond_Num += (uint)_diamond_Count;
+                }
+                    
+
+                }
             }
-        }
+        
+            
            
     }
 
     private IEnumerator HendEffector()
-    {
+    {   
         yield return new WaitForSeconds(4);
         Hand_Particle.SetActive(false);
     }
