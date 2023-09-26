@@ -26,7 +26,7 @@ public class MoveLeaves : MonoBehaviour
     
     void Update()
     {
-        rb.AddForce(Vector3.left * Time.deltaTime * Random.Range(Min_Speed,Max_Speed));
+        rb.AddForce(-transform.right * Time.deltaTime * Random.Range(Min_Speed,Max_Speed));
        
        
     }

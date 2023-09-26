@@ -90,6 +90,12 @@ public class GoHome : MonoBehaviour
 
         Season_Counter = PlayerPrefs.GetInt("SaveCountAnimation",0);
 
+        CountIndex_Num = PlayerPrefs.GetInt("SaveWeather",0);
+
+
+        SpawnerLeaves.Is_Active_B = PlayerPrefs.GetInt("SaveBool", 1) == 1;
+
+
         Particle_Objects[CountIndex_Num].SetActive(true);
 
     }
@@ -183,6 +189,13 @@ public class GoHome : MonoBehaviour
         PlayerPrefs.SetInt("SaveDiamond", (int)ClickPrice.Daimond_Num);
 
         PlayerPrefs.SetInt("SaveCountAnimation", Season_Counter);
+
+        PlayerPrefs.SetInt("SaveWeather", CountIndex_Num);
+
+
+        int isActiveInt = SpawnerLeaves.Is_Active_B ? 1 : 0;
+        PlayerPrefs.SetInt("SaveBool", isActiveInt);
+
     }
 
     private void GoHomeClick()
@@ -203,6 +216,11 @@ public class GoHome : MonoBehaviour
 
         PlayerPrefs.SetInt("SaveDiamond", (int)ClickPrice.Daimond_Num);
         PlayerPrefs.SetInt("SaveCountAnimation", Season_Counter);
+        PlayerPrefs.SetInt("SaveWeather", CountIndex_Num);
+
+
+        int isActiveInt = SpawnerLeaves.Is_Active_B ? 1 : 0; 
+        PlayerPrefs.SetInt("SaveBool", isActiveInt);
 
         PlayerPrefs.Save();
         SwapMusicSingle.Instance.gameObject.SetActive(true);
@@ -285,6 +303,14 @@ public class GoHome : MonoBehaviour
             Particle_Objects[CountIndex_Num].SetActive(false);
             CountIndex_Num = (CountIndex_Num + 1) % Particle_Objects.Length;
             Particle_Objects[CountIndex_Num].SetActive(true);
+            if(CountIndex_Num == 2)
+            {
+                SpawnerLeaves.Is_Active_B = true;
+            }
+            else
+            {
+                SpawnerLeaves.Is_Active_B = false;
+            }
 
         }
 
@@ -364,6 +390,14 @@ public class GoHome : MonoBehaviour
 
 
             Particle_Objects[CountIndex_Num].SetActive(true);
+            if (CountIndex_Num == 2)
+            {
+                SpawnerLeaves.Is_Active_B = true;
+            }
+            else
+            {
+                SpawnerLeaves.Is_Active_B = false;
+            }
         }
 
         Slider_Upgrade_Answer.value = Currect_Slid / Full_Slid;
@@ -448,6 +482,14 @@ public class GoHome : MonoBehaviour
 
 
             Particle_Objects[CountIndex_Num].SetActive(true);
+            if (CountIndex_Num == 2)
+            {
+                SpawnerLeaves.Is_Active_B = true;
+            }
+            else
+            {
+                SpawnerLeaves.Is_Active_B = false;
+            }
         }
 
         Slider_Upgrade_Answer.value = Currect_Slid / Full_Slid;
