@@ -78,6 +78,7 @@ public class ClickPrice : MonoBehaviour
     public AudioSource Halliluia_Song;
     public AudioClip[] Audio_Click;
 
+    public GameObject leaves_gm;
 
 
 
@@ -94,6 +95,12 @@ public class ClickPrice : MonoBehaviour
         Score = PlayerPrefs.GetInt("coin", 0);
         Daimond_Num = (uint)PlayerPrefs.GetInt("SaveDiamond",0);
         GoHome.Season_Counter = PlayerPrefs.GetInt("SaveCountAnimation", 0);
+
+
+        GoHome.CountIndex_Num = PlayerPrefs.GetInt("SaveWeather", 0);
+
+        SpawnerLeaves.Is_Active_B = PlayerPrefs.GetInt("SaveBool", 1) == 1;
+
         Daimond_Text.text = Daimond_Num.ToString();
 
         One_Auto_Text.text = One_Auto_Num.ToString();
@@ -107,6 +114,16 @@ public class ClickPrice : MonoBehaviour
         Diamond_10sec_Text.text = Diamond_10sec_Num.ToString();
         Diamond_100_Text.text = Diamond_100_Num.ToString();
         Sam_Postav[GoHome.CountIndex_Num].SetActive(true);
+        if (GoHome.CountIndex_Num == 2)
+        {
+            SpawnerLeaves.Is_Active_B = true;
+            leaves_gm.SetActive(true);
+        }
+        else
+        {
+            SpawnerLeaves.Is_Active_B = false;
+        }
+
     }
     void Start()
     {   
@@ -134,6 +151,8 @@ public class ClickPrice : MonoBehaviour
         SwapMusicSingle.Instance.gameObject.SetActive(true);
         PlayerPrefs.SetInt("SaveDiamond",(int)Daimond_Num);
         PlayerPrefs.SetInt("SaveCountAnimation", GoHome.Season_Counter);
+        PlayerPrefs.GetInt("SaveWeather",GoHome.CountIndex_Num);
+        int isActiveInt = SpawnerLeaves.Is_Active_B ? 1 : 1;
         SceneManager.LoadScene(0);
         PlayerPrefs.SetInt("coin", Score);
         ForSongExit2.IsOn_B_Soung = true;
@@ -144,6 +163,8 @@ public class ClickPrice : MonoBehaviour
         PlayerPrefs.SetInt("coin",Score);
         PlayerPrefs.SetInt("SaveDiamond", (int)Daimond_Num);
         PlayerPrefs.SetInt("SaveCountAnimation", GoHome.Season_Counter);
+        PlayerPrefs.GetInt("SaveWeather", GoHome.CountIndex_Num);
+        int isActiveInt = SpawnerLeaves.Is_Active_B ? 1 : 1;
         PlayerPrefs.Save();
     }
 
