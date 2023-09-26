@@ -34,7 +34,7 @@ public class Timer : MonoBehaviour
         if (Curent_Time_Num == 0)
         {
             Timer_Num = 0;
-            SceneManager.LoadScene(0);
+            
         }
 
         Time_Slider.value = Curent_Time_Num / Full_Time_Num;
