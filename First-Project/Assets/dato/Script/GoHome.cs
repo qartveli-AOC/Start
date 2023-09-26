@@ -61,6 +61,7 @@ public class GoHome : MonoBehaviour
     public static int Season_Counter;
 
     public ForSongExit For_Song_Exit;
+    public GameObject Particle;
 
 
 
@@ -107,7 +108,14 @@ public class GoHome : MonoBehaviour
     {
        
    
-
+        if(CountIndex_Num ==0)
+        {
+            Particle.SetActive(true);
+        }
+        else
+        {
+            Particle.SetActive(false);
+        }
 
         Text_Daimond_Home.text = ClickPrice.Daimond_Num.ToString();
         
@@ -303,7 +311,18 @@ public class GoHome : MonoBehaviour
             Particle_Objects[CountIndex_Num].SetActive(false);
             CountIndex_Num = (CountIndex_Num + 1) % Particle_Objects.Length;
             Particle_Objects[CountIndex_Num].SetActive(true);
-            if(CountIndex_Num == 2)
+
+            if (CountIndex_Num == 0)
+            {
+                Particle.SetActive(true);
+            }
+            else
+            {
+                Particle.SetActive(false);
+            }
+
+
+            if (CountIndex_Num == 2)
             {
                 SpawnerLeaves.Is_Active_B = true;
             }
@@ -390,6 +409,14 @@ public class GoHome : MonoBehaviour
 
 
             Particle_Objects[CountIndex_Num].SetActive(true);
+            if (CountIndex_Num == 0)
+            {
+                Particle.SetActive(true);
+            }
+            else
+            {
+                Particle.SetActive(false);
+            }
             if (CountIndex_Num == 2)
             {
                 SpawnerLeaves.Is_Active_B = true;
@@ -482,6 +509,14 @@ public class GoHome : MonoBehaviour
 
 
             Particle_Objects[CountIndex_Num].SetActive(true);
+            if (CountIndex_Num == 0)
+            {
+                Particle.SetActive(true);
+            }
+            else
+            {
+                Particle.SetActive(false);
+            }
             if (CountIndex_Num == 2)
             {
                 SpawnerLeaves.Is_Active_B = true;
