@@ -238,7 +238,7 @@ public class GoHome : MonoBehaviour
 
         Song_Audio.clip = Song_Clip_Audio[2];
         Song_Audio.Play();
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
         
       
         Transform_Buttons[3].localScale = new Vector3 (1.1f, 1.1f, 1.1f);

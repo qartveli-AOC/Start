@@ -157,7 +157,7 @@ public class ClickPrice : MonoBehaviour
         PlayerPrefs.SetInt("SaveCountAnimation", GoHome.Season_Counter);
         PlayerPrefs.GetInt("SaveWeather",GoHome.CountIndex_Num);
         int isActiveInt = SpawnerLeaves.Is_Active_B ? 1 : 1;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
         PlayerPrefs.SetInt("coin", Score);
         ForSongExit2.IsOn_B_Soung = true;
         ForSongExit2.IsOn_B_Song = true;
