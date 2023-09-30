@@ -83,6 +83,7 @@ public class ClickPrice : MonoBehaviour
 
     public Timer Timer_time;
     public GameObject Panel_noEnergy;
+    public GameObject[] Seasons;
 
 
 
@@ -118,7 +119,8 @@ public class ClickPrice : MonoBehaviour
         Diamond_10sec_Text.text = Diamond_10sec_Num.ToString();
         Diamond_100_Text.text = Diamond_100_Num.ToString();
         Sam_Postav[GoHome.CountIndex_Num].SetActive(true);
-        if (GoHome.CountIndex_Num == 2)
+        Seasons[GoHome.CountIndex_Num].SetActive(true);
+        if (GoHome.CountIndex_Num == 3)
         {
             SpawnerLeaves.Is_Active_B = true;
             leaves_gm.SetActive(true);
@@ -126,6 +128,15 @@ public class ClickPrice : MonoBehaviour
         else
         {
             SpawnerLeaves.Is_Active_B = false;
+        }
+
+        if (GoHome.CountIndex_Num == 2)
+        {
+            SwapnBirds.Is_Birds = true;
+        }
+        else
+        {
+            SwapnBirds.Is_Birds = false;
         }
 
     }
