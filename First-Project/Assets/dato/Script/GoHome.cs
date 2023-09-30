@@ -63,6 +63,11 @@ public class GoHome : MonoBehaviour
     public ForSongExit For_Song_Exit;
     public GameObject Particle;
 
+    public GameObject[] Seasons;
+
+    public ParticleSystem Smoke;
+    public ParticleSystem Little_fire;
+
 
 
 
@@ -98,6 +103,29 @@ public class GoHome : MonoBehaviour
 
 
         Particle_Objects[CountIndex_Num].SetActive(true);
+        if (CountIndex_Num == 1)
+        {
+            Smoke.Play();
+        }
+
+        else
+        {
+            Smoke.Stop();
+        }
+
+        if (CountIndex_Num == 3)
+        {
+            Little_fire.Play();
+        }
+
+        else
+        {
+            Little_fire.Stop();
+        }
+
+
+        
+        Seasons[CountIndex_Num].SetActive(true);
 
     }
 
@@ -309,8 +337,10 @@ public class GoHome : MonoBehaviour
 
             Debug.Log("MENAI");
             Particle_Objects[CountIndex_Num].SetActive(false);
+            Seasons[CountIndex_Num].SetActive(false);
             CountIndex_Num = (CountIndex_Num + 1) % Particle_Objects.Length;
             Particle_Objects[CountIndex_Num].SetActive(true);
+            Seasons[CountIndex_Num].SetActive(true);
 
             if (CountIndex_Num == 0)
             {
@@ -322,13 +352,35 @@ public class GoHome : MonoBehaviour
             }
 
 
-            if (CountIndex_Num == 2)
+            if (CountIndex_Num == 3)
             {
                 SpawnerLeaves.Is_Active_B = true;
+                Little_fire.Play();
+
             }
             else
             {
                 SpawnerLeaves.Is_Active_B = false;
+                Little_fire.Stop();
+            }
+
+
+            if (CountIndex_Num == 2)
+            {
+                SwapnBirds.Is_Birds = true;
+            }
+            else
+            {
+                SwapnBirds.Is_Birds = false;
+            }
+            if (CountIndex_Num == 1)
+            {
+                Smoke.Play();
+            }
+
+            else
+            {
+                Smoke.Stop();
             }
 
         }
@@ -403,12 +455,13 @@ public class GoHome : MonoBehaviour
 
             Debug.Log("MENAI");
             Particle_Objects[CountIndex_Num].SetActive(false);
-
+            Seasons[CountIndex_Num].SetActive(false);
 
             CountIndex_Num = (CountIndex_Num + 1) % Particle_Objects.Length;
 
 
             Particle_Objects[CountIndex_Num].SetActive(true);
+            Seasons[CountIndex_Num].SetActive(true);
             if (CountIndex_Num == 0)
             {
                 Particle.SetActive(true);
@@ -417,13 +470,32 @@ public class GoHome : MonoBehaviour
             {
                 Particle.SetActive(false);
             }
-            if (CountIndex_Num == 2)
+            if (CountIndex_Num == 3)
             {
                 SpawnerLeaves.Is_Active_B = true;
+                Little_fire.Play();
             }
             else
             {
                 SpawnerLeaves.Is_Active_B = false;
+                Little_fire.Stop();
+            }
+            if (CountIndex_Num == 2)
+            {
+                SwapnBirds.Is_Birds = true;
+            }
+            else
+            {
+                SwapnBirds.Is_Birds = false;
+            }
+            if (CountIndex_Num == 1)
+            {
+                Smoke.Play();
+            }
+
+            else
+            {
+                Smoke.Stop();
             }
         }
 
@@ -503,12 +575,13 @@ public class GoHome : MonoBehaviour
             Slider_Upgrade_Click[2].value = 0;
             Debug.Log("MENAI");
             Particle_Objects[CountIndex_Num].SetActive(false);
-
+            Seasons[CountIndex_Num].SetActive(false);
 
             CountIndex_Num = (CountIndex_Num + 1) % Particle_Objects.Length;
 
 
             Particle_Objects[CountIndex_Num].SetActive(true);
+            Seasons[CountIndex_Num].SetActive(true);
             if (CountIndex_Num == 0)
             {
                 Particle.SetActive(true);
@@ -517,13 +590,32 @@ public class GoHome : MonoBehaviour
             {
                 Particle.SetActive(false);
             }
-            if (CountIndex_Num == 2)
+            if (CountIndex_Num == 3)
             {
                 SpawnerLeaves.Is_Active_B = true;
+                Little_fire.Play();
             }
             else
             {
                 SpawnerLeaves.Is_Active_B = false;
+                Little_fire.Stop();
+            }
+            if (CountIndex_Num == 2)
+            {
+                SwapnBirds.Is_Birds = true;
+            }
+            else
+            {
+                SwapnBirds.Is_Birds = false;
+            }
+            if (CountIndex_Num == 1)
+            {
+                Smoke.Play();
+            }
+
+            else
+            {
+                Smoke.Stop();
             }
         }
 
