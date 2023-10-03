@@ -66,9 +66,9 @@ public class GoHome : MonoBehaviour
     public GameObject[] Seasons;
 
     public ParticleSystem Smoke;
-    public ParticleSystem Little_fire;
+    public GameObject Little_fire;
 
-
+    public  ForSongExit _forSongExit;
 
 
 
@@ -115,12 +115,12 @@ public class GoHome : MonoBehaviour
 
         if (CountIndex_Num == 3)
         {
-            Little_fire.Play();
+            Little_fire.SetActive(true);
         }
 
         else
         {
-            Little_fire.Stop();
+            Little_fire.SetActive(false);
         }
 
 
@@ -194,6 +194,21 @@ public class GoHome : MonoBehaviour
         Price_Update_Text1.text = Price_Update_Num_1.ToString();
         Price_Update_Text2.text = Price_Update_Num_2.ToString();
         Price_Update_Text3.text = Price_Update_Num_3.ToString();
+
+
+
+
+        if (CountIndex_Num == 0)
+        {
+            Particle.SetActive(true);
+        }
+
+        if (CountIndex_Num == 3)
+        {
+            Little_fire.SetActive(true);
+        }
+
+
 
 
 
@@ -291,7 +306,7 @@ public class GoHome : MonoBehaviour
                         Currect_Slid++;
                         Season_Counter++;
                         SliderMassivClick();
-                        Price_Update_Num_1 = (Price_Update_Num_1 + 1) * 2;
+                        Price_Update_Num_1 = (Price_Update_Num_1 + 50) ;
                     
                    
 
@@ -342,7 +357,7 @@ public class GoHome : MonoBehaviour
             Particle_Objects[CountIndex_Num].SetActive(true);
             Seasons[CountIndex_Num].SetActive(true);
 
-            if (CountIndex_Num == 0)
+            if (CountIndex_Num == 0  )
             {
                 Particle.SetActive(true);
             }
@@ -355,13 +370,13 @@ public class GoHome : MonoBehaviour
             if (CountIndex_Num == 3)
             {
                 SpawnerLeaves.Is_Active_B = true;
-                Little_fire.Play();
+                Little_fire.SetActive(true);
 
             }
             else
             {
                 SpawnerLeaves.Is_Active_B = false;
-                Little_fire.Stop();
+                Little_fire.SetActive(false);
             }
 
 
@@ -408,7 +423,7 @@ public class GoHome : MonoBehaviour
                     NextSprite2();
                     Currect_Slid++;
                     SliderMassivClick2();
-                    Price_Update_Num_2 = (Price_Update_Num_2 + 1) * 2;
+                    Price_Update_Num_2 = (Price_Update_Num_2 + 50) ;
                     Season_Counter++;
 
 
@@ -462,7 +477,7 @@ public class GoHome : MonoBehaviour
 
             Particle_Objects[CountIndex_Num].SetActive(true);
             Seasons[CountIndex_Num].SetActive(true);
-            if (CountIndex_Num == 0)
+            if (CountIndex_Num == 0  )
             {
                 Particle.SetActive(true);
             }
@@ -473,12 +488,12 @@ public class GoHome : MonoBehaviour
             if (CountIndex_Num == 3)
             {
                 SpawnerLeaves.Is_Active_B = true;
-                Little_fire.Play();
+                Little_fire.SetActive(true);
             }
             else
             {
                 SpawnerLeaves.Is_Active_B = false;
-                Little_fire.Stop();
+                Little_fire.SetActive(false);
             }
             if (CountIndex_Num == 2)
             {
@@ -527,7 +542,7 @@ public class GoHome : MonoBehaviour
                     Currect_Slid++;
                     Season_Counter++;
                     SliderMassivClick3();
-                    Price_Update_Num_3 = (Price_Update_Num_3 + 1) * 2;
+                    Price_Update_Num_3 = (Price_Update_Num_3 + 50);
 
 
 
@@ -582,7 +597,7 @@ public class GoHome : MonoBehaviour
 
             Particle_Objects[CountIndex_Num].SetActive(true);
             Seasons[CountIndex_Num].SetActive(true);
-            if (CountIndex_Num == 0)
+            if (CountIndex_Num == 0 )
             {
                 Particle.SetActive(true);
             }
@@ -593,12 +608,12 @@ public class GoHome : MonoBehaviour
             if (CountIndex_Num == 3)
             {
                 SpawnerLeaves.Is_Active_B = true;
-                Little_fire.Play();
+                Little_fire.SetActive(true);
             }
             else
             {
                 SpawnerLeaves.Is_Active_B = false;
-                Little_fire.Stop();
+                Little_fire.SetActive(false);
             }
             if (CountIndex_Num == 2)
             {

@@ -30,6 +30,10 @@ public class ForSongExit : MonoBehaviour
 
     public GoHome GOO_Home;
 
+    public GameObject Paritcle;
+    public GameObject Particle_2;
+
+
     private void Awake()
     {
        
@@ -46,8 +50,21 @@ public class ForSongExit : MonoBehaviour
         Setting_Button.onClick.AddListener(SettingClick);
     }
 
-    
-   
+    private void FixedUpdate()
+    {
+        if(Panel_gm.activeSelf)
+        {
+            Paritcle.SetActive(false);
+        }
+
+        if(Panel_gm.activeSelf)
+        {
+            Particle_2.SetActive(false);
+        }
+    }
+
+
+
 
     public void SongClick()
     {

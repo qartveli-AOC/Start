@@ -1842,7 +1842,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2085585759529967654, guid: 61406d604165c1f47b6d8b4d9b336fb4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -33.1
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 2085585759529967654, guid: 61406d604165c1f47b6d8b4d9b336fb4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1893,22 +1893,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7471492692955455029, guid: 61406d604165c1f47b6d8b4d9b336fb4, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471492692955455029, guid: 61406d604165c1f47b6d8b4d9b336fb4, type: 3}
       propertyPath: EmissionModule.rateOverDistance.scalar
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2572023089809000073, guid: 61406d604165c1f47b6d8b4d9b336fb4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2025266023}
   m_SourcePrefab: {fileID: 100100000, guid: 61406d604165c1f47b6d8b4d9b336fb4, type: 3}
 --- !u!224 &481098684 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2085585759529967654, guid: 61406d604165c1f47b6d8b4d9b336fb4, type: 3}
-  m_PrefabInstance: {fileID: 481098683}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &481098685 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7471492692955455029, guid: 61406d604165c1f47b6d8b4d9b336fb4, type: 3}
   m_PrefabInstance: {fileID: 481098683}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &492490875 stripped
@@ -4281,7 +4283,8 @@ MonoBehaviour:
   - {fileID: 504533878}
   - {fileID: 1987254786}
   Smoke: {fileID: 5958478976348681126}
-  Little_fire: {fileID: 481098685}
+  Little_fire: {fileID: 2025266021}
+  _forSongExit: {fileID: 1835942770}
 --- !u!114 &1835942770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4312,6 +4315,8 @@ MonoBehaviour:
   Audi: {fileID: 0}
   Audio: {fileID: 9150264}
   GOO_Home: {fileID: 1835942769}
+  Paritcle: {fileID: 602739845197543190}
+  Particle_2: {fileID: 2025266021}
 --- !u!114 &1835942771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4575,6 +4580,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2010310459}
   m_CullTransparentMesh: 1
+--- !u!1 &2025266021 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2572023089809000073, guid: 61406d604165c1f47b6d8b4d9b336fb4, type: 3}
+  m_PrefabInstance: {fileID: 481098683}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &2025266023
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025266021}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: -1000
+  m_TargetDisplay: 0
 --- !u!1 &2036764545
 GameObject:
   m_ObjectHideFlags: 0
@@ -4719,7 +4752,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2085585759529967654, guid: 61406d604165c1f47b6d8b4d9b336fb4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -33.1
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 2085585759529967654, guid: 61406d604165c1f47b6d8b4d9b336fb4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4770,6 +4803,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7471492692955455029, guid: 61406d604165c1f47b6d8b4d9b336fb4, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471492692955455029, guid: 61406d604165c1f47b6d8b4d9b336fb4, type: 3}
       propertyPath: EmissionModule.rateOverDistance.scalar
       value: 0
       objectReference: {fileID: 0}
@@ -4807,7 +4844,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: -300
+  m_SortingOrder: -1000
   m_TargetDisplay: 0
 --- !u!1001 &1974433746119334977
 PrefabInstance:

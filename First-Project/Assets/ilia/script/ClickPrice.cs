@@ -30,6 +30,14 @@ public class ClickPrice : MonoBehaviour
     public int Diamond_10sec_Num = 5000;
     public int Diamond_100_Num = 300000;
 
+
+
+         
+
+         
+
+
+
     public float Current_Level_Num;
     public float Level_Full_Num;
     
@@ -93,7 +101,7 @@ public class ClickPrice : MonoBehaviour
         Daimond_Text.text = Daimond_Num.ToString();
         Power_Click_Text.text = Click_Count.ToString();
 
-}
+    }
     public void Awake()
     {
        
@@ -105,6 +113,22 @@ public class ClickPrice : MonoBehaviour
         GoHome.CountIndex_Num = PlayerPrefs.GetInt("SaveWeather", 0);
 
         SpawnerLeaves.Is_Active_B = PlayerPrefs.GetInt("SaveBool", 1) == 1;
+
+
+
+        Click_One_Num = PlayerPrefs.GetInt("save1", 0);
+        One_Auto_Num =  PlayerPrefs.GetInt("save2", 0);
+        Ten_Click_Num =  PlayerPrefs.GetInt("save3", 0);
+        Auto_10_Num =  PlayerPrefs.GetInt("save4", 0);
+        OneHundred_Click_Num = PlayerPrefs.GetInt("save5", 0);
+        Auto_100_Num = PlayerPrefs.GetInt("save5", 0);
+        Hausent_Click_Num = PlayerPrefs.GetInt("save6", 0);
+        Diamond_1sec_Num = PlayerPrefs.GetInt("save7", 0);
+        Diamond_10sec_Num = PlayerPrefs.GetInt("save8", 0);
+        Diamond_100_Num = PlayerPrefs.GetInt("save9", 0);
+
+        Click_Count = PlayerPrefs.GetInt("saveCountPower", 0);
+
 
         Daimond_Text.text = Daimond_Num.ToString();
 
@@ -118,6 +142,11 @@ public class ClickPrice : MonoBehaviour
         Diamond_1sec_Text.text= Diamond_1sec_Num.ToString();
         Diamond_10sec_Text.text = Diamond_10sec_Num.ToString();
         Diamond_100_Text.text = Diamond_100_Num.ToString();
+
+
+        //
+        
+        //
         Sam_Postav[GoHome.CountIndex_Num].SetActive(true);
         Seasons[GoHome.CountIndex_Num].SetActive(true);
         if (GoHome.CountIndex_Num == 3)
@@ -143,7 +172,7 @@ public class ClickPrice : MonoBehaviour
     void Start()
     {   
         Level_Slider.value = 0;
-        Click_Count = 1;
+        
 
         Home_Button.onClick.AddListener(Go_Home);
         Auto_Button.onClick.AddListener(OneAuto);
@@ -168,6 +197,23 @@ public class ClickPrice : MonoBehaviour
         PlayerPrefs.SetInt("SaveCountAnimation", GoHome.Season_Counter);
         PlayerPrefs.GetInt("SaveWeather",GoHome.CountIndex_Num);
         int isActiveInt = SpawnerLeaves.Is_Active_B ? 1 : 1;
+
+
+        PlayerPrefs.SetInt("save1", Click_One_Num);
+        PlayerPrefs.SetInt("save2", One_Auto_Num);
+        PlayerPrefs.SetInt("save3", Ten_Click_Num);
+        PlayerPrefs.SetInt("save4", Auto_10_Num);
+        PlayerPrefs.SetInt("save5", OneHundred_Click_Num);
+        PlayerPrefs.SetInt("save5", Auto_100_Num);
+        PlayerPrefs.SetInt("save6", Hausent_Click_Num);
+        PlayerPrefs.SetInt("save7", Diamond_1sec_Num);
+        PlayerPrefs.SetInt("save8", Diamond_10sec_Num);
+        PlayerPrefs.SetInt("save9", Diamond_100_Num);
+
+        PlayerPrefs.SetInt("saveCountPower", Click_Count);
+
+
+
         SceneManager.LoadScene(1);
         PlayerPrefs.SetInt("coin", Score);
         ForSongExit2.IsOn_B_Soung = true;
@@ -179,7 +225,23 @@ public class ClickPrice : MonoBehaviour
         PlayerPrefs.SetInt("SaveDiamond", (int)Daimond_Num);
         PlayerPrefs.SetInt("SaveCountAnimation", GoHome.Season_Counter);
         PlayerPrefs.GetInt("SaveWeather", GoHome.CountIndex_Num);
+        
         int isActiveInt = SpawnerLeaves.Is_Active_B ? 1 : 1;
+
+
+        PlayerPrefs.SetInt("save1", Click_One_Num);
+        PlayerPrefs.SetInt("save2", One_Auto_Num);
+        PlayerPrefs.SetInt("save3", Ten_Click_Num);
+        PlayerPrefs.SetInt("save4", Auto_10_Num);
+        PlayerPrefs.SetInt("save5", OneHundred_Click_Num);
+        PlayerPrefs.SetInt("save5", Auto_100_Num);
+        PlayerPrefs.SetInt("save6", Hausent_Click_Num);
+        PlayerPrefs.SetInt("save7", Diamond_1sec_Num);
+        PlayerPrefs.SetInt("save8", Diamond_10sec_Num);
+        PlayerPrefs.SetInt("save9", Diamond_100_Num);
+
+        PlayerPrefs.SetInt("saveCountPower", Click_Count);
+
         PlayerPrefs.Save();
     }
 
@@ -463,7 +525,7 @@ public class ClickPrice : MonoBehaviour
             {
                 Click_Source.clip = Audio_Click[0];
                 Click_Source.Play();
-                Daimond_Num -= (uint)Diamond_100_Num;
+                Score -= Diamond_100_Num;
                 _diamond_Count += 100;
                 Diamond_100_Num += Diamond_100_Num / 2;
                 Diamond_100_Text.text = Diamond_100_Num.ToString();
