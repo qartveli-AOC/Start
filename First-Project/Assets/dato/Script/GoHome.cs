@@ -145,7 +145,7 @@ public class GoHome : MonoBehaviour
             Particle.SetActive(false);
         }
 
-        Text_Daimond_Home.text = ClickPrice.Daimond_Num.ToString();
+        
         
         
 
@@ -196,7 +196,7 @@ public class GoHome : MonoBehaviour
         Price_Update_Text3.text = Price_Update_Num_3.ToString();
 
 
-
+        Text_Daimond_Home.text = ClickPrice.Daimond_Num.ToString();
 
         if (CountIndex_Num == 0)
         {
