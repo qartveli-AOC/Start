@@ -796,7 +796,7 @@ MonoBehaviour:
   Diamond_10sec_Num: 5000
   Diamond_100_Num: 300000
   Current_Level_Num: 0
-  Level_Full_Num: 5
+  Level_Full_Num: 100
   Home_Button: {fileID: 1424733385}
   Click_Button: {fileID: 2044323505}
   Auto_Button: {fileID: 135900141}
