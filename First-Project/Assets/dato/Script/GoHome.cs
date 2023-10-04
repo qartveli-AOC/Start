@@ -1,3 +1,4 @@
+using CrazyGames;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -70,7 +71,7 @@ public class GoHome : MonoBehaviour
 
     public  ForSongExit _forSongExit;
 
-
+    public Button _Box;
 
 
 
@@ -145,7 +146,7 @@ public class GoHome : MonoBehaviour
             Particle.SetActive(false);
         }
 
-        Text_Daimond_Home.text = ClickPrice.Daimond_Num.ToString();
+       
         
         
 
@@ -166,11 +167,17 @@ public class GoHome : MonoBehaviour
         Button_Upgrade_Click[1].onClick.AddListener(SliderAnswer2);
         Button_Upgrade_Click[2].onClick.AddListener(SliderAnswer3);
         Chest_Button.onClick.AddListener(ChectClick);
+        _Box.onClick.AddListener(BoxClick);
+    }
+
+    public void BoxClick()
+    {
+        ClickPrice.Daimond_Num += 200;
+        CrazyAds.Instance.beginAdBreakRewarded();
     }
 
 
 
-  
 
 
 
@@ -195,7 +202,7 @@ public class GoHome : MonoBehaviour
         Price_Update_Text2.text = Price_Update_Num_2.ToString();
         Price_Update_Text3.text = Price_Update_Num_3.ToString();
 
-
+        Text_Daimond_Home.text = ClickPrice.Daimond_Num.ToString();
 
 
         if (CountIndex_Num == 0)

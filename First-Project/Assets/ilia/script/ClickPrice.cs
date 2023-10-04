@@ -6,6 +6,7 @@ using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
+using CrazyGames;
 
 public class ClickPrice : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class ClickPrice : MonoBehaviour
     private bool _diamond_IfAuto_Work_B=false;
 
     private int _auto_Count_Num = 0;
-    public int Click_Count;
+    public int Click_Count = 1;
     private int _diamond_x2_NUM=1;
     private int _diamond_Count;
     public int Score;
@@ -107,7 +108,7 @@ public class ClickPrice : MonoBehaviour
        
         Score = PlayerPrefs.GetInt("coin", 0);
         Daimond_Num = (uint)PlayerPrefs.GetInt("SaveDiamond",0);
-        GoHome.Season_Counter = PlayerPrefs.GetInt("SaveCountAnimation", 0);
+        GoHome.Season_Counter = PlayerPrefs.GetInt("SaveCountAnimation", 1);
 
 
         GoHome.CountIndex_Num = PlayerPrefs.GetInt("SaveWeather", 0);
@@ -116,18 +117,18 @@ public class ClickPrice : MonoBehaviour
 
 
 
-        Click_One_Num = PlayerPrefs.GetInt("save1", 0);
-        One_Auto_Num =  PlayerPrefs.GetInt("save2", 0);
-        Ten_Click_Num =  PlayerPrefs.GetInt("save3", 0);
-        Auto_10_Num =  PlayerPrefs.GetInt("save4", 0);
-        OneHundred_Click_Num = PlayerPrefs.GetInt("save5", 0);
-        Auto_100_Num = PlayerPrefs.GetInt("save5", 0);
-        Hausent_Click_Num = PlayerPrefs.GetInt("save6", 0);
-        Diamond_1sec_Num = PlayerPrefs.GetInt("save7", 0);
-        Diamond_10sec_Num = PlayerPrefs.GetInt("save8", 0);
-        Diamond_100_Num = PlayerPrefs.GetInt("save9", 0);
+        Click_One_Num = PlayerPrefs.GetInt("save1", 10);
+        One_Auto_Num =  PlayerPrefs.GetInt("save2", 20);
+        Ten_Click_Num =  PlayerPrefs.GetInt("save3",100);
+        Auto_10_Num =  PlayerPrefs.GetInt("save4",500);
+        OneHundred_Click_Num = PlayerPrefs.GetInt("save5", 1000);
+        Auto_100_Num = PlayerPrefs.GetInt("save5", 5000);
+        Hausent_Click_Num = PlayerPrefs.GetInt("save6", 10000);
+        Diamond_1sec_Num = PlayerPrefs.GetInt("save7", 20000);
+        Diamond_10sec_Num = PlayerPrefs.GetInt("save8", 50000);
+        Diamond_100_Num = PlayerPrefs.GetInt("save9", 100000);
 
-        Click_Count = PlayerPrefs.GetInt("saveCountPower", 0);
+        Click_Count = PlayerPrefs.GetInt("saveCountPower1", 1);
 
 
         Daimond_Text.text = Daimond_Num.ToString();
@@ -210,10 +211,11 @@ public class ClickPrice : MonoBehaviour
         PlayerPrefs.SetInt("save8", Diamond_10sec_Num);
         PlayerPrefs.SetInt("save9", Diamond_100_Num);
 
-        PlayerPrefs.SetInt("saveCountPower", Click_Count);
+        PlayerPrefs.SetInt("saveCountPower1", Click_Count);
 
-
-
+        // Crazy Games
+        CrazyAds.Instance.beginAdBreak();
+        //
         SceneManager.LoadScene(1);
         PlayerPrefs.SetInt("coin", Score);
         ForSongExit2.IsOn_B_Soung = true;
@@ -240,7 +242,7 @@ public class ClickPrice : MonoBehaviour
         PlayerPrefs.SetInt("save8", Diamond_10sec_Num);
         PlayerPrefs.SetInt("save9", Diamond_100_Num);
 
-        PlayerPrefs.SetInt("saveCountPower", Click_Count);
+        PlayerPrefs.SetInt("saveCountPower1", Click_Count);
 
         PlayerPrefs.Save();
     }
