@@ -6,9 +6,16 @@ using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
+using System.Runtime.InteropServices;
 
 public class ClickPrice : MonoBehaviour
 {
+    [DllImport("__Internal")]
+    private static extern void Hello();
+
+
+
+
     private bool _coin_IfAuto_Work_B=false;
     private bool _diamond_IfAuto_Work_B=false;
 
@@ -212,8 +219,9 @@ public class ClickPrice : MonoBehaviour
 
         PlayerPrefs.SetInt("saveCountPower1", Click_Count);
 
-
-
+        // Yandex Reklam
+        Hello();
+        //
         SceneManager.LoadScene(1);
         PlayerPrefs.SetInt("coin", Score);
         ForSongExit2.IsOn_B_Soung = true;

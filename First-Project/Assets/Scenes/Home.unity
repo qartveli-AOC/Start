@@ -4285,6 +4285,7 @@ MonoBehaviour:
   Smoke: {fileID: 5958478976348681126}
   Little_fire: {fileID: 2025266021}
   _forSongExit: {fileID: 1835942770}
+  Box: {fileID: 492490876}
 --- !u!114 &1835942770
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -70,6 +71,17 @@ public class GoHome : MonoBehaviour
 
     public  ForSongExit _forSongExit;
 
+    public Button Box;
+
+
+    [DllImport("__Internal")]
+    private static extern void Seng();
+
+    private void Senggin()
+    {
+        Seng();
+        ClickPrice.Daimond_Num += 200;
+    }
 
 
 
@@ -166,6 +178,7 @@ public class GoHome : MonoBehaviour
         Button_Upgrade_Click[1].onClick.AddListener(SliderAnswer2);
         Button_Upgrade_Click[2].onClick.AddListener(SliderAnswer3);
         Chest_Button.onClick.AddListener(ChectClick);
+        Box.onClick.AddListener(Senggin);
     }
 
 
@@ -281,6 +294,9 @@ public class GoHome : MonoBehaviour
 
         Song_Audio.clip = Song_Clip_Audio[2];
         Song_Audio.Play();
+
+
+      
         SceneManager.LoadScene(0);
         
       
