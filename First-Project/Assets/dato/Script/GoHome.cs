@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using YG;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -70,11 +71,23 @@ public class GoHome : MonoBehaviour
 
     public  ForSongExit _forSongExit;
 
+    public YandexGame yandexGame;
 
+    public Button Reward_Button;
+    private uint xUpper = 1;
 
+    public void RewardCall()
+    {        
+        yandexGame._RewardedShow(1);        
+    }
 
-
-
+    public void RewardMoney()
+    {
+             
+        ClickPrice.Daimond_Num +=((100+xUpper) * xUpper)-(xUpper*78);
+        xUpper++;
+    }
+    
     private void Awake()
     {   
         Currect_Slid = PlayerPrefs.GetFloat("SaveSliderLid", 0);
@@ -122,7 +135,7 @@ public class GoHome : MonoBehaviour
         {
             Little_fire.SetActive(false);
         }
-
+         
 
         
         Seasons[CountIndex_Num].SetActive(true);

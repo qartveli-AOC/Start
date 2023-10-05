@@ -6,6 +6,7 @@ using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
+using YG;
 
 public class ClickPrice : MonoBehaviour
 {
@@ -29,14 +30,6 @@ public class ClickPrice : MonoBehaviour
     public int Diamond_1sec_Num = 1000;
     public int Diamond_10sec_Num = 5000;
     public int Diamond_100_Num = 300000;
-
-
-
-         
-
-         
-
-
 
     public float Current_Level_Num;
     public float Level_Full_Num;
@@ -93,7 +86,19 @@ public class ClickPrice : MonoBehaviour
     public GameObject Panel_noEnergy;
     public GameObject[] Seasons;
 
-
+    public YandexGame yandexGame;
+    public Button Rewart_Button;
+    private uint xUpper;
+    public void RewardCall()
+    {
+        yandexGame._RewardedShow(1);
+    }
+    public void RewardMoney()
+    {
+        Score += 1000 * (int)xUpper;
+        Daimond_Num += ((95 + xUpper) * xUpper) - (xUpper * 78);
+        xUpper++;
+    }
 
     private void Update()
     {
