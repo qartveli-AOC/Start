@@ -148,9 +148,12 @@ public class ClickPrice : MonoBehaviour
         Diamond_10sec_Text.text = Diamond_10sec_Num.ToString();
         Diamond_100_Text.text = Diamond_100_Num.ToString();
 
-
+        StartCoroutine(Auto_Diamond());
+        StartCoroutine(Auto_Click());
+        _auto_Count_Num = PlayerPrefs.GetInt("AutoCoin",0);
+        _diamond_Count = PlayerPrefs.GetInt("AutoDiamond", 0);
         //
-        
+
         //
         Sam_Postav[GoHome.CountIndex_Num].SetActive(true);
         Seasons[GoHome.CountIndex_Num].SetActive(true);
@@ -216,7 +219,8 @@ public class ClickPrice : MonoBehaviour
         PlayerPrefs.SetInt("save9", Diamond_100_Num);
 
         PlayerPrefs.SetInt("saveCountPower1", Click_Count);
-
+        PlayerPrefs.SetInt("AutoCoin", _auto_Count_Num);
+        PlayerPrefs.SetInt("AutoDiamond", _diamond_Count);
 
 
         SceneManager.LoadScene(1);
@@ -230,7 +234,8 @@ public class ClickPrice : MonoBehaviour
         PlayerPrefs.SetInt("SaveDiamond", (int)Daimond_Num);
         PlayerPrefs.SetInt("SaveCountAnimation", GoHome.Season_Counter);
         PlayerPrefs.GetInt("SaveWeather", GoHome.CountIndex_Num);
-        
+        PlayerPrefs.SetInt("AutoCoin", _auto_Count_Num);
+        PlayerPrefs.SetInt("AutoDiamond", _diamond_Count);
         int isActiveInt = SpawnerLeaves.Is_Active_B ? 1 : 1;
 
 

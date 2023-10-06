@@ -1,2 +1,2 @@
-Build path: C:/Users/pc-first/Desktop/Git/game/Yandex
-Build number: 14
+Build path: C:/Users/pc-first/Desktop/Git/Homeless clicker
+Build number: 20

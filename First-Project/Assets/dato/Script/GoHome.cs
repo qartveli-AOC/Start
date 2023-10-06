@@ -101,9 +101,9 @@ public class GoHome : MonoBehaviour
         _currentSpriteIndex_Num_3 = PlayerPrefs.GetInt("SaveSprite300", 0);
 
 
-        Price_Update_Num_1 = PlayerPrefs.GetInt("SaveDaimondPrice1", Price_Update_Num_1);
-        Price_Update_Num_2 = PlayerPrefs.GetInt("SaveDaimondPrice2", Price_Update_Num_2);
-        Price_Update_Num_3 = PlayerPrefs.GetInt("SaveDaimondPrice3", Price_Update_Num_3);
+        Price_Update_Num_1 = PlayerPrefs.GetInt("SaveDaimondPrice1", 50);
+        Price_Update_Num_2 = PlayerPrefs.GetInt("SaveDaimondPrice2", 20);
+        Price_Update_Num_3 = PlayerPrefs.GetInt("SaveDaimondPrice3", 10);
 
         ClickPrice.Daimond_Num = (uint)PlayerPrefs.GetInt("SaveDiamond", 0);
 
@@ -319,7 +319,7 @@ public class GoHome : MonoBehaviour
                         Currect_Slid++;
                         Season_Counter++;
                         SliderMassivClick();
-                        Price_Update_Num_1 = (Price_Update_Num_1 + 50) ;
+                        Price_Update_Num_1 +=(Price_Update_Num_1+100)/2;
                     
                    
 
@@ -436,7 +436,7 @@ public class GoHome : MonoBehaviour
                     NextSprite2();
                     Currect_Slid++;
                     SliderMassivClick2();
-                    Price_Update_Num_2 = (Price_Update_Num_2 + 50) ;
+                    Price_Update_Num_2 += (Price_Update_Num_2 + 20)/2 ;
                     Season_Counter++;
 
 
@@ -555,7 +555,7 @@ public class GoHome : MonoBehaviour
                     Currect_Slid++;
                     Season_Counter++;
                     SliderMassivClick3();
-                    Price_Update_Num_3 = (Price_Update_Num_3 + 50);
+                    Price_Update_Num_3 += (Price_Update_Num_3 + 10)/2;
 
 
 

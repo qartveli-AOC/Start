@@ -4235,8 +4235,8 @@ MonoBehaviour:
   Price_Update_Text1: {fileID: 301026702}
   Price_Update_Text2: {fileID: 360128598}
   Price_Update_Text3: {fileID: 976381416}
-  Price_Update_Num_1: 10
-  Price_Update_Num_2: 10
+  Price_Update_Num_1: 50
+  Price_Update_Num_2: 20
   Price_Update_Num_3: 10
   Button_Go_Home: {fileID: 1358022639}
   Button_Upgrade_Click:
