@@ -1,6 +1,7 @@
+using CrazyGames;
 using System.Collections;
 using System.Collections.Generic;
-using YG;
+
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -71,19 +72,16 @@ public class GoHome : MonoBehaviour
 
     public  ForSongExit _forSongExit;
 
-    public YandexGame yandexGame;
+    
 
     public Button Reward_Button;
     private uint xUpper = 1;
 
-    public void RewardCall()
-    {        
-        yandexGame._RewardedShow(1);        
-    }
+   
 
     public void RewardMoney()
     {
-             
+        CrazyAds.Instance.beginAdBreakRewarded();
         ClickPrice.Daimond_Num +=((100+xUpper) * xUpper)-(xUpper*78);
         xUpper++;
     }
@@ -263,7 +261,9 @@ public class GoHome : MonoBehaviour
     }
 
     private void GoHomeClick()
-    {   
+    {
+        CrazyAds.Instance.beginAdBreak();
+
         PlayerPrefs.SetFloat("SaveSliderLid", Currect_Slid);
         PlayerPrefs.SetFloat("sav10", Currect_Slider_Click_1);
         PlayerPrefs.SetFloat("sav11", Currect_Slider_Click_2);

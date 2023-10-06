@@ -6,7 +6,8 @@ using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
-using YG;
+using CrazyGames;
+
 
 public class ClickPrice : MonoBehaviour
 {
@@ -86,15 +87,13 @@ public class ClickPrice : MonoBehaviour
     public GameObject Panel_noEnergy;
     public GameObject[] Seasons;
 
-    public YandexGame yandexGame;
+    
     public Button Rewart_Button;
     private uint xUpper;
-    public void RewardCall()
-    {
-        yandexGame._RewardedShow(1);
-    }
+   
     public void RewardMoney()
     {
+        CrazyAds.Instance.beginAdBreakRewarded();
         Score += 1000 * (int)xUpper;
         Daimond_Num += ((95 + xUpper) * xUpper) - (xUpper * 78);
         xUpper++;
@@ -221,7 +220,7 @@ public class ClickPrice : MonoBehaviour
         PlayerPrefs.SetInt("saveCountPower1", Click_Count);
         PlayerPrefs.SetInt("AutoCoin", _auto_Count_Num);
         PlayerPrefs.SetInt("AutoDiamond", _diamond_Count);
-
+        CrazyAds.Instance.beginAdBreak();
 
         SceneManager.LoadScene(1);
         PlayerPrefs.SetInt("coin", Score);

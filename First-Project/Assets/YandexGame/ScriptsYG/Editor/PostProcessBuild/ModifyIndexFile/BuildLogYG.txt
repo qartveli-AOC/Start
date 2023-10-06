@@ -1,2 +1,0 @@
-Build path: C:/Users/pc-first/Desktop/Git/Homeless clicker
-Build number: 20
