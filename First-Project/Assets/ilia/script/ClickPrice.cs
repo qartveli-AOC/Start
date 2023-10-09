@@ -228,7 +228,7 @@ public class ClickPrice : MonoBehaviour
         PlayerPrefs.SetInt("saveCountPower1", Click_Count);
         PlayerPrefs.SetInt("AutoCoin", _auto_Count_Num);
         PlayerPrefs.SetInt("AutoDiamond", _diamond_Count);
-        CrazyAds.Instance.beginAdBreak();
+   
         
 
         SceneManager.LoadScene(1);

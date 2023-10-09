@@ -274,7 +274,7 @@ public class GoHome : MonoBehaviour
 
     private void GoHomeClick()
     {
-        CrazyAds.Instance.beginAdBreak();
+        
 
         PlayerPrefs.SetFloat("SaveSliderLid", Currect_Slid);
         PlayerPrefs.SetFloat("sav10", Currect_Slider_Click_1);
