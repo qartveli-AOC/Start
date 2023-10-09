@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class GoHome : MonoBehaviour
@@ -79,13 +80,17 @@ public class GoHome : MonoBehaviour
 
    
 
-    public void RewardMoney()
+    public void RewardStart()
     {
-        CrazyAds.Instance.beginAdBreakRewarded();
-        ClickPrice.Daimond_Num +=((100+xUpper) * xUpper)-(xUpper*78);
+        CrazyAds.Instance.beginAdBreakRewarded(RewardFinished);
+       
+    }
+    public void RewardFinished()
+    {
+        ClickPrice.Daimond_Num += ((100 + xUpper) * xUpper) - (xUpper * 78);       
         xUpper++;
     }
-    
+
     private void Awake()
     {   
         Currect_Slid = PlayerPrefs.GetFloat("SaveSliderLid", 0);

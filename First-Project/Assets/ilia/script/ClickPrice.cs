@@ -91,9 +91,13 @@ public class ClickPrice : MonoBehaviour
     public Button Rewart_Button;
     private uint xUpper;
    
-    public void RewardMoney()
+    public void RewardStart()
     {
-        CrazyAds.Instance.beginAdBreakRewarded();
+        CrazyAds.Instance.beginAdBreakRewarded(RewardFinished);
+       
+    }
+    public void RewardFinished()
+    {
         Score += 1000 * (int)xUpper;
         Daimond_Num += ((95 + xUpper) * xUpper) - (xUpper * 78);
         xUpper++;
@@ -221,6 +225,7 @@ public class ClickPrice : MonoBehaviour
         PlayerPrefs.SetInt("AutoCoin", _auto_Count_Num);
         PlayerPrefs.SetInt("AutoDiamond", _diamond_Count);
         CrazyAds.Instance.beginAdBreak();
+        
 
         SceneManager.LoadScene(1);
         PlayerPrefs.SetInt("coin", Score);
