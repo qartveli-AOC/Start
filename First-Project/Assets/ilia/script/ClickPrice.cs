@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 using YG;
+using YG.Example;
 
 public class ClickPrice : MonoBehaviour
 {
@@ -88,10 +89,10 @@ public class ClickPrice : MonoBehaviour
 
     public YandexGame yandexGame;
     public Button Rewart_Button;
-    private uint xUpper;
+    private uint xUpper = 1;
     public void RewardCall()
     {
-        yandexGame._RewardedShow(1);
+        YandexGame.RewVideoShow(0);          
     }
     public void RewardMoney()
     {

@@ -77,13 +77,12 @@ public class GoHome : MonoBehaviour
     private uint xUpper = 1;
 
     public void RewardCall()
-    {        
-        yandexGame._RewardedShow(1);        
+    {
+        YandexGame.RewVideoShow(0);
     }
 
     public void RewardMoney()
-    {
-             
+    {            
         ClickPrice.Daimond_Num +=((100+xUpper) * xUpper)-(xUpper*78);
         xUpper++;
     }
