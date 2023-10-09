@@ -82,13 +82,20 @@ public class GoHome : MonoBehaviour
 
     public void RewardStart()
     {
-        CrazyAds.Instance.beginAdBreakRewarded(RewardFinished);
+        CrazyAds.Instance.beginAdBreakRewarded(RewardFinished,RewardError);
        
     }
     public void RewardFinished()
     {
         ClickPrice.Daimond_Num += ((100 + xUpper) * xUpper) - (xUpper * 78);       
         xUpper++;
+    }
+    public void RewardError()
+    {
+        if (CrazySDK.Instance.AdblockDetectionExecuted())
+        {
+            CrazySDK.Instance.HasAdblock().ToString();
+        }
     }
 
     private void Awake()

@@ -89,11 +89,11 @@ public class ClickPrice : MonoBehaviour
 
     
     public Button Rewart_Button;
-    private uint xUpper;
+    private uint xUpper=1;
    
     public void RewardStart()
     {
-        CrazyAds.Instance.beginAdBreakRewarded(RewardFinished);
+        CrazyAds.Instance.beginAdBreakRewarded(RewardFinished,RewardError);
        
     }
     public void RewardFinished()
@@ -101,6 +101,10 @@ public class ClickPrice : MonoBehaviour
         Score += 1000 * (int)xUpper;
         Daimond_Num += ((95 + xUpper) * xUpper) - (xUpper * 78);
         xUpper++;
+    }
+    public void RewardError()
+    {
+        Debug.Log("Error");
     }
 
     private void Update()
