@@ -177,7 +177,7 @@ public class GoHome : MonoBehaviour
         Button_Upgrade_Click[0].onClick.AddListener(SliderAnswer1);
         Button_Upgrade_Click[1].onClick.AddListener(SliderAnswer2);
         Button_Upgrade_Click[2].onClick.AddListener(SliderAnswer3);
-        Chest_Button.onClick.AddListener(ChectClick);
+        
     }
 
 
@@ -293,7 +293,7 @@ public class GoHome : MonoBehaviour
 
         Song_Audio.clip = Song_Clip_Audio[2];
         Song_Audio.Play();
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(leng.Leng_Scene_Num);
         
       
         Transform_Buttons[3].localScale = new Vector3 (1.1f, 1.1f, 1.1f);
@@ -720,17 +720,7 @@ public class GoHome : MonoBehaviour
     }
 
 
-    private void ChectClick()
-    {
-        Chest_Button_Transform.localScale = new Vector3(1.1f,1.1f,1.1f);
-        StartCoroutine(ForButtonClicable());
-        if(ForSongExit.IsOn_B_Song)
-        {
-            Song_Audio.clip = Song_Clip_Audio[3];
-            Song_Audio.Play();
-        }
-        
-    }
+
 
 
 }

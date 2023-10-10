@@ -107,6 +107,29 @@ public class ClickPrice : MonoBehaviour
         Daimond_Text.text = Daimond_Num.ToString();
         Power_Click_Text.text = Click_Count.ToString();
 
+        PlayerPrefs.SetInt("coin", Score);
+        PlayerPrefs.SetInt("SaveDiamond", (int)Daimond_Num);
+        PlayerPrefs.SetInt("SaveCountAnimation", GoHome.Season_Counter);
+        PlayerPrefs.SetInt("SaveWeather", GoHome.CountIndex_Num);
+        PlayerPrefs.SetInt("AutoCoin", _auto_Count_Num);
+        PlayerPrefs.SetInt("AutoDiamond", _diamond_Count);
+        int isActiveInt = SpawnerLeaves.Is_Active_B ? 1 : 1;
+
+
+        PlayerPrefs.SetInt("save1", Click_One_Num);
+        PlayerPrefs.SetInt("save2", One_Auto_Num);
+        PlayerPrefs.SetInt("save3", Ten_Click_Num);
+        PlayerPrefs.SetInt("save4", Auto_10_Num);
+        PlayerPrefs.SetInt("save5", OneHundred_Click_Num);
+        PlayerPrefs.SetInt("save5", Auto_100_Num);
+        PlayerPrefs.SetInt("save6", Hausent_Click_Num);
+        PlayerPrefs.SetInt("save7", Diamond_1sec_Num);
+        PlayerPrefs.SetInt("save8", Diamond_10sec_Num);
+        PlayerPrefs.SetInt("save9", Diamond_100_Num);
+
+        PlayerPrefs.SetInt("saveCountPower1", Click_Count);
+
+        PlayerPrefs.Save();
     }
     public void Awake()
     {
@@ -224,36 +247,14 @@ public class ClickPrice : MonoBehaviour
         PlayerPrefs.SetInt("AutoDiamond", _diamond_Count);
 
 
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
         PlayerPrefs.SetInt("coin", Score);
         ForSongExit2.IsOn_B_Soung = true;
         ForSongExit2.IsOn_B_Song = true;
     }
     private void OnApplicationQuit()
     {
-        PlayerPrefs.SetInt("coin",Score);
-        PlayerPrefs.SetInt("SaveDiamond", (int)Daimond_Num);
-        PlayerPrefs.SetInt("SaveCountAnimation", GoHome.Season_Counter);
-        PlayerPrefs.GetInt("SaveWeather", GoHome.CountIndex_Num);
-        PlayerPrefs.SetInt("AutoCoin", _auto_Count_Num);
-        PlayerPrefs.SetInt("AutoDiamond", _diamond_Count);
-        int isActiveInt = SpawnerLeaves.Is_Active_B ? 1 : 1;
-
-
-        PlayerPrefs.SetInt("save1", Click_One_Num);
-        PlayerPrefs.SetInt("save2", One_Auto_Num);
-        PlayerPrefs.SetInt("save3", Ten_Click_Num);
-        PlayerPrefs.SetInt("save4", Auto_10_Num);
-        PlayerPrefs.SetInt("save5", OneHundred_Click_Num);
-        PlayerPrefs.SetInt("save5", Auto_100_Num);
-        PlayerPrefs.SetInt("save6", Hausent_Click_Num);
-        PlayerPrefs.SetInt("save7", Diamond_1sec_Num);
-        PlayerPrefs.SetInt("save8", Diamond_10sec_Num);
-        PlayerPrefs.SetInt("save9", Diamond_100_Num);
-
-        PlayerPrefs.SetInt("saveCountPower1", Click_Count);
-
-        PlayerPrefs.Save();
+        
     }
 
     public void Click()
