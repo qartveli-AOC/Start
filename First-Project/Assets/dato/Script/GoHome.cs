@@ -75,7 +75,7 @@ public class GoHome : MonoBehaviour
 
     public TextMeshProUGUI Price_Diamond_Reward;
     
-    private uint xUpper = 1;
+    private uint xUpper=1;
 
 
     public GameObject Reward_Panel;
@@ -97,17 +97,19 @@ public class GoHome : MonoBehaviour
 
     public void RewardMoney()
     {
-        Reward_Score = ((100 + xUpper) * xUpper) - (xUpper * 78);
-        ClickPrice.Daimond_Num += Reward_Score;
-        Price_Diamond_Reward.text = Reward_Score.ToString();
+        
+        Reward_Score = ((100 + xUpper) * xUpper) - (xUpper * 70);
         xUpper++;
+        ClickPrice.Daimond_Num += Reward_Score;        
+        uint tmp = ((100 + xUpper) * xUpper) - (xUpper * 70);
+        Price_Diamond_Reward.text = tmp.ToString();
         PlayerPrefs.SetInt("Rewarc_Score", (int)Reward_Score);
         PlayerPrefs.SetInt("XUpeer", (int)xUpper);
     }
     
     private void Awake()
     {
-        Reward_Score =  (uint)PlayerPrefs.GetInt("Rewarc_Score", 30);
+        Reward_Score =  (uint)PlayerPrefs.GetInt("Rewarc_Score", 31);
         xUpper = (uint)PlayerPrefs.GetInt("XUpeer", 1);
         Price_Diamond_Reward.text = Reward_Score.ToString();
 

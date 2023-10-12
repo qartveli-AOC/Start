@@ -89,7 +89,7 @@ public class ClickPrice : MonoBehaviour
 
     public YandexGame yandexGame;
     public Button Rewart_Button;
-    private uint xUpper = 1;
+    private uint xUpper=1;
 
     public TextMeshProUGUI Price_Reward;
     public uint Coin_Reward;
@@ -102,12 +102,14 @@ public class ClickPrice : MonoBehaviour
     }
     public void RewardMoney()
     {
+        
         Coin_Reward = 1000 * xUpper;
-        Score += (int)Coin_Reward;
         xUpper++;
-        Price_Reward.text = Coin_Reward.ToString();
-        PlayerPrefs.SetInt("savePrice", (int)Coin_Reward);
-        PlayerPrefs.SetInt("saveXUpper", (int)xUpper);
+        Score += (int)Coin_Reward;
+        uint tmp = 1000 * xUpper;
+        Price_Reward.text = tmp.ToString();
+        PlayerPrefs.SetInt("savePrice2", (int)Coin_Reward);
+        PlayerPrefs.SetInt("saveXUpper2", (int)xUpper);
     }
 
     public void RewardBox()
@@ -121,8 +123,7 @@ public class ClickPrice : MonoBehaviour
     }
 
     private void Update()
-    {
-        Price_Reward.text = Coin_Reward.ToString();       
+    {   
         Show_Score.text = Score.ToString();
         Daimond_Text.text = Daimond_Num.ToString();
         Power_Click_Text.text = Click_Count.ToString();
@@ -155,9 +156,9 @@ public class ClickPrice : MonoBehaviour
     }
     public void Awake()
     {
-        Price_Reward.text = Coin_Reward.ToString();
-        Coin_Reward = (uint) PlayerPrefs.GetInt("savePrice", 30);
-        xUpper = (uint)PlayerPrefs.GetInt("saveXUpper", 1);
+        Coin_Reward = (uint)PlayerPrefs.GetInt("savePrice2", 1000);
+        Price_Reward.text = Coin_Reward.ToString();       
+        xUpper = (uint)PlayerPrefs.GetInt("saveXUpper2", 1);
 
 
         Score = PlayerPrefs.GetInt("coin", 0);
