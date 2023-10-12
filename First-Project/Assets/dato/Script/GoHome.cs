@@ -73,22 +73,46 @@ public class GoHome : MonoBehaviour
 
     public YandexGame yandexGame;
 
-    public Button Reward_Button;
+    public TextMeshProUGUI Price_Diamond_Reward;
+    
     private uint xUpper = 1;
 
+
+    public GameObject Reward_Panel;
+    public uint Reward_Score;
+
+    public void RewardGo()
+    {
+        Reward_Panel.SetActive(true);
+    }
+
+    public void RewardExit()
+    {
+        Reward_Panel.SetActive(false);
+    }
     public void RewardCall()
     {
         YandexGame.RewVideoShow(0);
     }
 
     public void RewardMoney()
-    {            
-        ClickPrice.Daimond_Num +=((100+xUpper) * xUpper)-(xUpper*78);
+    {
+        Reward_Score = ((100 + xUpper) * xUpper) - (xUpper * 78);
+        ClickPrice.Daimond_Num += Reward_Score;
+        Price_Diamond_Reward.text = Reward_Score.ToString();
         xUpper++;
+        PlayerPrefs.SetInt("Rewarc_Score", (int)Reward_Score);
+        PlayerPrefs.SetInt("XUpeer", (int)xUpper);
     }
     
     private void Awake()
-    {   
+    {
+        Reward_Score =  (uint)PlayerPrefs.GetInt("Rewarc_Score", 30);
+        xUpper = (uint)PlayerPrefs.GetInt("XUpeer", 1);
+        Price_Diamond_Reward.text = Reward_Score.ToString();
+
+
+
         Currect_Slid = PlayerPrefs.GetFloat("SaveSliderLid", 0);
         Currect_Slider_Click_1 = PlayerPrefs.GetFloat("sav10", 0);
         Currect_Slider_Click_2 = PlayerPrefs.GetFloat("sav11", 0);
@@ -124,7 +148,7 @@ public class GoHome : MonoBehaviour
         {
             Smoke.Stop();
         }
-
+       
         if (CountIndex_Num == 3)
         {
             Little_fire.SetActive(true);
@@ -190,6 +214,9 @@ public class GoHome : MonoBehaviour
 
     private void FixedUpdate()
     {
+       
+
+        
         Slider_Upgrade_Answer.value = Currect_Slid / Full_Slid;
         Slider_Upgrade_Click[0].value = Currect_Slider_Click_1 / Fuul_Slider_Click_1;
         Slider_Upgrade_Click[1].value = Currect_Slider_Click_2 / Fuul_Slider_Click_2;
@@ -293,7 +320,7 @@ public class GoHome : MonoBehaviour
 
         Song_Audio.clip = Song_Clip_Audio[2];
         Song_Audio.Play();
-        SceneManager.LoadScene(leng.Leng_Scene_Num);
+        SceneManager.LoadScene(0);
         
       
         Transform_Buttons[3].localScale = new Vector3 (1.1f, 1.1f, 1.1f);
@@ -695,7 +722,7 @@ public class GoHome : MonoBehaviour
         Transform_Buttons[1].localScale = new Vector3(1, 1, 1);
         Transform_Buttons[2].localScale = new Vector3(1, 1, 1);
         Transform_Buttons[3].localScale = new Vector3(1, 1, 1);
-        Chest_Button_Transform.localScale = new Vector3(1,1,1);
+      
     }
 
     private void NextSprite1()

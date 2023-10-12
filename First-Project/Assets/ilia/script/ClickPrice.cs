@@ -90,22 +90,44 @@ public class ClickPrice : MonoBehaviour
     public YandexGame yandexGame;
     public Button Rewart_Button;
     private uint xUpper = 1;
+
+    public TextMeshProUGUI Price_Reward;
+    public uint Coin_Reward;
+
+    public GameObject Panel_Reward;
+
     public void RewardCall()
     {
         YandexGame.RewVideoShow(0);          
     }
     public void RewardMoney()
     {
-        Score += 1000 * (int)xUpper;
-        Daimond_Num += ((95 + xUpper) * xUpper) - (xUpper * 78);
+        Coin_Reward = 1000 * xUpper;
+        Score += (int)Coin_Reward;
         xUpper++;
+        Price_Reward.text = Coin_Reward.ToString();
+        PlayerPrefs.SetInt("savePrice", (int)Coin_Reward);
+        PlayerPrefs.SetInt("saveXUpper", (int)xUpper);
+    }
+
+    public void RewardBox()
+    {
+        Panel_Reward.SetActive(true);
+    }
+
+    public void RewardBoxExit()
+    {
+        Panel_Reward.SetActive(false);
     }
 
     private void Update()
     {
+        Price_Reward.text = Coin_Reward.ToString();       
         Show_Score.text = Score.ToString();
         Daimond_Text.text = Daimond_Num.ToString();
         Power_Click_Text.text = Click_Count.ToString();
+
+        
 
         PlayerPrefs.SetInt("coin", Score);
         PlayerPrefs.SetInt("SaveDiamond", (int)Daimond_Num);
@@ -133,7 +155,11 @@ public class ClickPrice : MonoBehaviour
     }
     public void Awake()
     {
-       
+        Price_Reward.text = Coin_Reward.ToString();
+        Coin_Reward = (uint) PlayerPrefs.GetInt("savePrice", 30);
+        xUpper = (uint)PlayerPrefs.GetInt("saveXUpper", 1);
+
+
         Score = PlayerPrefs.GetInt("coin", 0);
         Daimond_Num = (uint)PlayerPrefs.GetInt("SaveDiamond",0);
         GoHome.Season_Counter = PlayerPrefs.GetInt("SaveCountAnimation", 0);
@@ -247,7 +273,7 @@ public class ClickPrice : MonoBehaviour
         PlayerPrefs.SetInt("AutoDiamond", _diamond_Count);
 
 
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
         PlayerPrefs.SetInt("coin", Score);
         ForSongExit2.IsOn_B_Soung = true;
         ForSongExit2.IsOn_B_Song = true;

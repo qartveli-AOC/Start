@@ -17,7 +17,6 @@ public class leng : MonoBehaviour
     
     void Update()
     {
-        Debug.Log(Leng_Scene_Num + "dddddddddddddddddd");
     }
 
 
